@@ -7,6 +7,15 @@ header{
     background:  #748181;
 }
 
+#fav{
+    display: inline;
+    border-radius: 15px;
+    width: 75px;
+}
+h1{
+    display: inline;
+}
+
 #navbar {
     position: fixed;
     top: 0;
