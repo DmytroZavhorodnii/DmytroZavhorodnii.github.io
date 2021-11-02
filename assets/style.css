@@ -236,7 +236,10 @@ footer{
     
     }
     h1{
-        font-size: 16pt;
+        font-size: 13pt;
+    }
+    #fav{
+        width: 50px;
     }
 }
 
