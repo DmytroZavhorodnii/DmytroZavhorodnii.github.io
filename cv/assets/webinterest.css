@@ -1,0 +1,39 @@
+.news{
+  min-height: 90vh;
+}
+.list{
+  display: grid;
+  grid-template-columns:repeat(2, 50%) ;
+  grid-template-rows: auto!important;
+  grid-gap:35px ;
+  padding: 20px;
+}
+.imgw{
+  height: 100%;
+
+}
+.list{
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px gray;
+  padding: 50px;
+  display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr;
+
+}
+.adres{
+  transition: 1s linear;
+}
+.adres:hover{
+  color: brown;
+}
+
+@media (max-width: 768px){
+  .list{
+      grid-template-columns: 1fr  ;
+      grid-template-rows: auto!important;
+
+  }
+
+}
