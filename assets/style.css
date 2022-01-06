@@ -153,6 +153,21 @@ header{
 .kscard{
     margin: auto;
 }
+.designed{
+   
+    display: grid;
+    grid-template-columns: 1fr ;
+
+    grid-gap:5px ;
+    padding: 3px;
+    
+}
+
+.postimg{
+    display: block;
+    margin: auto;
+}
+
 
 footer{
     background-color: rgb(85, 85, 85);
@@ -243,6 +258,13 @@ footer{
     }
 }
 
+.posts{
+    background-color: #111111;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
 
 /*grid-template-areas: "brandimg"
 "brand"
