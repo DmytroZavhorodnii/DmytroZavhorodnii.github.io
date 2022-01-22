@@ -8,7 +8,7 @@ var i = 1;
 function baton(){
   let variant = +ans.value;
       if(i>=10){
-        outplace.innerHTML = '<div class="alert alert-danger" role="alert">Нажаль ти вичерпав свої спроби... Загадане число: <span id="right"> </span></div>'
+        outplace.innerHTML = '<div class="alert alert-danger" role="alert">Нажаль ти вичерпав свої спроби... Загадане число: <span id="right"></span></div>'
         right.innerHTML = secret;
       }
       else if((variant==secret)){
