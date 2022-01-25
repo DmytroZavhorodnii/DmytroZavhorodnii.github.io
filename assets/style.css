@@ -153,6 +153,12 @@ header{
 .kscard{
     margin: auto;
 }
+#port{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+}
 .designed{
    
     display: grid;
@@ -221,6 +227,12 @@ footer{
 
 }
 @media (max-width: 768px){
+
+    #port{
+    
+        grid-template-columns: 1fr ;
+
+    }
     .spec{
     
         grid-template-columns: 1fr;
