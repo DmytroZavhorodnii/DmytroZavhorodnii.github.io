@@ -1,0 +1,133 @@
+aside {
+    background-position-y: 30%;
+}
+
+
+
+@media (max-width:768px){
+    aside {
+        background-position-y: 20%;
+    }
+
+    .titles {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.contacts { 
+    line-height: 1.6;
+    font-size: 26px; 
+}
+
+@media (max-width:768px){
+    .contacts {
+        font-size: 28px; 
+    }
+
+    aside {
+        box-shadow: 0px 0px 15px gray;
+    }
+}
+
+main {
+    padding-top: 50px;   
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+
+@font-face{
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Regular.eot') format('embedded-opentype'),
+        url('../fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('../fonts/JetBrainsMono-Regular.woff') format('woff'),
+        url('../fonts/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Bold.eot') format('embedded-opentype'),
+        url('../fonts/JetBrainsMono-Bold.woff2') format('woff2'),
+        url('../fonts/JetBrainsMono-Bold.woff') format('woff'),
+        url('../fonts/JetBrainsMono-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Italic.eot') format('embedded-opentype'),
+        url('../fonts/JetBrainsMono-Italic.woff2') format('woff2'),
+        url('../fonts/JetBrainsMono-Italic.woff') format('woff'),
+        url('../fonts/JetBrainsMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.mono-font {
+    font-family: 'JetBrains Mono' ;
+}
+
+
+
+p {
+    font-family: 'JetBrains Mono';
+    color: #5E5E5E;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: underline;
+}
+
+
+.footer-message {
+    margin-top: 110px;
+    color:black; 
+    line-height: 1.4;
+    font-family: 'JetBrains Mono';
+}
+
+.footer-message i{
+    font-size: 1.2em;
+}
+
+main {
+    padding-bottom: 20px;
+}
+
+.copymark {
+    color:black; 
+    line-height: 1.4;
+    font-family: 'JetBrains Mono';
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+h1 {
+    margin-top: 80px;
+}
+
+.item-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-box img {
+    flex-basis: 100px;
+    width: 100px;
+    height: 100px;
+    object-fit: scale-down;
+    
+    margin-right: 12px;
+ 
+}
+
+
