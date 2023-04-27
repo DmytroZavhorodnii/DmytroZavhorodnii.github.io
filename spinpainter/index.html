@@ -1,0 +1,224 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Spin Painter</title>
+		<style>
+			* {
+				color: #444;
+				font-family: Monospace;
+				font-size: 12px;
+			}
+			body {
+				margin: 0;
+				background: #000;
+				overflow: hidden;
+			}
+			button {
+				border: 0;
+				padding: 2px;
+				background: transparent;
+				text-transform: uppercase;
+				cursor: pointer;
+				outline: 0;
+			}
+			button:hover {
+				text-decoration: underline;
+			}
+			#canvas {
+				position: absolute;
+				cursor: crosshair;
+			}
+			#header {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+			}
+			#menu {
+				display: inline-block;
+				padding: 7px 10px;
+				background-color: #fff;
+				text-transform: uppercase;
+			}
+			@media all and ( max-width: 450px ) {
+				#title {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+
+		<script src="/js/ga.js"></script>
+
+		<canvas id="canvas"></canvas>
+		<div id="header">
+			<div id='menu'>
+				<span id="title"><strong>Spin Painter</strong> | </span>
+				Size
+				<select onchange="setSize( this.value )">
+					<option>1</option>
+					<option>5</option>
+					<option selected>10</option>
+					<option>50</option>
+					<option>100</option>
+				</select>
+				Speed
+				<select onchange="setSpeed( this.value )">
+					<option>1</option>
+					<option>10</option>
+					<option>20</option>
+					<option>40</option>
+					<option>80</option>
+					<option>100</option>
+					<option selected>200</option>
+				</select>
+				|
+				<button onclick="saveCanvas()">Save</button>
+				<button onclick="clearCanvas()">Clear</button>
+			</div>
+		</div>
+		<script>
+
+			var width = window.innerWidth * 2;
+			var height = window.innerHeight * 2;
+
+			var canvas = document.getElementById( 'canvas' );
+			canvas.width = width;
+			canvas.height = height;
+			canvas.style.left = ( window.innerWidth - canvas.width ) / 2;
+			canvas.style.top = ( window.innerHeight - canvas.height ) / 2;
+
+			var context = canvas.getContext( '2d' );
+
+			var size = 10, speed = 2;
+
+			var rectangle = canvas.getBoundingClientRect();
+			var touches = [];
+
+			//
+
+			document.addEventListener( 'mousemove', function ( event ) {
+
+				if ( touches.length ) touches = [ event ];
+
+			} );
+
+			canvas.addEventListener( 'mousedown', function ( event ) {
+
+				event.preventDefault();
+
+				touches = [ event ];
+
+			} );
+
+			canvas.addEventListener( 'mouseup', function ( event ) {
+
+				touches = [];
+
+			} );
+
+			canvas.addEventListener( 'touchstart', function ( event ) {
+
+				event.preventDefault();
+
+				touches = event.touches;
+
+			} );
+
+			canvas.addEventListener( 'touchmove', function ( event ) {
+
+				event.preventDefault();
+
+				touches = event.touches;
+
+			} );
+
+			canvas.addEventListener( 'touchend', function ( event ) {
+
+				event.preventDefault();
+
+				touches = event.touches;
+
+			} );
+
+			//
+
+			function setSize( value ) {
+
+				size = value;
+
+			}
+
+			function setSpeed( value ) {
+
+				speed = value / 100;
+
+			}
+
+			function saveCanvas() {
+
+				var canvas2 = document.createElement( 'canvas' );
+				canvas2.width = width;
+				canvas2.height = height;
+
+				var context2 = canvas2.getContext( '2d' );
+				context2.fillStyle = 'black';
+				context2.fillRect( 0, 0, width, height );
+				context2.drawImage( canvas, 0, 0 );
+
+				var link = document.createElement( 'a' );
+				link.href = canvas2.toDataURL();
+				link.download = 'image.png';
+				link.target = '_blank';
+				link.click();
+
+			}
+
+			function clearCanvas() {
+
+				context.clearRect( 0, 0, width, height );
+
+			}
+
+			//
+
+			function rand() {
+
+				return Math.floor( Math.random() * 255 );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				//
+
+				for ( var i = 0; i < touches.length; i ++ ) {
+
+					var touch = touches[ i ];
+
+					var x = touch.clientX - rectangle.left;
+					var y = touch.clientY - rectangle.top;
+
+					context.beginPath();
+					context.arc( x, y, size, 0, Math.PI * 2 );
+					context.fillStyle = 'rgb(' + [ rand(), rand(), rand() ].toString() + ')';
+					context.fill();
+
+				}
+
+				context.save();
+				context.translate( width / 2, height / 2 );
+				context.rotate( speed );
+				context.drawImage( canvas, - width / 2, - height / 2 );
+				context.restore();
+
+			}
+
+			requestAnimationFrame( animate );
+
+		</script>
+	</body>
+</html>

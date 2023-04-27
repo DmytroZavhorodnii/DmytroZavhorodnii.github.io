@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Дrunk camera</title>
+		<style>
+			html, body {
+				height: 100%;
+			}
+			body {
+				background-color: #000;
+				margin: 0;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+			}
+			canvas {
+				display: block;
+				width: 100%;
+				transform: scaleX(-1);
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<script src="/js/ga.js"></script>
+		<script>
+
+			const video = document.createElement( 'video' );
+			video.setAttribute( 'playsinline', true ); // Safari/iOS 🤦
+
+			const constraints = { video: { facingMode: 'user' } };
+			navigator.mediaDevices.getUserMedia( constraints )
+				.then( function ( stream ) {
+
+					video.srcObject = stream;
+					video.onloadedmetadata = function () {
+
+						video.play();
+
+						init();
+
+					};
+
+				} );
+
+			//
+
+			const array = [];
+
+			const canvas = document.getElementById( 'canvas' );
+			const context = canvas.getContext( '2d', { alpha: false } );
+
+			function init() {
+
+				canvas.width = video.videoWidth;
+				canvas.height = video.videoHeight;
+
+				const count = canvas.height / 3;
+
+				for ( let i = 0; i < count; i ++ ) {
+
+					const canvas = document.createElement( 'canvas' );
+					canvas.width = video.videoWidth;
+					canvas.height = video.videoHeight;
+
+					const context = canvas.getContext( '2d', { alpha: false } );
+					context.fillRect( 0, 0, canvas.width, canvas.height );
+
+					canvas._context = context; // 🙈
+
+					array.push( canvas );
+
+				}
+
+				requestAnimationFrame( animate );
+
+			}
+
+			function animate() {
+
+				array[ 0 ]._context.drawImage( video, 0, 0 );
+
+				const size = canvas.height / array.length;
+
+				for ( let i = 0; i < array.length; i ++ ) {
+
+					const canvas = array[ i ];
+					context.drawImage(
+						canvas, 0, i * size, canvas.width, size, 0, i * size, canvas.width, size
+					);
+
+				}
+
+				array.unshift( array.pop() );
+
+				requestAnimationFrame( animate );
+
+			}
+
+		</script>
+	</body>
+</html>
