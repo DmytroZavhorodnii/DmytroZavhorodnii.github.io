@@ -398,10 +398,14 @@ table {
         width: 350px;
     }
   }
-  @media (max-width: 768px){
+  @media (max-width: 576px){
     .content{
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .mpage{
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
 
