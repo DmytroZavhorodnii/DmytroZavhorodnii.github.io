@@ -1,0 +1,392 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>IV. Rozwiązanie prostokątnych trójkątów sferycznych.</title>
+		<meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="source/bootstrap.css">
+    <script src="source/bootstrap.js"></script>
+    <link rel="stylesheet" href="source/css/style.css">
+    
+    <style>
+
+        model-viewer{
+        
+            width:100%;
+        
+            height: 100vh;
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+        model-viewer{
+        
+            height:600px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 767px) {
+        
+        model-viewer{
+        
+            height:350px;
+        
+        }
+        
+        }
+        
+        </style>
+         <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+</head>
+<body>
+  
+    <body>
+        <div class="bg">
+            <div id="all"></div>
+        </div>
+        <div class="content" >
+ 
+             <div class="title">
+              Temat - IV.
+            </div>
+
+           
+
+            <div class="mpage">
+
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <a href="index.html"><button type="button" class="btn btn-primary">START</button></a>
+                        
+                      <li class="page-item">
+                        <a class="page-link" href="III.html" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+ 
+                      <li class="page-item"><a  class="page-link " href="I.html">I</a></li>
+                      <li class="page-item"><a class="page-link" href="II.html">II</a></li>
+                      <li class="page-item"><a class="page-link" href="III.html">III</a></li>
+                      <li class="page-item"><a style="color: black;" class="page-link bg-secondary" href="IV.html">IV</a></li>
+                      <li class="page-item"><a class="page-link" href="V.html">V</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="V.html" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                      <a href="menu.html"><button type="button" class="btn btn-primary">MENU</button></a>
+                      
+                    </ul>
+                  </nav>
+
+
+
+
+                <h1 id="bh1">
+                    <div class="big-text">
+                      Rozwiązanie prostokątnych trójkątów sferycznych.
+                    </div>
+                </h1>
+                <h2 id="4.1" class="paragraf">
+                  § 4.1 Rozwiązywania trójkątów sferycznych prostokątnych. 
+                </h2>
+                <p>
+                  Wzór na rozwiązanie trójkąta sferycznego prostokątnego musi zawierać trzy elementy: dwa podane i jeden wymagany. Liczba możliwych przypadków znalezienia nieznanego elementu według dwóch danych jest równa liczbie kombinacji pięciu elementów w trzech, czyli 5!/(3!2!) = 10 . Zatem dla wszystkich przypadków rozwiązania trójkąta sferycznego prostokątnego potrzeba dziesięciu wzorów.
+                </p>
+                <img class="monochrome" src="source/illustration/4.1pit.png" alt="">
+                <p>
+                  Rozważ prostokątny trójkąt sferyczny i dla pewności zawsze zakładaj, że A jest kątem prostym, bok a nazywamy przeciwprostokątną, a boki b i c to przyprostokątne. Spośród sześciu grup podstawowych formuł uzyskanych w paragrafach 3.1-3.4 wyróżniamy następujące dziesięć:
+                </p>
+                <img  id="systemill1" src="source/illustration/4.1sys.png" alt="">
+                <p>
+                  Biorąc pod uwagę, że <b> A=90° , cosA=0, sinA=1, ctgA=0,</b> otrzymujemy dziesięć wzorów na rozwiązanie trójkąta sferycznego prostokątnego. Na przykład pierwszą równością jest <b>sferyczne twierdzenie Pitagorasa,</b>  które można łatwo uzyskać ze wzoru
+                </p>
+                <img class="eql" src="source/illustration/4.1for1.png" alt="">
+                <p>
+                  Przy A=90° równość przyjmuje postać (sferycznego twierdzenia Pitagorasa)
+                </p>
+                <img class="eql" src="source/illustration/4.1for2.png" alt="">
+                <p>Podobnie można uzyskać pozostałe 10 równości</p>
+                <img id="systemill" src="source/illustration/4.1sys2.png" alt="">
+                <p>
+                  Szkocki matematyk J. Napier zastąpił we wzorach przyprostokątne b i c ich uzupełnieniami do 90° i zaproponował wygodną regułę mnemoniczną do pisania formuł, dzieląc je na dwie grupy.
+                </p>
+                <img id="systemill" src="source/illustration/4.1sys3.png" alt="">
+                <p>
+                  Wzory nazywane są regułą Napiera. Jeśli założymy, że przyprostokątne b i c leżą obok siebie, to znaczy nie liczymy kąta prostego A i zastępujemy przyprostokątne ich uzupełnieniami do 90°. Wtedy cosinus dowolnego elementu trójkąta prostokątnego wynosi równy iloczynowi cotangensów elementów do niego przylegających lub iloczynowi sinusów elementów niesąsiadujących.
+                </p>
+                <img class="monochrome" src="source/illustration/4.1ill.png" alt="">
+                <article class="page">
+                  <h2 id="4.2" class="paragraf">
+                    § 4.2 Związek między bokami i kątami. 
+                  </h2>
+                  <ol>
+                    <li>Aby połączyć przeciwprostokątną i przyprostokątne, mamy sferyczny wzór Pitagorasa:</li>
+                    <img class="eql" src="source/illustration/4.1for2.png" alt="">
+                    <ul>
+                      <li>Niech każda z przyprostokątnych będzie mniejsza niż 90°, wtedy cos(b) i cos(c) są dodatnie, ale wtedy cos(a) jest również dodatnie, a zatem a < 90° .</li>
+                      <li>Jeśli każda z przyprostokątnych jest większa niż 90°, to cos(b) i cos(c) są ujemne, a zatem cos a jest dodatnie, a a < 90°.</li>
+                      <li>
+                        Jeśli jedna z przyprostokątnych jest większa niż 90°, a druga mniejsza niż 90°, to cosinus jednej z przyprostokątnych  jest dodatni, a drugiej ujemny. Dlatego cos a będzie ujemne, a a > 90°.
+                      </li>
+                    </ul>
+                    <p>
+                      Dla wygody umawiamy się, że dwa elementy trójkąta nazywamy <b>jednorodnymi</b> , jeśli oba są większe lub mniejsze niż 90°, a <b>niejednorodnymi</b> , gdy jeden z nich jest większy, a drugi mniejszy niż 90°.
+                    </p>
+                    <p>
+                      Korzystając z tych pojęć, związek między wartościami przyprostokątnych a przeciwprostokątną można sformułować w następujący sposób: <b>jeśli przyprostokątne są jednorodne, wówczas przeciwprostokątna jest mniejsza niż 90 °; jeśli przyprostokątne są niejednorodne, wówczas przeciwprostokątna jest większa niż 90 °</b> .
+                    </p>
+                    <li>
+
+                      Aby połączyć przeciwprostokątną z sąsiednimi kątami, mamy zależność
+                      <img class="eql" src="source/illustration/4.2eql.png" alt="">
+                      Po przeanalizowaniu tego wyrażenia podobnie do analizy wzoru pitagorejskiego ustalamy następujący związek między przeciwprostokątną a sąsiednimi kątami: <b>jeśli kąty przylegające do przeciwprostokątnej są jednorodne, wówczas przeciwprostokątna jest mniejsza niż 90 °; jeśli te kąty są niejednorodne, to przeciwprostokątna jest większa niż 90 °</b> .
+                    </li>
+                    <li>
+                      Aby połączyć jedną z przyprostokątnych i dwa kąty sąsiadujące z przeciwprostokątną, mamy zależność:
+                    </li>
+                    <img class="eql" src="source/illustration/4.2eql1.png" alt="">
+                    <p>
+                      Ponieważ sin(C) jest zawsze dodatni, niezależnie od tego, czy C jest kątem ostrym, czy rozwartym, znaki cos(B) i cos(b) zawsze się pokrywają: <b>dowolna przyprostokątna i jej przeciwny kąt są zawsze jednorodne</b> .
+                    </p>
+                    <p>
+                      Uzyskane stosunki między wartościami boków i kątów prostokątnego trójkąta sferycznego pomogą, znajdując elementy trójkąta według ich sinusów, wybrać, która z dwóch możliwych wartości elementu jest akceptowalna. Na przykład, jeśli w trójkącie prostokątnym ABC ramię b > 90° i rozwiązując zadanie dla przeciwległego kąta B otrzymamy, że sinB = 0,5, to jego wartość jest równa B = 150°.
+                    </p>
+
+                  </ol>
+                  <h2 id="4.3" class="paragraf">
+                    § 4.3 Podstawowe przypadki i instrukcje 
+                  </h2>
+                  <p>
+                    Możliwych jest sześć różnych przypadków rozwiązania trójkątów prostokątnych, pod warunkiem, że mamy padane:
+                  </p>
+                  <ol>
+                    <li>przeciwprostokątna i przyprostokątna;</li>
+                    <li>dwie  przyprostokątnych;</li>
+                    <li>przeciwprostokątna i kąt do niej przylegający;</li>
+                    <li>przyprostokątna i kąt do niej przylegający;</li>
+                    <li>dwa kąta;</li>
+                    <li>przyprostokątna i jej przeciwny kąt.</li>
+                  </ol>
+                  <p>
+                    Jeśli istnieje rozwiązanie trójkąta, to w pierwszych pięciu przypadkach jest ono unikalne, aw szóstym jest dwuwartościowe. W szóstym przypadku pierwszy z trzech wymaganych elementów jest obliczany przez sinus, który ma wartość dodatnią w pierwszej i drugiej ćwiartce. Dlatego dla pierwszego elementu otrzymujemy dwie wartości, które uzupełniają się aż do 180°. Geometrycznie oznacza to, że mamy dwa sprzężone prostokątne trójkąty sferyczne. Mają dany wspólny bok i przeciwny do niego kąt w wierzchołku przekątnej.
+                  </p>
+                  <p>
+                    Podczas rozwiązywania należy kontrolować poprawność obliczeń i upewnić się, że wartości elementów spełniają warunki istnienia trójkąta sferycznego.
+                  </p>
+                  <p>
+                    Instrukcje rozwiązywania prostokątnych trójkątów sferycznych:
+                  </p>
+                  <div class="alert alert-secondary" role="">
+                     <b>
+                    Przypadek 1.
+                  </b>
+                  <p>
+                    Podano przeciwprostokątną a i nogę b. Znajdź nogę c, kąty A i B oraz pole trójkąta.
+                  </p>
+                  </div>
+                 
+                  <b>
+                    Instrukcje.
+                  </b>
+                  <p>
+                    Spośród dziesięciu formuł wybierzemy następujące
+                  </p>
+                  <img width="90%" src="source/illustration/4.3for1.png" alt="">
+                  <p>
+                    Następnie nieznane elementy są określane za pomocą wzorów
+                  </p>
+                  <img width="90%" src="source/illustration/4.3for3.png" alt="">
+                  <p>
+                    Następnie sprawdźmy poprawność rozwiązania sprawdzając warunki istnienia sferycznego trójkąta prostokątnego.
+                  </p>
+                  <ol>
+                    <li>90º < B + C < 270°; −90 < B − C < 90:</li>
+                    <li>0< a+b+c < 360°:</li>
+                    <li>a+b>c, a + c > b, b+c> a, b > c-a, a >b-c, c>b-a:</li>
+                    <li>Dowolna noga i przeciwległy do ​​niej kąt są zawsze jednorodne.</li>
+                    <li>Jeśli nogi są jednorodne, przeciwprostokątna musi być mniejsza niż 90º</li>
+                    <li>Formuła kontrolna musi łączyć znalezione elementy <b>
+                      cos(C) = sin(B)cos(c)
+                    </b>.</li>
+                  </ol>
+
+
+
+
+                  <div class="alert alert-secondary" role="">
+
+                    <b>
+                      Przypadek 2.
+                    </b>
+                    <p>
+                      Podano  dwie nogi b i c. Znajdź przeciwprostokątną a, kąty B i C.
+                    </p>
+                  </div>
+
+                  
+                  <b>
+                    Instrukcje.
+                  </b>
+                  <p>
+                    Spośród dziesięciu formuł wybierzemy następujące
+                  </p>
+                  <img width="90%" src="source/illustration/4.3p2.png" alt="">
+
+                  <p>
+                    Następnie nieznane elementy są określane za pomocą wzorów:
+                  </p>
+                  <img width="90%" src="source/illustration/4.3for2.png" alt="">
+                  <p>
+                    Formuła kontrolna musi łączyć znalezione elementy. Sprawdźmy równość <b>cos(a) = ctg(B)ctg(C)</b> 
+                  </p>
+
+
+
+
+                  
+                  <div class="alert alert-secondary" role="">
+
+                    <b>
+                      Przypadek 3.
+                    </b>
+                    <p>
+                      Podano przeciwprostokątną a i przylegający do niej kąt C. Znajdź nogi i kąt B.
+                    </p>
+                  </div>
+                  <b>
+                    Instrukcje.
+                  </b>
+                  <p>
+                    Spośród dziesięciu formuł wybierzemy następujące
+                  </p>
+                  <img width="90%" src="source/illustration/4.3for4.png" alt="">
+
+                  <p>
+                    Następnie nieznane elementy są określane za pomocą wzorów:
+                  </p>
+                  <img width="90%" src="source/illustration/4.3for5.png" alt="">
+                  <p>
+                    Formuła kontrolna musi łączyć znalezione elementy. Sprawdźmy równość <b>sin(c) = ctg(B)tg(b)</b> 
+
+
+                    <div class="alert alert-secondary" role="">
+
+                      <b>
+                        Przypadek 4.
+                      </b>
+                      <p>
+                        Dana noga b i przylegający do niej kąt C. Znajdź nogę c,
+                        przeciwprostokątna a i kąt B.
+                      </p>
+                    </div>
+                    <b>
+                      Instrukcje.
+                    </b>
+                    <p>
+                      Spośród dziesięciu formuł wybierzemy następujące
+                    </p>
+                    <img width="90%" src="source/illustration/4.3for6.png" alt="">
+  
+                    <p>
+                      Następnie nieznane elementy są określane za pomocą wzorów:
+                    </p>
+                    <img width="90%" src="source/illustration/4.3for7.png" alt="">
+                    <p>
+                      Formuła kontrolna musi łączyć znalezione elementy. Sprawdźmy równość <b>cos(B) = tg(c)/tg(a)</b> 
+                      <div class="alert alert-secondary" role="">
+
+                        <b>
+                          Przypadek 5.
+                        </b>
+                        <p>
+                          Dane kąty B i C. Znajdź nogi i przeciwprostokątną.
+                        </p>
+                      </div>
+                      <b>
+                        Instrukcje.
+                      </b>
+                      <p>
+                        Spośród dziesięciu formuł wybierzemy następujące
+                      </p>
+                      <img width="90%" src="source/illustration/4.3for8.png" alt="">
+    
+                      <p>
+                        Następnie nieznane elementy są określane za pomocą wzorów:
+                      </p>
+                      <img width="90%" src="source/illustration/4.3for9.png" alt="">
+                      <p>
+                        Formuła kontrolna musi łączyć znalezione elementy. Sprawdźmy równość <b>cos(a) = cos(b)cos(c)</b> 
+                        <div class="alert alert-secondary" role="">
+
+                          <b>
+                            Przypadek 6.
+                          </b>
+                          <p>
+                            Biorąc pod uwagę nogę b i przeciwległy do ​​niej kąt B. Znajdź nogę c i przeciwprostokątną a, kąt C.
+                          </p>
+                        </div>
+                        <b>
+                          Instrukcje.
+                        </b>
+                        <p>
+                          Spośród dziesięciu formuł wybierzemy następujące
+                        </p>
+                        <img  class="monochrome" src="source/illustration/4.3for10.png" alt="">
+      
+                        <p>
+                          Następnie nieznane elementy są określane za pomocą wzorów:
+                        </p>
+                        <img width="90%" src="source/illustration/4.3for11.png" alt="">
+                        <p>
+                          Formuła kontrolna musi łączyć znalezione elementy. Sprawdźmy równość <b>sin(c) = sin(a)sin(C)</b>
+
+                          <p>
+                            Aby trójkąt istniał, sina, sinc i sinC muszą być dodatnie i mniejsze niż jeden. Wymaga to, aby b i B były jednorodne — oba są większe niż 90° lub mniejsze niż 90%. Aby spełnić nierówność sina < 1, konieczne jest, aby sinb było mniejsze niż sinB. Opierając się na fakcie, że b i B muszą znajdować się w tej samej ćwiartce, dla b < 90° b < B < 90° musi być spełniony, a dla b > 90° warunek 90° < b < B.
+                          </p>
+                          <p>
+                            Jeżeli zadanie jest możliwe, to otrzymujemy dwa rozwiązania, mamy dwa trójkąty sferyczne. Boki a1, c1 i kąt C pierwszego trójkąta będą dopełnieniami odpowiednich boków drugiego trójkąta a2, C2 i kąta C2 aż do 180°. Te trójkąty będą miały wspólną nogę b, a kąty przeciwległe do tej nogi będą równe B.
+                          </p>
+                          <h2 id="4.4"  class="paragraf">
+                            § 4.4 Pytania i ćwiczenia
+                          </h2>
+                          <ol>
+                            <li>Co to jest „prostokątny trójkąt sferyczny”? Jakie są jego elementy</li>
+                            <li>Sformułuj twierdzenie Pitagorasa dla prostokątnych trójkątów sferycznych.</li>
+                            <li>Sformułuj regułę Napiera.</li>
+                            <li>Korzystając z reguły Napiera, napisz wzory odnoszące się do następujących elementów trójkąta prostokątnego: a, B, C; a, B, c; ABC; b, b, c; a, c, C; B, c, C.</li>
+                            <li>Jakie dwa elementy prostokątnego trójkąta sferycznego nazywamy jednorodnymi?</li>
+                            <li>Jak połączyć przeciwprostokątną z sąsiednimi kątami?</li>
+                            <li>Jak połączyć nogę z dwoma narożnikami B i C?</li>
+                            <li>Zapisz warunki istnienia trójkąta sferycznego prostokątnego.</li>
+                            <li>Ile jest możliwych przypadków rozwiązania trójkąta sferycznego prostokątnego?</li>
+                            <li>Wykonaj schematy obliczeniowe dla każdego przypadku rozwiązywania prostokątnych trójkątów sferycznych.</li>
+                            <li>Czy trójkąt sferyczny prostokątny jest możliwy, jeśli jego kąty są równe: B=135° , C=140°?</li>
+                            <li>Czy trójkąt sferyczny prostokątny jest możliwy, jeśli jego kąty są równe: B=35°, C=48°?</li>
+                            <li>Jak kontrolować poprawność rozwiązywania zadań wyznaczania nieznanych elementów trójkąta sferycznego prostokątnego?</li>
+                          </ol>
+
+                 </article>
+
+
+            </div>
+        
+       
+
+
+ 
+
+
+
+
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+                
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</body>
+</html>

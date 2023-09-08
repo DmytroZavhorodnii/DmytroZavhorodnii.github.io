@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+	<head>
+		<title>Sphere</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+
+			body {
+				background: radial-gradient(ellipse at center,#252878 0,rgba(11,15,29,0) 65%);
+				background-image: url(source/illustration/fon.png);
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			body::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background-image: radial-gradient(white 10%, transparent 11%);
+				background-size: 60px 60px;
+				animation: animate 15s;
+				animation-timing-function: ease-out; 
+				animation-delay: 0s;
+				animation-direction: alternate;
+				animation-iteration-count: infinite;
+				animation-fill-mode: none;
+				animation-play-state: running; 
+						}
+
+			@keyframes animate {
+			from {
+				transform: scale(1);
+				opacity: 90%;
+			}
+			to {
+				transform: scale(1.2);
+				opacity: 10%;
+			}
+			}
+
+			a {
+				color: #00AA80;
+			}
+
+			#top {
+				position: absolute;
+				top: 0px;
+				width: 100%;
+				padding: 10px;
+				text-align: center;
+			}
+
+			#info {
+
+				background-color: rgba(0,0,0,0.15);
+				border-radius: 5px;
+				padding: 5px;
+				color: #ffffff;
+				font-family: Monospace;
+				font-size:13px;
+				font-weight: bold;
+				text-shadow: rgba(0,0,0,0.75) 1px 1px 0px;
+			}
+
+
+		</style>
+
+		<link rel="stylesheet" href="source/bootstrap.css">
+		<script src="source/bootstrap.js"></script>
+		<link rel="stylesheet" href="source/css/style.css">
+	</head>
+	<body >
+		<script type="text/javascript" src="js/ThreeWebGL.js"></script>
+		<script type="text/javascript" src="js/ThreeExtras.js"></script>
+		
+		<div id="container" style="background: radial-gradient(ellipse at center,#252878 0,rgba(11,15,29,0) 65%);"></div>
+
+		<div id="top">
+			<a id="logolink" href="https://dimon.work/">	
+			<img 
+			id="logoimg"
+			src="source/illustration/dimonwhite.svg" alt="dimon.work">
+		</a>
+
+			<div id="startd">
+				<ul style="list-style: none;">
+					<li>
+						<a href="menu.html"><button id="start" type="button" class="btn btn-light  btn-lg">Start</button></a>
+						
+					
+					
+					</li>
+					<li>
+						<label id="sphlink" class="btn btn-outline-light btn-lg" for="fileInputb">
+							<ul style="list-style: none;"></ul>
+							<p style="margin-bottom: 0px;">Twoja sfera</p>
+							<p style="font-size: 8pt; margin-bottom: 0px;">wybierz foto</p>
+							
+							<input type="file" id="fileInputb" style="display:none;">
+						  </label>
+
+					</li>
+				
+				
+				</ul>
+				
+			
+				
+
+			</div>
+				
+		
+			
+		
+		
+
+
+		<script id="vs" type="x-shader/x-vertex">
+
+			uniform float offset_x;
+			uniform float offset_y;
+			uniform sampler2D map;
+
+			varying vec2 vUv;
+
+			void main() {
+
+				vUv = ( uv / 3.0 ) + vec2( offset_x, offset_y );
+				vUv.x = mod( vUv.x, 1.0 );
+				vUv.y = mod( vUv.y, 1.0 );
+
+				vec4 color = texture2D( map, vUv );
+				float dist = ( color.r + color.g + color.b ) / 3.0;
+
+				vec4 pos = vec4( position + position * dist, 1.0 );
+
+				gl_Position = projectionMatrix * modelViewMatrix * pos;
+
+			}
+
+		</script>
+
+		<script id="fs" type="x-shader/x-fragment">
+
+			uniform sampler2D map;
+
+			varying vec2 vUv;
+
+			void main() {
+
+				gl_FragColor = texture2D( map, vUv );
+
+			}
+
+		</script>
+
+		<script type="text/javascript">
+
+			var container, stats;
+			var camera, scene, renderer, canvas, context, texture;
+
+			var mouseX = 0, mouseY = 0;
+			var start_time = new Date().getTime();
+
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+
+			init();
+			animate();
+
+			
+
+			function init() {
+
+				container = document.getElementById( 'container' );
+
+				camera = new THREE.Camera( 30, window.innerWidth / window.innerHeight, 1, 5000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+
+				canvas = document.createElement( 'canvas' );
+				canvas.width = 2048;
+				canvas.height = 2048;
+
+				context = canvas.getContext( '2d' );
+
+				texture = new THREE.Texture( canvas );
+				texture.magFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter = THREE.LinearMipMapLinearFilter;
+
+
+								
+				
+				
+
+				loadImage( 'texture.jpg' );
+
+
+
+
+
+
+
+
+
+				material = new THREE.MeshShaderMaterial( {
+
+					uniforms: {
+
+						"map": { type: "t", value: 0, texture: texture },
+						"offset_x": { type: "f", value: 0 },
+						"offset_y": { type: "f", value: 0 }
+
+					},
+					vertexShader: document.getElementById( 'vs' ).textContent,
+					fragmentShader: document.getElementById( 'fs' ).textContent
+
+				} );
+
+				mesh = new THREE.Mesh( new Sphere( 130, 280, 180 ), material );
+				mesh.doubleSided = true;
+				scene.addObject( mesh );
+
+				renderer = new THREE.WebGLRenderer( { antialias: false } );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				window.addEventListener( 'resize', onWindowResize, false );
+
+				document.addEventListener( 'dragover', onDocumentDragOver, false );
+				document.addEventListener( 'dragleave', onDocumentLeave, false );
+				document.addEventListener( 'drop', onDocumentDrop, false );
+
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				mouseX = ( event.clientX - windowHalfX );
+				mouseY = ( event.clientY - windowHalfY );
+
+			}
+
+			function onWindowResize( event ) {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentDragOver( event ) {
+
+				event.preventDefault();
+
+			}
+
+			function onDocumentLeave( event ) {
+
+				event.preventDefault();
+
+			}
+
+		
+
+
+
+			function loadImage( src ) {
+
+				var image = document.createElement( 'img' );
+
+				image.onload = function () {
+
+					context.drawImage( this, 0, 0, 2048, 2048 );
+					texture.needsUpdate = true;
+
+				};
+
+				image.src = src;
+
+			}
+
+			function onDocumentDrop( event ) {
+
+				event.preventDefault();
+
+				var file = event.dataTransfer.files[ 0 ];
+				var reader = new FileReader();
+
+				reader.onload = function ( event ) {
+					
+					loadImage( event.target.result );
+					console.log( event.target.result )
+				};
+
+				reader.readAsDataURL( file );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				render();
+
+			}
+
+			function render() {
+
+				material.uniforms.offset_x.value -= mouseX * 0.000001;
+				material.uniforms.offset_y.value -= mouseY * 0.000001;
+
+				renderer.render( scene, camera );
+
+			}
+
+			
+			const fileInputb = document.getElementById('fileInputb');
+
+			// Слушаем изменение значения input
+			fileInputb.addEventListener('change', (event) => {
+			// Получаем выбранный файл
+			const file = event.target.files[0];
+
+			// Создаем объект FileReader
+			const reader = new FileReader();
+
+			// Слушаем событие загрузки файла
+			reader.addEventListener('load', (event) => {
+				// Создаем новый элемент img
+				const img = document.createElement('img');
+				loadImage(event.target.result);
+			});
+
+			// Читаем выбранный файл
+			console.log(reader.readAsDataURL(file))
+
+
+			});
+		</script>
+	</body>
+</html>

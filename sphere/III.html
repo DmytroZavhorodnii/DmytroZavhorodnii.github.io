@@ -1,0 +1,552 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>III. Podstawy trygonometrii sferycznej</title>
+		<meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="source/bootstrap.css">
+    <script src="source/bootstrap.js"></script>
+    <link rel="stylesheet" href="source/css/style.css">
+    
+    <style>
+
+        model-viewer{
+        
+            width:100%;
+        
+            height: 100vh;
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+        model-viewer{
+        
+            height:600px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 767px) {
+        
+        model-viewer{
+        
+            height:350px;
+        
+        }
+        
+        }
+        
+        </style>
+         <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+</head>
+<body>
+  
+    <body>
+        <div class="bg">
+            <div id="all"></div>
+        </div>
+        <div class="content" >
+ 
+             <div class="title">
+              Temat - III.
+            </div>
+
+           
+
+            <div class="mpage">
+
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <a href="index.html"><button type="button" class="btn btn-primary">START</button></a>
+                        
+                      <li class="page-item">
+                        <a class="page-link" href="II.html" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+ 
+                      <li class="page-item"><a  class="page-link " href="I.html">I</a></li>
+                      <li class="page-item"><a class="page-link" href="II.html">II</a></li>
+                      <li class="page-item"><a style="color: black;" class="page-link bg-secondary" href="III.html">III</a></li>
+                      <li class="page-item"><a class="page-link" href="IV.html">IV</a></li>
+                      <li class="page-item"><a class="page-link" href="V.html">V</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="IV.html" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                      <a href="menu.html"><button type="button" class="btn btn-primary">MENU</button></a>
+                      
+                    </ul>
+                  </nav>
+
+
+
+
+                <h1 id="bh1">
+                    <div class="big-text">
+                     Podstawowe wzory na trójkąty sferyczne.
+                    </div>
+                </h1>
+
+                <article class="page">
+                  <h2 id="3.1" class="paragraf">
+                    § 3.1 Wzory na cosinusy boków i kątów trójkąta sferycznego
+                  </h2>
+                  <p>
+                    Rozważmy, który przedstawia trójkąt ABC na kuli o promieniu równym jeden i środku w punkcie O. W wierzchołku A poprowadzono styczne AE i AD do boków c i b trójkąta sferycznego. Styczne te przecinają się w punktach E i D z przedłużeniem promieni kuli, które przechodzą przez wierzchołki B i C.
+                  </p>
+                  <img class="monochrome" src="source/illustration/3.1tri.png" alt="">
+                  Stosujemy twierdzenie cosinusów dla płaskich trójkątów AED i OED:
+                  <img class="eql" src="source/illustration/3.1eqlpng.png" alt="">
+                  <p>
+                    Przyrównując prawe strony równań, otrzymujemy:
+                  </p>
+                  <img  class="eql" src="source/illustration/3.1eql2.png" alt="">
+                  <img  class="eql" src="source/illustration/3.1eql3.png" alt="">
+                  <p>
+                    Biorąc pod uwagę, że promień kuli jest równy jeden, z trójkątów prostokątnych OAE OAD otrzymujemy:
+                  </p>
+                  <img  class="eql" src="source/illustration/2.3eql4.png" alt="">
+                  <img  class="eql" src="source/illustration/3.1eql5.png" alt="">
+
+                  <p>
+                    Ponieważ
+                  </p>
+                  <img  class="eql" src="source/illustration/3.1eql6.png" alt="">
+                  <img  class="eql" src="source/illustration/3.1eql7.png" alt="">
+                  <p>
+                    otrzymujemy:
+                  </p>
+
+                  <p>
+                    Mnożymy wszystkie warunki ostatniego równania przez cosb * cosc i ostatecznie mamy:
+                  </p>
+                  <img  class="eql" src="source/illustration/3.1eql9.png" alt="">
+               <p>
+                Budowa  jest możliwe, jeśli każdy z boków b i c jest mniejszy niż 90°. Dlatego wyrażenie należy uogólnić na przypadek, gdy trójkąt ma boki większe niż 90°.
+               </p>
+               <img id="ill" class="monochrome" src="source/illustration/3.2ill.png" alt="">
+               <p>
+                W tym celu rozważ <a href="III.html#ill">rys</a> . Pokazuje ABC, który ma boki b>90° i c>90°. Jeśli będziemy kontynuować te boki, aż przetną się w punkcie D, to otrzymamy sąsiedni trójkąt DBC, w którym każdy z boków 180° − b i 180° − c jest mniejszy od 90°.
+               </p>
+               <p>
+                Następnie dla trójkąta DBC formuła przyjmuje postać
+               </p>
+               <h5>
+               
+                cos(a) =  cos(180° − b)cos(180° − c)+sin(180° − b)sin(180° − c)*cos A
+             
+               </h5>
+               <p>albo:</p>
+               <h5>
+                cos(a) =  cos(b)cos(c)+sin(b)sin(c)*cos A
+               </h5>
+               <p>
+                W końcu dostajemy:
+               </p>
+               <img id="ill" class="monochrome" src="source/illustration/3.2ill2.png" alt="">
+               <p>
+                Zatem cosinus boku trójkąta sferycznego jest równy sumie iloczynów cosinusów pozostałych dwóch boków i sinusów tych samych boków, pomnożonej przez cosinus kąta między nimi.
+               </p>
+               <p>
+                Aby otrzymać wzory na cosinusy kątów trójkąta sferycznego, zapisujemy stosunki boków trójkąta A1B1C1, który jest biegunowy względem trójkąta ABC:
+               </p>
+               <img id="ill" class="monochrome" src="source/illustration/3.2ill3.png" alt="">
+               <p>
+                Zgodnie z główną właściwością wzajemnie biegunowych trójkątów ABC i A1B1C1:
+               </p>
+               <img id="ill" class="monochrome" src="source/illustration/3.2ill4.png" alt="">
+               <p>
+                Podstawienie tych równości do poprzedniego wzoru daje
+               </p>
+               <img id="systemill" src="source/illustration/3.2ill5.png" alt="">
+               <p>
+                Korzystamy ze wzorów na redukcję funkcji trygonometrycznych
+               </p>
+               <h5>
+                sin(180° − a) = sin(a), cos(180° − A) = -cos(a),
+               </h5>
+               <p>
+                a także pomnóżmy obie części każdego stosunku przez jednostkę ujemną. W rezultacie otrzymujemy wzory na cosinusy kątów trójkąta sferycznego.
+               </p>
+               <img id="systemill" src="source/illustration/3.2ill6.png" alt="">
+               <p>
+                Zatem cosinus kąta trójkąta sferycznego jest równy różnicy między iloczynami sinusów tych samych kątów pomnożonych przez cosinus boku między nimi i cosinusy pozostałych dwóch kątów.
+               </p>
+               <div class="alert alert-secondary" role="">
+                <b>
+                  Przykład użycia wzorów:
+                </b>
+                Wyznacz najkrótszą odległość (ortodromię) między A (52°11’; 49°30’) a B(58°17’; 55°36’), które leżą w północnej części kuli ziemskiej (R=6370 km).
+              </div>
+              <p>
+             <b>Rozwiązanie: </b>
+                <p>
+                  Rozważmy trójkąt sferyczny <b>BPA</b>. Ponieważ CD to łuk równika, P to biegun, a następnie boki
+                  ΔBPA są równe AP = 90° - ∠PAO = 90° - φ;  BP = 90° - ∠PBO = 90° - φ'. 
+                </p> 
+                <p>
+                  Różnica długości  - kąt ∠BPA = Δλ, równa się λ2 - λ1 = 55°36’ - 49°30’ = 6°06’
+                </p>
+                <p>
+                  Aby określić ortodromię, używamy wzoru na cosinus boku trójkąta sferycznego
+                </p>
+                <h5>
+                  cos(a) =  cos(b)cos(c)+sin(b)sin(c)*cos A
+                 </h5>
+                 <p>
+                  W naszym przypadku wzór przyjmuje postać:
+                 </p>
+                 <h5>
+                  cos(BA) = cos(90° - φ1)cos(90° - φ2)+sin(90° - φ1)sin(90° - φ2)*cos Δλ
+                 </h5>
+                 albo:
+                 <h5>
+                  cos(BA) = sin(φ1)sin(φ2) + cos(φ1)cos(φ2)*cos(Δλ)
+                 </h5>
+                 </article>
+
+
+            </div>
+            <model-viewer
+                        
+            src="source/illustration/3d/31.glb"
+        
+            shadow-intensity="1"
+        
+            
+        
+            camera-controls
+        
+            auto-rotate
+        
+            >
+        
+        </model-viewer>
+        <div class="mpage">
+          <article class="page">
+
+            <div class="alert alert-info" >
+              <form>
+
+                    
+                  <table style="background-color: whitesmoke;">
+                      <tr>
+                          <td  rowspan="5">
+                              Punkt 1
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Szerokość φ(1)</th>
+                      </tr>
+                      <tr>
+                              <td>
+                                  <label class="calctext" for="Rad1">Radiany: </label>
+                                  <input class="inputCalc" type="number" id="Rad1" value="0.91077" step="0.01">
+                              </td>
+                      </tr>
+
+                      <tr> 
+                          <th colspan="">Długość λ(1)</th> 
+                      </tr>
+                      <tr>
+
+                          <td>
+                              <label class="calctext" for="Rad11">Radiany: </label>
+                              <input class="inputCalc" type="number" id="Rad11" value="0.86394" step="0.01">
+                          </td>
+                      </tr>
+                      <tr>
+                          <td  rowspan="5">
+                              Punkt 2
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Szerokość φ(2)</th>
+                      </tr>
+                      <tr>
+                              <td>
+                                  <label class="calctext" for="Rad2">Radiany: </label>
+                                  <input class="inputCalc" type="number" id="Rad2" value="1.01724" step="0.01">
+                              </td>
+                      </tr>
+
+                      <tr> 
+                          <th colspan="">Długość λ(2)</th> 
+                      </tr>
+                      <tr>
+
+                          <td>
+                              <label class="calctext" for="Rad22">Radiany: </label>
+                              <input class="inputCalc" type="number" id="Rad22" value="0.9704" step="0.01">
+                          </td>
+
+                      </tr>
+
+
+
+
+
+                  </table>
+
+
+                  <div class=" mt-3 d-flex justify-content-evenly">
+                      <button class="btn btn-success" type="button" onclick="convertToLenth()">Policz odległości</button>
+                  </div>
+
+              </form>
+              <div class="d-flex justify-content-center mt-3 mb-2">
+                  <ul>
+         
+                  <li>
+                      <p id="delta"></p>
+                  </li>
+                  <li>
+                    <p id="coslam"></p>
+                  </li>
+                  <li>
+                    <p id="cosf1"></p>
+                  </li>     
+                  <li>
+                    <p id="cosf2"></p>
+                  </li>
+                  <li>
+                    <p id="sinf1"></p>
+                  </li>     
+                  <li>
+                    <p id="sinf2"></p>
+                  </li>
+                  <li>
+                    <p id="cosAB"></p>
+                  </li>
+                  <li>
+                    <p id="acos"></p>
+                  </li>
+                  <li>
+                    <b><p id="lenon"></p></b> 
+                 </li>
+                  </ul>
+                  
+                  
+              </div>
+
+          
+              </div>
+
+              <script>
+                  function convertToLenth() {
+
+                      let rad1 = parseFloat(document.getElementById('Rad1').value);
+                      let rad11 =  parseFloat(document.getElementById('Rad11').value);
+                      let rad2 =  parseFloat(document.getElementById('Rad2').value);
+                      let rad22 =  parseFloat(document.getElementById('Rad22').value);
+
+                      console.log(rad1)
+                      console.log(rad11)
+                      console.log(rad2)
+                      console.log(rad22)
+
+
+
+                      delta  = Math.abs(rad11 - rad22) ;
+                      cosl = Math.cos(delta);
+                      cosf1 = Math.cos(rad1);
+                      cosf2 = Math.cos(rad2);
+                      sinf1 = Math.sin(rad1);
+                      sinf2 = Math.sin(rad2);
+                      cosAB = sinf1*sinf2+cosf1*cosf2*cosl;
+                      cosABrad = Math.acos(cosAB);
+                      lenon = 6370*cosABrad
+                      
+                
+                      document.getElementById('delta').innerHTML = "Δλ = |λ1 - λ2| = " + delta.toFixed(5);
+                      document.getElementById('coslam').innerHTML = "cos(Δλ) = " + cosl.toFixed(5);
+                      document.getElementById('cosf1').innerHTML = "cos(φ1) = " + cosf1.toFixed(5);
+                      document.getElementById('cosf2').innerHTML = "cos(φ2) = " + cosf2.toFixed(5);
+                      document.getElementById('sinf1').innerHTML = "sin(φ1) = " + sinf1.toFixed(5);
+                      document.getElementById('sinf2').innerHTML = "sin(φ2) = " + sinf2.toFixed(5);
+                      document.getElementById('cosAB').innerHTML = "cos(AB) = sin(φ1)sin(φ2) + cos(φ1)cos(φ2)*cos(Δλ) = " + cosAB.toFixed(5);
+                      document.getElementById('acos').innerHTML = "arccos(AB) = " + cosABrad.toFixed(5);
+                      document.getElementById('lenon').innerHTML = "d = 6370km *arccos(AB)= " + lenon.toFixed(2) +"km";
+
+                      
+
+                
+                        
+                  }
+              </script>
+              <h2 id="3.2" class="paragraf">
+                § 3.2 Twierdzenie sinusów
+              </h2>
+              <div class="alert alert-secondary" role="">
+                <b>
+                  TWIERDZENIE:
+                </b>
+                Stosunek sinusa kąta trójkąta sferycznego do sinusa przeciwległego boku jest wartością stałą. Innymi słowy, sinusy boków trójkąta sferycznego są proporcjonalne do sinusów przeciwległych kątów
+                <img class="Sdu" src="source/illustration/3.2sin.png" alt="">
+                gdzie K = const.
+              </div>
+              <p>
+             <b>Dowód: </b>W p.3.1 był otrzyman wzór
+              </p>
+              <h5>cos(a) = cos(b)cos(c)+sin(b)sin(c)*cos A</h5>
+              <p>
+                z czego wynika:
+              </p>
+              <img class="eql" src="source/illustration/3.2cos.png" >
+              <p>
+                Następnie
+              </p>
+              <img id="systemill" src="source/illustration/3.2systemsin.png" >
+              <p>
+                podzielimy obie części wynikowego wyrażenia przez <b>sin^2(A)</b> 
+              </p>
+              <img id="systemill" src="source/illustration/3.2systemsin2.png" >
+              <p>
+                Wyrażenie po prawej stronie równości jest symetryczne względem elementówm (a, b, c)  i nie zmieni swojej wartości przy kołowej permutacji liter.
+              </p>
+              <p>
+                Dlatego K można przyjąć jako stałą i otrzymujemy <b>sin(A)/sin(a) = K</b>
+              </p>
+              <h5>
+                <b>
+                  Twierdzenie zostało udowodnione.
+                </b>
+              
+              </h5>
+              <ul>
+                Twierdzenie sinus ustanawia związek między bokami i przeciwległymi kątami trójkąta sferycznego:
+                <li>
+                  Równe kąty leżą naprzeciw równych boków trójkąta sferycznego.
+                </li>
+                <li>
+                  Największy bok trójkąta sferycznego leży naprzeciw największego kąta i odwrotnie, największy kąt leży naprzeciw największego boku trójkąta sferycznego.
+                </li>
+              </ul>
+              <div class="alert alert-secondary" role="">
+                <b>
+                  Przykład użycia wzorów:
+                </b>
+                Znane są dwa boki trójkąta sferycznego a = 70°14’; b = 62°10’; i kąt A = 80°20’. Wyznacz kąt B.
+              </div>
+              <b>Rozwiązanie:</b> Zgodnie z twierdzeniem o sinów dostajemy: <b>sin(B) = sin(A) * sin(B)/sin(a)</b> .
+              <p>
+                sin(B) = 0,9263
+              </p>
+              <h5>
+                <b>Kąt B = 1,1846rad</b>
+              </h5>
+              <h2 id="3.3" class="paragraf">
+                §3.3 Wzory na pięć elementów trójkąta sferycznego
+              </h2>
+              <ol>
+                Formuły pięciu elementów ustanawiają związek:
+                <li>
+                  między trzema bokami i dwoma rogami trójkąta sferycznego (podstawowe wzory pięciu elementów);
+                </li>
+                <li>
+                  między trzema kątami i dwoma bokami trójkąta sferycznego (zmodyfikowane wzory pięciu elementów).
+                </li>
+              </ol>
+              <p>
+                Aby otrzymać wzory na pięć elementów, używamy wzoru na cosinusy boków trójkąta sferycznego
+              </p>
+              <img class="eql" src="source/illustration/3.3for1.png" alt="">
+              <p>
+                Wyeliminuj cos(c) ​​z pierwszego wzoru za pomocą drugiej:
+              </p>
+              <img id="systemill" src="source/illustration/3.3for2.png" alt="">
+              <p>
+                Połączmy wyrazy podobne i podzielmy obie strony równości przez sin(a), otrzymamy:
+              </p>
+              <img class="eql" src="source/illustration/3.3for3.png" alt="">
+              <p>
+                Jeśli cos(b) jest wykluczone ze wzorów, to przez analogię otrzymujemy
+              </p>
+              <img class="eql" src="source/illustration/3.3for4.png" alt="">
+              <p>
+                Podobne przekształcenia przeprowadzamy dla pozostałych dwóch par wzorów, otrzymujemy układ wzorów dla pięciu elementów trójkąta sferycznego.
+              </p>
+              <img id="systemill" src="source/illustration/3.3system.png" alt="">
+              <p>
+                Iloczyn sinusa boku i cosinusa sąsiedniego kąta jest równy iloczynowi sinusa trzeciego boku i cosinusa boku przeciwnego do tego kąta, bez iloczynu cosinusa trzeciego boku i sinus tego samego przeciwległego boku i cosinus kąta między nimi.
+              </p>
+              <p>
+                Otrzymane wzory są jednorodne pod względem sinusów boków trójkąta sferycznego. Zgodnie z twierdzeniem o sinusach dokonamy zmiany w tych wzorach:
+              </p>
+              <img class="eql" src="source/illustration/3.3for5.png" alt="">
+              <p>
+                Po prostych przekształceniach otrzymujemy tzw. zmodyfikowane wzory pięciu elementów, które ustalają zależność między trzema kątami i dwoma bokami trójkąta sferycznego.
+              </p>
+              <img id="systemill" src="source/illustration/3.3system.2png.png" alt="">
+              <p>
+                Iloczyn sinusa kąta razy cosinus sąsiedniego boku jest równy iloczynowi cosinusa kąta przeciwległego do tego boku razy sinus trzeciego kąta plus iloczyn sinusa przeciwnego kąta razy cosinus trzeci kąt i cosinus boku między nimi.
+              </p>
+              <h2 id="3.4" class="paragraf">
+                §3.4 Wzory na cztery elementy trójkąta sferycznego
+              </h2>
+              <p>
+                Wybieramy na przykład jedną z formuł z podrozdziału 3.3
+              </p>
+              <img class="eql" src="source/illustration/3.4for1.png" alt="">
+              <p>
+                Zgodnie z twierdzeniem sinusów
+              </p>
+              <h5>
+                sin(b)*sin(A) =  sin(a)*sin(b) 
+              </h5>
+              <p>
+                Dzieląc pierwsze równanie przez drugie, otrzymujemy
+              </p>
+              <img class="eql" src="source/illustration/3.4for2.png" alt="">
+              <img class="eql" src="source/illustration/3.4for3.png" alt="">
+              <img class="eql" src="source/illustration/3.4for4.png" alt="">
+
+              <p>
+
+                Tak więc, jeśli po lewej stronie każdej formuły dokonamy zamiany sinusów boków zgodnie ze wzorami uzyskanymi z twierdzeniem sinusów
+              </p>
+              <img width="90%" src="source/illustration/3.4for6.png" alt="">
+              <img class="eql" src="source/illustration/3.4for5.png" alt="">
+              <p>
+                następnie po prostych przekształceniach otrzymujemy wzory na cztery elementy trójkąta sferycznego:
+              </p>
+              <img id="systemill" src="source/illustration/3.4sys.png" alt="">
+              <p>
+                Jeśli w sferycznym trójkącie, zgodnie ze schematem na rysunku, weźmiemy rząd czterech sąsiednich elementów, na przykład b, C, a, B, wówczas elementy C, a są środkowe, a elementy b, B są skrajny. Wówczas iloczyn cosinusów elementów środkowych jest równy iloczynowi cotangensa skrajnego boku przez sinus środka bez iloczynu cotangensa skrajnego kąta przez sinus kąta środkowego.
+              </p>
+              <img class="monochrome" src="source/illustration/3.4cykl.png" alt="">
+              <h2 id="3.5" class="paragraf">
+                § 3.5 Pytania i ćwiczenia
+              </h2>
+              <ol>
+                <li>Jaka jest metoda zamiany?</li>
+                <li>Ile podstawowych wzorów łączy sześć elementów trójkąta sferycznego?</li>
+                <li>Jak obliczyć najkrótszą odległość między dwoma punktami na kuli?</li>
+                <li>Ile podstawowych wzorów łączy pięć elementów trójkąta sferycznego?</li>
+                <li>Ile podstawowych wzorów łączy cztery elementy trójkąta sferycznego?</li>
+                <li>Ile niezależnych wzorów z ogólnej liczby wzorów łączących cztery elementy trójkąta sferycznego?</li>
+                <li>Jaką zależność określa twierdzenie o sinusie sferycznym?</li>
+              </ol>
+          </article>
+        </div>
+        
+       
+
+
+ 
+
+
+
+
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+                
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</body>
+</html>

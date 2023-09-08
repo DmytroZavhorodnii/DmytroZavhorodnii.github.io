@@ -1,0 +1,845 @@
+
+    <!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>I. Wprowadzenie do trygonometrii sferycznej.</title>
+		<meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="source/bootstrap.css">
+    <script src="source/bootstrap.js"></script>
+    <link rel="stylesheet" href="source/css/style.css">
+    
+    <style>
+
+        model-viewer{
+        
+            width:100%;
+        
+            height: 100vh;
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+        model-viewer{
+        
+            height:600px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 767px) {
+        
+        model-viewer{
+        
+            height:350px;
+        
+        }
+        
+        }
+        
+        </style>
+         <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+</head>
+<body>
+  
+    <body>
+        <div class="bg">
+            <div id="all"></div>
+        </div>
+        <div class="content" >
+ 
+             <div class="title">
+                Temat - I.
+            </div>
+
+           
+
+            <div class="mpage">
+
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <a href="index.html"><button type="button" class="btn btn-primary">START</button></a>
+                        
+                      <li class="page-item">
+                        <a class="page-link" href="V.html" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+ 
+                      <li class="page-item"><a style="color: black;" class="page-link bg-secondary" href="I.html">I</a></li>
+                      <li class="page-item"><a class="page-link" href="II.html">II</a></li>
+                      <li class="page-item"><a class="page-link" href="III.html">III</a></li>
+                      <li class="page-item"><a class="page-link" href="IV.html">IV</a></li>
+                      <li class="page-item"><a class="page-link" href="V.html">V</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="II.html" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                      <a href="menu.html"><button type="button" class="btn btn-primary">MENU</button></a>
+                      
+                    </ul>
+                  </nav>
+
+
+
+
+                <h1 id="bh1">
+                    <div class="big-text">
+                         Wprowadzenie do trygonometrii sferycznej.
+                    </div>
+                </h1>
+
+                <article class="page">
+                
+                    <h2 id="1.1" class="paragraf">
+                        
+                        § 1.1 Kąty i kręgi na kuli. 
+                    </h2>
+                    <p>
+                        Kula to ciało utworzone przez obrót półkola wokół swojej średnicy. Geometria sferyczna to dziedzina matematyki zajmująca się badaniem figur geometrycznych leżących na powierzchni kuli. Powstała powierzchnia nazywana jest powierzchnią sferyczną. Często taka powierzchnia nazywana jest po prostu kulą. Zatem kula jest zbiorem punktów w przestrzeni równoodległych od jednego punktu, zwanego środkiem kuli.
+                    </p>
+                    <p>
+                        Każda płaszczyzna K, przecinająca się z kulą, zakreśli na kuli określony okrąg
+                    </p>
+
+                    <img id="Sphere1" src="source/illustration/Sphere1.svg" alt="Sphere1">
+                </article>
+
+
+                       
+                
+            </div>
+            <div>
+                
+            
+                <model-viewer
+                
+                    src="source/illustration/3d/1st-Copy.glb"
+                
+                    shadow-intensity="1"
+                
+                    
+                
+                    camera-controls
+                
+                    auto-rotate
+                
+                >
+                
+                </model-viewer>
+                
+               
+
+
+            </div>
+
+            
+            <div id="pageunder" class="mpage">
+                <article  class="page">
+                <p>
+                    Prostopadła do płaszczyzny K średnica kuli przechodząca przez jej środek O przecina kulę w dwóch punktach M i M1, zwanych <b>sferycznymi środkami</b>  okręgu. Okręgi, których płaszczyzny przechodzą przez środek kuli O, nazywane są <b>kołami wielkimi</b> ; pozostałe okręgi na kuli nazywane są mniejszymi okręgami. Sferyczne środki M i M1 wielkiego koła nazywane są jego <b>biegunami</b>. Bieguny są oddalone o 90° od odpowiednich kół wielkich lub ćwiartki koła. Rzeczywiście, punkty A i B wielkiego koła leżą na łukach AM i VM1, które są równe 90° .
+                   
+                </p>
+
+                
+
+
+   
+                    <p>
+                        Przez dwa punkty na kuli, które nie leżą na końcach tej samej średnicy, można narysować łuk koła wielkiego i to w dodatku tylko jednego. Łuk - koło wielkie - to najkrótsza odległość między punktami na kuli. Należy zauważyć, że dwa punkty dzielą okrąg na dwie nierówne części. Mniejszy łuk AB wielkiego koła wyznacza <b>sferyczną (najkrótszą) odległość</b>  między punktami A i B na powierzchni kuli. Łuk ten nazywany jest <b>linią geodezyjną</b>. Linie geodezyjne odgrywają na kuli taką samą rolę jak linie proste w planimetrii.
+                    </p>
+                    <p>
+                        Tabela zawiera szereg analogii między pojęciami związanymi z płaszczyzną i sferą, przydatnych do dalszej nauki.
+                    </p>
+                        <table>
+                            <tr>
+                                <th>Plaszczyzna</th>
+                                <th>Sfera</th>
+                            </tr>
+                            <tr>
+                                <td>Linia prosta</td>
+                                <td>Łuk wielkiego koła</td>
+                            </tr>
+                            <tr>
+                                <td>Tylko jedna prosta przechodzi przez dwa punkty</td>
+                                <td>Przez dwa punkty na kuli, które nie leżą na końcach tej samej średnicy, przechodzi tylko jeden łuk wielkiego koła</td>
+                            </tr>
+                            <tr>
+                                <td>Dwie proste przecinają się tylko w jednym punkcie</td>
+                                <td>Dwa łuki wielkich kół o kącie mniejszym niż 180° przecinają się w jednym punkcie</td>
+                            </tr>
+                            <tr>
+                                <td>Krzywa</td>
+                                <td>Łul małego koła</td>
+                            </tr>
+                        </table>
+                        <p>
+                            W trygonometrii sferycznej brane są pod uwagę tylko takie figury, które są utworzone przez łuki wielkich kół, dlatego w dalszej części tekstu słowo „łuk” oznacza odcinek łuku wielkiego koła. W tych przypadkach, jeśli chodzi o łuk małego koła, zostanie to specjalnie określone. Długość łuku jest proporcjonalna do wartości <b>kąta środkowego</b> , czyli kąta opisanego końcem promienia przy przejściu od jednego końca łuku do drugiego, więc łuk na kuli mierzy się kąt między promieniami opartymi na końcach tego łuku.
+                        </p>
+                        <p>
+                            Z reguły w trygonometrii sferycznej, zgodnie z sugestią Leonharda Eulera, brane są pod uwagę tylko te łuki, których długość jest równa lub mniejsza niż połowa długości koła, to znaczy 180°. Ta reguła nazywa się 
+                            <b>
+                                ograniczeniem Eulera. 
+                            </b>
+                            
+                        </p>
+                        <div style="display: block;">
+                               <img class="monochrome" src="source/illustration/Sphere_-_monochrome_simple.svg" alt="Sphere_-_monochrome_simple">
+                        <p class="m-auto">
+                            Dwa łuki, BB1 i CC1, przecinające się w jednym punkcie
+                            A na kuli tworzą kąt sferyczny CAB, który będziemy oznaczać &#x2220 CAB. gdzie A jest jego wierzchołkiem, a łuki AB i AC są bokami kąta sferycznego. Wartość kąta sferycznego mierzy się jako kąt między stycznymi MA i NA do boków kąta sferycznego CAB w wierzchołku kąta sferycznego.
+                        </p>
+                        </div>
+                         
+
+                        <div class="alert alert-secondary" role="">
+                            <b>
+                                TWIERDZENIE:
+                            </b>
+                            Kąt sferyczny BAC ( <a href="I.html#dok1">rys.</a> ) mierzy się łukiem BC,
+                            zamknięty pomiędzy bokami, dla którego wierzchołkiem kąta A jest biegun, 
+                            <b>
+                                &#x2220 BAC = ∪ BC
+                            </b>
+                          </div>
+                          <p>
+                         <b>Dowód: </b>
+                            <p>
+                                Ponieważ łuki ABA1 i ACA1 są łukami wielkich okręgów, punkty A i A1 leżą na tej samej średnicy AOA1, reprezentującej linię przecięcia płaszczyzn ABA1 i ACA1. Płaszczyzny te tworzą kąt dwuścienny, który będziemy nazywać odpowiadającym kątowi sferycznemu BAC.
+                            </p>   
+                            
+                          </p>
+                          <img id="dok1"  class="monochrome" src="source/illustration/dokaz.svg" alt="">
+                          <p>
+                            Narysujmy styczne MA i NA do boków kąta sferycznego ABC w jego wierzchołku A. Dzięki własności stycznych leżą one w płaszczyznach kół wielkich ABA1 i ACA1 oraz AM⊥AA1, AN⊥AA1. Narysujmy płaszczyznę przekroju OCBD, prostopadłą do średnicy AA1 i przechodzącą przez środek kuli O. Przecięcie tej płaszczyzny z kulą da koło wielkie BCD, dla którego punkty A i A1 są biegunami. Okrąg ten przecina się z łukami ABA1 i ACA1 w punktach B i C. Zgodnie z konstrukcją OB⊥AA1 i OC⊥AA1 . Zatem kąt BOC będzie również kątem płaskim kąta dwuściennego MAA1N, a ponieważ wszystkie kąty płaskie kąta dwuściennego są równe, &#x2220 BOC = &#x2220 MAN = &#x2220 BAC
+                          </p>
+                          <p>
+                            Ponieważ kąt BOC jest środkowym kątem łuku &#x2220 BOC = ∪ BC ==>  &#x2220 BAC = ∪ BC, cnd.
+                          </p>
+                          <p>
+                           <b>Wniosek 1.</b>  Kąt sferyczny i odpowiadający mu kąt dwuścienny mają tę samą miarę
+                          </p>
+                          <p>
+                            <b>Wniosek 2.</b>  Łuk koła wielkiego przechodzący przez biegun innego koła wielkiego jest prostopadły do ​​tego koła wielkiego.  ∪ AB =  ∪ BC ( <a href="I.html#dok1">rys.</a> )
+                          </p>
+                          <p>
+                            Łuk ∪AB nazywamy <b>sferyczną prostopadłą </b> do łuku ∪BC, ponieważ kąt między łukami wynosi 90°
+                          </p>
+                          <p>
+                            <b>
+                                Wniosek 3.
+                            </b>
+                            Sferyczna prostopadła do danego łuku wielkiego koła przechodzi przez biegun tego wielkiego koła
+                          </p>
+                          <p>
+                            <b>Dowód: </b>
+                            <p>
+                                Prosta OB leży w płaszczyźnie CODB, która jest prostopadła do prostej AA1. Przez dwie proste AO i OB, przecinające się w punkcie O, rysujemy płaszczyznę AOA1B. Ta płaszczyzna jest prostopadła do płaszczyzny CODB. Na przecięciu z kulą płaszczyzna tworzy łuk koła wielkiego ABA1. Zgodnie z Wnioskiem 2 łuk przechodzący przez biegun jakiegoś innego koła wielkiego jest prostopadły do ​​tego koła wielkiego, co dowodzi Wniosku 3.
+                            </p>
+                          </p>
+                          <p>
+                            <b>
+                                Wniosek 4. 
+                            </b>
+                            Pionowe kąty sferyczne są sobie równe
+                          </p>
+                          <p>
+                            <b>
+                                Wniosek 5.
+                            </b>
+                            Suma sąsiednich kątów sferycznych wynosi 180°.
+                          </p>
+                        <h2 id="1.2" class="paragraf">
+                            § 1.2 Pomiar łuków i kątów środkowych
+                        </h2>
+                        <p>
+                            Następujące jednostki są używane do pomiaru długości łuków i odpowiadających im kątów środkowych:
+                        </p>
+                        <table>
+
+                            <tr>
+                                <td><b id="1.St">1. Stopień</b></td>
+                                <td>kąt środkowy odpowiadający łukowi 1/360 koła. Stopień (°) dzieli się na 60 minut ('), minutę dzieli się na 60 sekund ("). Miara stopni jest najczęściej stosowana w naukach przyrodniczych i technice. Aby przedstawić stopnie jako ułamek dziesiętny (StD°), używamy skorzystaj ze wzoru:
+                                    <br><br>
+                                    <div class="d-flex justify-content-center">
+                                        <div>
+                                        <b>
+                                        St°M'Sek" = St + ( (M/60) + (Sek/3600) ) = StD°
+                                        </b>
+                                        <br>
+                                        <br>
+                                        St° - stopnie, M' - minuty, Sek" - sekundy, StD° - stopnie dziesiętne
+                                        </div>
+                                       
+
+                                    </div>
+                                    
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b id="2.Ra">2. Radian</b></td>
+                                <td>
+                                    <p>kąt środkowy oparty na łuku, którego długość jest równa jednemu promieniowi. Miara radiana jest używana głównie w obliczeniach teoretycznych i wzorach analitycznych. 2π radianów odpowiada 360° .</p>
+                                    <p>Miary stopni i radianów są połączone następującymi zależnościami: 1 radian = 57,29577951° ; 1°=0,01745329. Aby przeliczyć stopnie (StD°) na radiany (R), zaleca się użycie wzoru:</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div>
+                                        <b>
+                                        R = StD° * (π/180°) 
+                                        </b>
+                                        </div>
+                                       
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>3. Godzina</b></td>
+                                <td>kąt środkowy odpowiadający łukowi w 1/24 koła. Godzina ( h ) dzieli się na 60 minut ( m ), minuta dzieli się na 60 sekund ( s ). Miara godzinowa jest używana, gdy obliczenia dotyczą obrotu Ziemi i liczenia czasu. Aby rozróżnić jednostki miar godzinowych i stopniowych, często wyjaśnia się: „minuta łuku” - w miarach stopni lub „sekunda czasu” - w miarach czasu. Miary godzinowe i stopniowe są powiązane zależnościami:
+                                    <div class="d-flex justify-content-center">
+                                        <div>
+                                        <b>
+                                        1° = 4m, 1h = 15°, 1' = 4s, 1m = 15', 1s = 15"
+                                        </b>
+                                        </div>
+                                       
+
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                        </table>
+                        <br>
+                        <p>
+                            Zależność miary kątowej (stopień), radianowej i liniowej łuku wielkiego koła określa wzór:
+                        </p>
+                        <img class="eql"  src="source/illustration/formula2.svg" alt="">
+                        <p>
+                            L, α, α° - liniowa, radianowa i kątowa miara łuku koła wielkiego; R - jest promieniem kuli; ρ° - liczba jednostek kąta w radianie ρ° = 180°/π = 57,2957795°.
+                        </p>
+                        <p>
+                            Zależność miary radianowej od liniowej miary łuku małego koła przechodzącego przez punkt D leżący na łuku BD o kącie środkowym φ  od ΔODO1 określa wzór:
+                        </p>
+                        <img id="f3" class="eql" src="source/illustration/formula-3.svg" alt="">
+                        <div class="d-flex justify-content-center">
+                            <p>na modele niżej L= AB, l = CD</p>
+                        </div>
+
+
+
+                    
+                          
+
+
+                        
+                        
+                        
+                        
+
+                        
+          
+                    
+
+
+                    
+                </article>
+
+
+                       
+                
+            </div>
+
+            <model-viewer
+                
+            src="source/illustration/3d/anotherONE.glb"
+        
+            shadow-intensity="1"
+        
+            
+        
+            camera-controls
+        
+            auto-rotate
+        
+        >
+        
+        </model-viewer>
+
+        <div id="pageunder" class="mpage">
+            <article  class="page"> 
+                <h2 id="1.3" class="paragraf">
+                    § 1.3. Układ współrzędnych geograficznych sferycznych
+                </h2>
+                <p>
+                    Położenie punktu na powierzchni kuli (na przykład kuli ziemskiej) określa się za pomocą współrzędnych geograficznych: <b>szerokości i długości</b>  geograficznej. Równoleżniki i południki tworzą układ współrzędnych siatki na powierzchni Ziemi, za pomocą którego można precyzyjnie określić dowolny punkt na Ziemi. Szerokość i długość geograficzna to odpowiednio współrzędne równoleżników i południków, które są mierzone w stopniach i reprezentują odległości kątowe obliczone od środka Ziemi do jej powierzchni względem równika w pionie (na szerokości geograficznej - φ) i względem zera południk poziomo (na długości geograficznej - λ).
+                </p>
+                <p>
+                    Szerokość geograficzna φ jest mierzona odległością sferyczną wzdłuż południka od równika do odpowiedniego równoleżnika φ=NM (północ lub południe od 0° do 90°). Długość geograficzną mierzy się pod kątem λ od głównego południka do odpowiedniego południka (wschód lub zachód od 0° do 180°).
+                </p>
+                
+                <p>
+                    Zatem punkt M na kuli ziemskiej jest określony przez współrzędne:
+                </p>
+
+                <img class="monochrome" src="source/illustration/geo.svg" alt="">
+                <p>
+                    Współrzędne punktu są zwykle zapisywane w stopniach, minutach i sekundach. Do kolejnych obliczeń zaleca się przepisanie współrzędnych punktu w stopniach jako ułamek dziesiętny oraz w radianach. Jest to wygodny zapis przy stosowaniu wzorów trygonometrycznych.
+                </p>
+                <p>
+                    Rozważmy dwa dowolne punkty M1 i M2 na powierzchni kuli. <b>Azymut</b>  punktu M2 względem punktu M1 to kąt sferyczny μ21, który tworzy ortodrom M1M2 oraz mniejszy łuk południka PM1P1, przechodzący przez punkt M1 ( <a href="I.html#1.6">rys</a> ).
+                </p>
+                <img id="1.6" class="monochrome" src="source/illustration/geo2.svg" alt="">
+                <div class="alert alert-secondary" role="">
+                <p>
+                    <b>Przykład.</b>Współrzędne Charkowa: 49°58′50” szerokości geograficznej północnej i 36°15′9” długości geograficznej wschodniej. Oblicz współrzędne jako ułamek dziesiętny, a także w radianach.
+                </p>
+                </div>
+
+                <p>
+                    <b>Rozwiązanie.</b> 
+                    <p>Aby przeliczyć współrzędne ułamka dziesiętnego, używamy wzoru ( <a href="I.html#1.St">1.Stopień </a> ):</p>
+                    
+                </p>
+
+                <p>
+                    <b>Szerokość: </b>49°58′50” =49 + (58/60 + 50/3600)= 49,98056°;
+                </p>
+                <p>
+                    <b>Długość: </b>36°15′9” =36 + (15/60 + 9/3600)= 36,2525°;
+                </p>
+                <p>
+                    Aby obliczyć współrzędne w radianach, używamy wzoru ( <a href="I.html#2.Ra">2. Radian</a> ):
+                </p>
+                <p>
+                    <b>Szerokość: </b>49,98056° * (π/180°) = 0,872325;
+                </p>
+                <p>
+                    <b>Długość: </b>36,2525° * (π/180°) =  0,632725;
+                </p>
+                <p>
+                    Dzięki Internetowi problem ten można łatwo rozwiązać za pomocą kalkulatora online.
+                </p>
+
+
+
+                <div id="calc1" class="alert alert-info" >
+                <form>
+                    <div class="d-flex justify-content-center mb-3">
+                        <label class="calctext" for="degrees">Stopnie: </label>
+                        <input type="number" id="degrees" min="-180" max="180" value="49">
+                    </div>
+                    <div class="d-flex justify-content-center mb-3" >
+                        <label class="calctext" for="minutes">Minuty: </label>
+                        <input type="number" id="minutes" min="0" max="59" value="58">
+                    </div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <label class="calctext" for="seconds">Sekundy: </label>
+                        <input type="number" id="seconds" min="0" max="59" value="50">
+                    </div>
+                    <div class=" mt-3 d-flex justify-content-evenly">
+                        <button class="btn btn-success" type="button" onclick="convertToDecimal()">Przelicz w dziesiętne</button>
+                        <button class="btn btn-success" type="button" onclick="convertToRadians()">Przelicz w radianowe</button>    
+                    </div>
+
+                </form>
+                <div class="d-flex justify-content-center mt-3 mb-2">
+                    <b>
+                        <p class="calctext" id="result"></p>
+                    </b> 
+                    
+   
+                </div>
+                <div class="d-flex justify-content-center"> 
+                    <b><p class="calctext" id="result1"></p></b>
+                    
+                </div>
+            
+                </div>
+
+                <script>
+                    function convertToDecimal() {
+                        let degrees = parseFloat(document.getElementById('degrees').value);
+                        let minutes = parseFloat(document.getElementById('minutes').value);
+                        let seconds = parseFloat(document.getElementById('seconds').value);
+                        let decimal = degrees + (minutes/60) + (seconds/3600);
+                        document.getElementById('result').innerHTML = "Dziesiętne : " + decimal;
+                    }
+                    function convertToRadians() {
+                        let degrees = parseFloat(document.getElementById('degrees').value);
+                        let minutes = parseFloat(document.getElementById('minutes').value);
+                        let seconds = parseFloat(document.getElementById('seconds').value);
+                        let decimal = degrees + (minutes/60) + (seconds/3600);
+                        let radians = decimal * (Math.PI/180);
+                        document.getElementById('result1').innerHTML = "Radianowe: " + radians;
+                    }
+                </script>
+
+                <h2 id="1.4" class="paragraf">
+                    § 1.4. Loxodroma
+                </h2>
+                <p>
+                    Loxodroma (lub loxodromia) - krzywa na powierzchni obrotu przecinająca wszystkie południki pod stałym kątem K, który nazywa się kątem toru loksodromu. Pojęcie to zostało wprowadzone przez portugalskiego matematyka Noniusza w 1529 roku.
+                </p>
+                <img class="monochrome" src="source/illustration/loxodrome.png" alt="">
+            </article>
+        </div>
+        <model-viewer
+                
+        src="source/illustration/3d/loxodrome_dense__ornament.glb"
+    
+        shadow-intensity="1"
+    
+        
+    
+        camera-controls
+    
+        auto-rotate
+    
+    >
+    
+    </model-viewer>
+        <div class="mpage" id="pageunder">
+            <article class="page">
+                <p>
+                    Na powierzchni Ziemi loxodromy to wszystkie równoleżniki (K=±90°) i wszystkie południki (K=0° i K=180°). Pozostałe loxodromy to spirale, wykonujące nieograniczoną liczbę obrotów, zbliżające się do biegunów. Jeśli podróżnik porusza się wzdłuż dowolnego loxodromu (z wyjątkiem równoleżników) ze stałą prędkością bez zatrzymywania się, to na pewno dotrze do jednego z biegunów w skończonym czasie.
+                </p>
+                <p>
+                    Loxodrome jest szeroko stosowany w nawigacji morskiej i lotniczej, gdzie kąt K jest interpretowany jako rzeczywisty kurs statku lub samolotu. Zastosowanie loxodromu zamiast ortodromu (reprezentującego najkrótszą odległość między dwoma punktami na kuli) wynika z praktycznej wygody sterowania statkiem lub samolotem, chociaż w tym przypadku droga jest dłuższa. Loxodrome jest czasami używany w geodezji sferycznej.
+                </p>
+
+                <p>
+                    Niech promień Ziemi będzie równy R, a promień jakiegoś równoległego AB - r. Następnie wyrażenie r = Rcos(φ). Niech łuk М0С będzie loxodromem z dwoma sąsiednimi dowolnymi punktami M1 (φ1 ,λ1) i М2 (φ2 ,λ2); K - kąt przecięcia loxodromu z południkami ziemi.
+
+                    Długość łuku równoleżnika MM2 i długość łuku południka MM, które są zawarte między tymi dwoma punktami, wyznacza się na podstawie długości promieni i wartości kąta środkowego.
+                </p>
+                <img id="MM" class="monochrome" src="source/illustration/formula2.png" alt="">
+                <p>
+                    <b>Δλ = λ2 - λ1</b> Trójkąt M1MM2 ze względu na swoją małość można uznać za płaski, dodatkowo kąt M jest równy 90°, zatem
+                </p>
+                <img id="MM" class="monochrome" src="source/illustration/formula3.png" alt="">
+                <img style="width: 90%;" class="monochrome" src="source/illustration/corn-sph.png" alt="">
+            </article>
+        </div>
+        <model-viewer
+                
+        src="source/illustration/3d/another1BUTtheSECOND.glb"
+    
+        shadow-intensity="1"
+    
+        
+    
+        camera-controls
+    
+        auto-rotate
+    
+    >
+    
+    </model-viewer>
+        <div class="mpage" id="pageunder">
+            <article class="page">
+                <p>
+                    Przejdźmy od elementarnych małych przyrostów do nieskończenie małych: <b>Δφ = dφ, Δλ = dλ</b>
+                </p>
+                <p>
+                    Wtedy tgK = dλ * cosφ/dφ , stąd dλ = tgK * dφ/cosφ
+                </p>
+                <p>
+                    Rozwiązujemy otrzymane równanie różniczkowe:
+                </p>
+                <img class="eql" src="source/illustration/integral1.png" alt="">
+                <p>Obliczając całki, otrzymujemy</p>
+                <img id="MM" class="monochrome" src="source/illustration/la2-la1.png" alt="">
+                <img id="MM" class="monochrome" src="source/illustration/formula4.png" alt="">
+                <br>
+                <p>
+                    Z trójkąta M1MM2 wynika również, że M2M1 = MM1/cosK, ale skoro MM1 = Rdφ, to długość łuku M2M1 loxodrome oblicza się ze wzoru 
+                </p>
+                <img class="eql" src="source/illustration/formula5.png" alt="">
+                <p>
+                    Z analizy równań można wyciągnąć następujące wnioski.
+                </p>
+                <ol>
+                   <li>
+                    <p>
+                        Gdy <b> К=0° lub  К=180° wynika z tego, że tgК= 0</b>. Wtedy Δλ = λ2 - λ1 = 0 ==> λ2 = λ1, to znaczy <b>loxodrom pokrywa się z południkiem</b> .
+                    </p>
+                       
+                   </li>
+                   <li>
+                    
+                    Gdy <b> K = 90° lub K = -90°, wynika z tego, że tgK dąży do nieskończoności</b>; a jest to możliwe, jeśli mianownik ułamka po prawej stronie jest równy zeru,  φ2 = φ1 . W takich przypadkach <b>loksodrom pokrywa się z równoleżnikiem</b>
+                    <p>W szczególnym przypadku, przy φ2 = φ1 = 0°, loksodrom pokrywa się z równikiem.</p>
+                   </li>
+                     <li>
+                        <p>
+                            Niech φ1 = 0°, wtedy 
+                            <img id="MM" class="monochrome" src="source/illustration/formula6.png" alt="">
+                            a równanie loksodromu przyjmie postać:
+                            <img id="MM" class="monochrome" src="source/illustration/formula7.png" alt="">
+                        </p>
+                     </li>
+                </ol>
+                <p>
+                    Podstawiając wartości λ2 co 360° (okrążając świat wzdłuż loxodromu), widać, że każdej nowej wartości długości geograficznej odpowiada nowa wartość szerokości geograficznej. Innymi słowy, loksodrom przecina każdy południk niezliczoną ilość razy, ale za każdym razem na nowej szerokości geograficznej.
+                </p>
+                <p>
+                    Gdy tangens dąży do nieskończoności: <b>π/4 + φ2/2 = π/2</b>
+                </p>
+                <div class="alert alert-secondary" role="">
+                    <p>
+                        <b>Przykład.</b>
+                        Znajdź długość łuku S i kąt ścieżki K loxodrome między dwoma punktami Havana (23°10′ N; 82°21’ W) i Marsylia (43 27’ N; 50°13’ E).
+                        
+                        
+                    </p>
+                </div>
+                <p>
+                    Zaleca się ustawienie długości geograficznej Hawany jako ujemnej -82°21', ponieważ jej długość mierzona jest na zachód (W).
+                </p>
+                <p>
+                    Przeliczmy na radiany ( <a href="I.html#calc1">kalkulator</a> )
+                </p>
+
+                    <div class="alert alert-info" >
+                        <form>
+
+                              
+                            <table style="background-color: whitesmoke;">
+                                <tr>
+                                    <td  rowspan="5">
+                                        Punkt 1
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Szerokość φ(1)</th>
+                                </tr>
+                                <tr>
+                                        <td>
+                                            <label class="calctext" for="Rad1">Radiany: </label>
+                                            <input class="inputCalc" type="number" id="Rad1" value="0.4043" step="0.01">
+                                        </td>
+                                </tr>
+
+                                <tr> 
+                                    <th colspan="">Długość λ(1)</th> 
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <label class="calctext" for="Rad11">Radiany: </label>
+                                        <input class="inputCalc" type="number" id="Rad11" value="-1.4373" step="0.01">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td  rowspan="5">
+                                        Punkt 2
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Szerokość φ(2)</th>
+                                </tr>
+                                <tr>
+                                        <td>
+                                            <label class="calctext" for="Rad2">Radiany: </label>
+                                            <input class="inputCalc" type="number" id="Rad2" value="0.7583" step="0.01">
+                                        </td>
+                                </tr>
+
+                                <tr> 
+                                    <th colspan="">Długość λ(2)</th> 
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <label class="calctext" for="Rad22">Radiany: </label>
+                                        <input class="inputCalc" type="number" id="Rad22" value="0.09105" step="0.01">
+                                    </td>
+
+                                </tr>
+    
+
+
+
+
+                            </table>
+
+
+                            <div class=" mt-3 d-flex justify-content-evenly">
+                                <button class="btn btn-success" type="button" onclick="convertToLenth()">Policz odległości</button>
+                            </div>
+        
+                        </form>
+                        <div class="d-flex justify-content-center mt-3 mb-2">
+                            <ul>
+                                
+                            <li><p id="resultL1"></p></li>
+                            <li><p id="resultL2"></p></li>
+                            <li>
+                                <p id="delta"></p>
+                            </li>
+                            <li>
+                                <p id="tan"></p>
+                            </li>
+                            <li>
+                                <p id="atan"></p>
+                            </li>
+                            <li>
+                                <p id="fi"></p>
+                            </li>
+                            <li>
+                               <b><p id="len"></p></b> 
+                            </li>
+                            </ul>
+                            
+                            
+                        </div>
+
+                    
+                        </div>
+        
+                        <script>
+                            function convertToLenth() {
+
+                                let rad1 = parseFloat(document.getElementById('Rad1').value);
+                                let rad11 =  parseFloat(document.getElementById('Rad11').value);
+                                let rad2 =  parseFloat(document.getElementById('Rad2').value);
+                                let rad22 =  parseFloat(document.getElementById('Rad22').value);
+
+                                console.log(rad1)
+                                console.log(rad11)
+                                console.log(rad2)
+                                console.log(rad22)
+
+
+   
+                                tan1 = (Math.tan((Math.PI/4) + (rad1 /2))).toFixed(5);
+                                tan2 = (Math.tan((Math.PI/4) + (rad2 /2))).toFixed(5);
+                                delta  = Math.abs(rad11 - rad22) ;
+                                tan = delta/ ( Math.log(tan2)  - Math.log(tan1));
+                                KK = Math.atan(tan).toFixed(5)
+                                delta1 = Math.abs(rad1 - rad2);
+                                len =(6370 * delta1/Math.cos(KK)).toFixed(2);
+
+                                document.getElementById('resultL1').innerHTML = "tan((π/4) + (φ(1)/2)) = " + tan1;
+                                document.getElementById('resultL2').innerHTML = "tan((π/4) + (φ(2)/2)) = " + tan2;
+                                document.getElementById('delta').innerHTML = "Δλ = |λ1 - λ2| = " + delta.toFixed(5);
+                                document.getElementById('tan').innerHTML = `tanK = Δλ/( ln(${tan1}) - ln(${tan2}) ) = ` + tan.toFixed(5);
+                                document.getElementById('atan').innerHTML = "&#x2220 K = arctanK " + KK;
+                                document.getElementById('fi').innerHTML = "Δφ = |φ1 - φ2| = " + delta1;
+                                document.getElementById('len').innerHTML = "L = R(zeimi)*Δφ/cos(&#x2220 K) = " + len +"km";
+                                  
+                            }
+                        </script>
+
+                <h2 id="1.5" class="paragraf">
+                                        
+                    § 1.5 Sferyczny dwukąt.
+                </h2>
+                <p>
+                    Na powierzchni kuli zwykle uważa się figury utworzone przez przecięcie łuków wielkich kół kuli. Najprostszą figurą jest kulisty digon - część powierzchni kuli, która jest ograniczona dwoma dużymi półkolami. Boki kulistej przekątnej, złożonej z półokręgów wielkich kół, są równe 180° każdy. Na przykład na rysnku AA1 będzie kulistym digonem. Ponieważ kąt liniowy kąta dwuściennego między dwiema płaszczyznami jest utworzony przez dwie proste leżące w obu płaszczyznach i prostopadłe do linii ich przecięcia w tym samym punkcie, możemy zdefiniować kąt kulistego wielokąta jako kąt między dwoma styczne do dużych okręgów dwukąta przechodzącego przez jego wierzchołek.
+                </p>
+                <img class="monochrome" src="source/illustration/duo.png" alt="">
+                <p>
+                    Na podstawie tych definicji łatwo jest udowodnić:
+                </p>
+                <div class="alert alert-secondary" role="">
+                    <b>
+                        TWIERDZENIE:
+                    </b>
+                    1. Na tej samej kuli sferyczne dwukąty o równych kątach mają równe pola.                
+                </div>
+                  <p>
+                    <div class="alert alert-secondary" role="">
+                        <b>
+                            TWIERDZENIE:
+                        </b>
+                        1. Pole dwukąta o kącie α leżącym na kuli o promieniu R jest określone wzorem. 
+                        <img class="Sdu"  src="source/illustration/S2u.png" alt="">              
+                    </div>
+                    <b>Dowód: </b>
+                    <p>
+                        Jeśli pole powierzchni kuli podzielimy na 360 równych części, to każda z nich będzie równa polu przekątnej, której wierzchołek ma kąt równy 1°:
+                    </p>
+                    <img class="Sdu" src="source/illustration/Sdu1.png" alt="">
+                    <p>
+                        Wtedy pole dwukąta o kącie α° równa się:
+                    </p>
+                    <img  id="Sdu2" src="source/illustration/Sdu2.png" alt="">
+                    <img id="Sdu2" src="source/illustration/Sdu4.png" alt="">
+                    <div class="alert alert-secondary" role="">
+                        <b>
+                            TWIERDZENIE:
+                        </b>
+                        3. Pole dwukątów są proporcjonalne do ich kątów             
+                    </div>
+                    <div class="alert alert-secondary" role="">
+                        <b>
+                            Przykład:
+                        </b>
+                        Kąt dwukąta sferycznego wynosi α° =30°15'. Oblicz pole dwukąta, jeśli promień kuli wynosi 10 m.          
+                    </div>
+                    <b>Rozwiązanie:</b>
+                    <p>
+                        α° =30°15' = 30,25°, w radianach a = 0,527962
+                    </p>
+                    <p>
+                        Wtedy pole dwukąta wynosi:
+                    </p>
+                    <img id="Sdu3" src="source/illustration/Sdu5.png" alt="">
+                    <h2 id="p1.6" class="paragraf">
+                        § 1.6 Pytania i ćwiczenia
+                    </h2>
+                    <ol>
+                        <li>Co bada geometria sferyczna?</li>
+                        <li>Co to jest ortodrom?</li>
+                        <li>Co to jest loksodromia?</li>
+                        <li>Jaka zależność określa zależność między miarą kątową (stopień, radian) a miarą liniową łuku koła wielkiego?</li>
+                        <li>Czym jest „sferyczny środek” i „sferyczny promień” małego koła?</li>
+                        <li>Jak określa się położenie punktu w kulistym układzie współrzędnych geograficznych?</li>
+                        <li>Jaka jest istota ograniczeń Eulera?</li>
+                        <li>Jakich wzorów używa się do obliczenia liniowej długości łuku dużego i małego koła?</li>
+                        <li>W jaki sposób powiązane są miary stopni i radianów łuków i kątów?</li>
+                        <li>Podaj w radianach (z dokładnością do siódmego miejsca po przecinku) kąt sferyczny mierzony w stopniach: φ1 = 42°54'6", φ2 = 160°9'47" (odp:  φ1 = 0,7487753, φ2 = 2,7953727)</li>
+                        <li>Podaj w miarę liniową (z dokładnością do km) łuk S koła wielkiego kuli ziemskiej (R = 6370 km), mierzony w stopniach: φ1 = 63°0'42" (Odp: S = 7006km)</li>
+                        <li>Co to jest „kąt sferyczny” i jak się go mierzy?</li>
+                        <li>Jak obliczyć pole kulistego dwukąta?</li>
+
+                    </ol>
+
+ 
+
+
+                        
+        
+                    
+            </article>
+
+
+        </div>
+        
+       
+
+
+    </div>
+
+
+
+
+
+        
+
+
+
+
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+                
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</body>
+</html>

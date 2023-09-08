@@ -1,0 +1,531 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>II. Trójkąty sferyczne.</title>
+		<meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="source/bootstrap.css">
+    <script src="source/bootstrap.js"></script>
+    <link rel="stylesheet" href="source/css/style.css">
+    
+    <style>
+
+        model-viewer{
+        
+            width:100%;
+        
+            height: 100vh;
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+        model-viewer{
+        
+            height:600px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 767px) {
+        
+        model-viewer{
+        
+            height:350px;
+        
+        }
+        
+        }
+        
+        </style>
+         <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+</head>
+<body>
+  
+    <body>
+        <div class="bg">
+            <div id="all"></div>
+        </div>
+        <div class="content" >
+ 
+             <div class="title">
+                Temat - II.
+            </div>
+
+           
+
+            <div class="mpage">
+
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <a href="index.html"><button type="button" class="btn btn-primary">START</button></a>
+                        
+                      <li class="page-item">
+                        <a class="page-link" href="I.html" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+ 
+                      <li class="page-item"><a  class="page-link " href="I.html">I</a></li>
+                      <li class="page-item"><a style="color: black;" class="page-link bg-secondary" href="II.html">II</a></li>
+                      <li class="page-item"><a class="page-link" href="III.html">III</a></li>
+                      <li class="page-item"><a class="page-link" href="IV.html">IV</a></li>
+                      <li class="page-item"><a class="page-link" href="V.html">V</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="III.html" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                      <a href="menu.html"><button type="button" class="btn btn-primary">MENU</button></a>
+                      
+                    </ul>
+                  </nav>
+
+
+
+
+                <h1 id="bh1">
+                    <div class="big-text">
+                         Trójkąty sferyczne.
+                    </div>
+                </h1>
+
+                <article class="page">
+                    <h2  class="paragraf">
+                        § 2.1 Trójkąt sferyczny i jego elementy
+                    </h2>
+                    <p>
+                        Trójkąt sferyczny to część powierzchni kuli ograniczona trzema przecinającymi się łukami kół wielkich. Trójkąt sferyczny ma sześć podstawowych elementów: trzy kąty A, B, C i trzy boki a, b, c.  Kąty są oznaczone tymi samymi dużymi literami, co wierzchołki trójkąta, a przeciwległe boki są oznaczone odpowiednimi małymi literami.
+                    </p>
+                    <img width="100%" src="source/illustration/2.1Kut.png" alt="">
+                    <p>
+                        Z rysunku widać, że kąty trójkąta sferycznego są równe odpowiednim kątom dwuściennym trójkąta. Boki trójkąta sferycznego można wyrazić długością promienia kuli oraz kątami środkowymi odpowiednich łuków. Jednocześnie, używając trójkątów sferycznych w astronomii do obliczania trójkątów na sferze niebieskiej, nie można zmierzyć długości łuków; ze względu na problemy z określeniem promienia sfery niebieskiej. Dlatego boki trójkąta są określone w miarach kątowych lub radianowych i są równe odpowiednim kątom płaszczyzny trójkąta. Oznacza to, że wszystkie sześć elementów trójkąta sferycznego są równe odpowiednim elementom trójkąta.
+                    </p>
+                    <p>
+                        Ponieważ boki sferycznego trójkąta a, b, c są zwykle mierzone w miarach kątowych lub radianowych, wybór promienia kuli staje się nieistotny.
+                    </p>
+                    <img  class="monochrome" src="source/illustration/2.2Kut.png" alt="">
+                    <p>
+                        Można to zobaczyć na rysunku. Trójkąty ABC i A1B1C1 są podobne. Mają różne (proporcjonalne) wymiary liniowe, ale ich elementy, przedstawione w miarach kątowych, są odpowiednio równe. Dlatego dla uproszczenia za jednostkę przyjmuje się promień kuli, czyli przyjmuje się R = 1.
+                    </p>
+                    <p>
+                        Jeżeli dwa boki trójkąta sferycznego nie mogą być większe niż 180°, to trzeci bok może być większy niż 180°. W dalszej części rozważymy tylko tak zwane trójkąty sferyczne Eulera. Dla takich trójkątów kąty i boki zmieniają się tylko w zakresie od 0° do 180°. Jeśli jednak dany jest taki trójkąt sferyczny, w którym dowolny bok jest większy niż 180°, to zamiast niego rozważymy inny trójkąt, który służy jako dopełnienie danego trójkąta do półkuli. Ten ostatni trójkąt będzie trójkątem Eulera. Znając elementy tego trójkąta pomocniczego, łatwo jest określić elementy tego trójkąta.
+                    </p>
+
+
+               
+                 </article>
+                    </div>
+                <model-viewer
+                        
+                    src="source/illustration/3d/4.glb"
+                
+                    shadow-intensity="1"
+                
+                    
+                
+                    camera-controls
+                
+                    auto-rotate
+                
+                    >
+                
+                </model-viewer>
+
+                <div id="pageunder" class="mpage"> 
+                    <article  class="page">
+                        <p>
+                            Dwa duże koła przecinają się w dwóch punktach znajdujących się na końcach tej samej średnicy. Jeśli będziemy przedłużać dowolne dwa sąsiednie boki trójkąta sferycznego do drugiego punktu ich przecięcia, to ten drugi punkt będzie leżeć na tej samej wspólnej średnicy co pierwszy punkt. W wyniku takiej konstrukcji powstaje kolejny trójkąt sferyczny BCA1, który w stosunku do pierwotnego trójkąta ABC nazywany jest trójkątem sprzężonym wzdłuż boku a.
+                        </p>
+                        
+                        <p>
+                            Boki i kąty trójkąta sprzężonego są określone za pomocą wzorów:
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                                            <h5>
+                                &#x2220 A1 = &#x2220 A (bok a - wspólny)
+                            </h5>
+                            <h5>
+                                &#x2220 BCA1 = 180° -  &#x2220 C
+                            </h5>
+                            <h5>
+                                bok A1B = 180° -  c
+                            </h5>
+                            <h5>
+                                &#x2220 A1BC = 180° -  &#x2220 B
+                            </h5>
+                            <h5>
+                                bok A1C = 180° -  b
+                            </h5>
+
+                            </div>
+
+
+                        </div>
+
+                        <ul>
+                            Trójkąty sferyczne dzielą się na:
+                            <li>prostokątne, jeżeli przynajmniej jeden z kątów trójkąta ma miarę 90°;</li>
+                            <li>prostoboczne, jeżeli co najmniej jeden z boków trójkąta ma 90 °;</li>
+                            <li>ukośne - w innych przypadkach.</li>
+                        </ul>
+                        <p>
+                            Trójkąty sferyczne mogą być zarówno prostokątne, jak i prostoboczne. W geometrii sferycznej używane są również pojęcia: równoramienny i trójkąt równoboczny.
+                        </p>
+                        <img class="monochrome" src="source/illustration/2.2spherekut.png" alt="">
+                        <p>
+                            W trójkącie sferycznym prostokątnym bok leżący naprzeciw kąta 90° nazywa się przeciwprostokątną, a pozostałe dwa boki to przyprostokątne. Ale są trójkąty sferyczne z dwoma i trzema kątami prostymi. Na przykład na rysunku sferyczne trójkąty A1B1C, A1B1D i A1CD są ukośne, wszystkie ich kąty różnią się od 90°. Trójkąt sferyczny DHG - prostokątny, (kąt DGH - prawy); trójkąty A1EF i A1GE są podwójnie prostokątne, ponieważ każdy z nich ma dwa kąty proste; trójkąt sferyczny A1FG ma trzy kąty proste, zawiera 1/8 powierzchni kuli.
+                        </p>
+                        <p>
+                            Rozwiązanie trójkątów sferycznych jest przedmiotem trygonometrii sferycznej i jest stosowane w astronomii, kartografii, nawigacji, wyższej geodezji, krystalografii i fotogrametrii.
+                        </p>
+                        <h2 id="2.2" class="paragraf">
+                            § 2.2 Sferyczny trójkąt biegunowy i jego własności
+                        </h2>
+                        <p>
+                            Dwa trójkąty sferyczne leżące na tej samej kuli nazywamy trójkątami biegunowymi, jeśli wierzchołki jednego z nich są biegunami boków drugiego. Po raz pierwszy pojęcie trójkąta biegunowego sformułował w XVIII wieku geometr i matematyk Snell.
+                        </p>
+                        <p>
+                            Skonstruujmy trójkąt biegunowy dla danego trójkąta sferycznego ABC. Z punktu A o promieniu 90° narysuj na kuli łuk B1C1. Wtedy punkt A będzie biegunem narysowanego łuku. W ten sam sposób z punktu B rysujemy łuk A'C', z punktu C rysujemy łuk A'B'. Wtedy trójkąt A'B'C' będzie biegunowy dla tego trójkąta ABC.
+                        </p>
+
+                    </article>
+                </div>
+                <model-viewer id="DuuKut"
+                        
+                src="source/illustration/3d/5.glb"
+            
+                shadow-intensity="1"
+            
+                
+            
+                camera-controls
+            
+                auto-rotate
+            
+                >
+            
+            </model-viewer>
+                <div id="pageunder" class="mpage"> 
+                    <article  class="page">
+                        <p>Łatwo zauważyć, że wierzchołki skonstruowanego trójkąta biegunowego są biegunami boków trójkąta ABC.</p>
+                        <p>
+                            Narysujmy łuki wielkich kół przechodzące przez punkty B', A i B', C. Wtedy, jeśli wierzchołek A jest biegunem łuku B'C', to każdy punkt tego łuku jest oddalony od punktu A o 90°, a zatem łuk wielkiego koła AB1 będzie równy 90°, a kąt środkowy B1OA, oparty na będzie prosto. W ten sam sposób, argumentując podobnie, dochodzimy do wniosku, że kąt B'OC również będzie prosty.
+                        </p>
+                        <p>
+                            Ale jeśli prosta B'O jest prostopadła do dwóch prostych poprowadzonych na płaszczyźnie A'OC', to będzie również prostopadła do dowolnej trzeciej linii poprowadzonej w tej płaszczyźnie przechodzącej przez jej podstawę, czyli łuk koła wielkiego łączący wierzchołek bieguna trójkąt B' z dowolnym punktem M leżącym na boku głównego trójkąta AC, będzie równy 90 °. Zatem wierzchołek B' trójkąta biegunowego jest biegunem boku AC głównego trójkąta.
+                        </p>
+                        <p>
+                            Podobnie można udowodnić, że dwa pozostałe wierzchołki trójkąta biegunowego A' i C' są biegunami boków początkowego trójkąta BC i AB. Dlatego jeśli jeden trójkąt sferyczny jest biegunowy względem drugiego, to drugi będzie biegunowy względem pierwszego (trójkąty będą wzajemnie biegunowe).
+                        </p>
+                        <div class="alert alert-secondary" role="">
+                            <b>
+                                TWIERDZENIE:
+                            </b>
+                            Boki i kąty dwóch trójkątów biegunowych względem siebie uzupełniają się parami do 180°.
+                          </div>
+                          <p>
+                         <b>Dowód: </b>
+                            <p>
+                                Przyjmuje się, że trójkąty ABC i A'B'C' są biegunowe względem siebie ( <a href="II.html#DuuKut">rys</a> ). Kąty i boki trójkąta głównego będziemy oznaczać przez A, B, C, a, b, c, natomiast elementy trójkąta biegunowego zbudowanego dla jego trójkąta biegunowego oznaczymy tymi samymi literami, tylko indeksami A', B', C', a', b', c'.
+                            </p>
+                            <ol>
+                                <li>
+                                    <p>Udowodnijmy, że kąt głównego trójkąta sferycznego, np. B, dodany do boku trójkąta biegunowego b' daje w sumie 180°.</p>
+                                    <p>
+                                        Przedłużmy łuki wielkich kół BA i BC na kuli, aż przetną się one z bokiem trójkąta biegunowego A'C' w punktach K i L.
+                                    </p>
+                                    <p>
+                                        Kąt sferyczny mierzy się łukiem wielkiego koła zawartym między jego bokami, względem którego wierzchołkiem kąta jest biegun, a więc kąt B mierzy się łukiem KL. <b>Dlatego B + b' = KL + A'C'</b> 
+                                    </p>
+                                    <p>
+                                        Zastępując w tej równości A'C' do A'K + KL + LC', a następnie łącząc wyrazy w kolejności przez dwa, otrzymujemy:
+                                    </p>
+                                    <b>B + b'= KL + А'К + KL+ LC' = A'L + KC'</b>
+                                    <p>
+                                        Biorąc pod uwagę fakt, że punkt C' jest biegunem łuku BK, stwierdzamy, że KC' = 90°; z uwagi na to, że punkt A' jest biegunem łuku BL, mamy: A'L = 90°. Wtedy:
+                                    </p>
+                                    <b>
+                                        B + b' = 90° + 90° =180°.
+                                    </b>
+                                    <p>
+                                        Dokładnie w ten sam sposób zostało to udowodnione
+                                    </p>
+                                    <b>
+                                        А + а' = 180°, С + c' = 180°,
+                                    </b>
+                                    <p>
+                                        Zatem suma kąta danego trójkąta sferycznego i odpowiadającego mu boku trójkąta biegunowego wynosi 180°:
+                                    </p>
+                                    <b>
+                                        А + а' = 180°, B + b' = 180°, С + c' = 180°,  
+                                    </b>
+                                </li>
+                                <li>
+                                    <p>
+                                        Łatwo jest udowodnić, że suma kątów trójkąta biegunowego i odpowiedniego boku trójkąta głównego wynosi 180°. Udowodnijmy na przykład, że 
+                                        <b>
+                                                   B' + b = 180°.   
+                                        </b>
+                              
+                                    </p>
+                                    <p>
+                                        Kąt B' jest mierzony łukiem NS. Dlatego B' + b = NS + AC; ale zamiast NS możesz umieścić sumę NC + CS, a zamiast AC różnicę AS - CS (<a href="II.html#DuuKut">rys</a> ). Wtedy będziemy mieli: 
+                                    </p>
+                                    <b>В' + b = NC + CS + AS - CS = NC + AS = 90°+90° = 180°.</b>
+                                    <p>
+                                        Zauważ, że to, co zostało udowodnione, jest również oczywiste ze względu na wzajemną biegunowość trójkątów.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Jeśli każdy bok jednego trójkąta jest mniejszy niż 90°, to skonstruowany dla niego trójkąt biegunowy będzie znajdował się poza tym trójkątem, jak widać na (<a href="II.html#DuuKut">rys</a> ). Jeżeli któryś z boków jednego trójkąta jest większy niż 90°, a inny mniejszy niż 90°, to jego trójkąt biegunowy przetnie boki danego trójkąta; wreszcie, jeśli każdy z boków danego trójkąta jest większy niż 90°, to jego trójkąt biegunowy będzie się w nim znajdował.
+                                    </p>
+                                    <p>
+                                        Własności trójkąta biegunowego wykorzystamy w przyszłości przy wyprowadzaniu różnych wzorów trygonometrii sferycznej.
+                                    </p>
+                                </li>
+                            </ol>
+
+                            <h2 id="2.3" class="paragraf">
+                                § 2.3 Związek między bokami i kątami trójkąta sferycznego
+                            </h2>
+                            <p>
+                                Ze stereometrii wiadomo, że każdy kąt płaski kąta trójściennego O jest mniejszy niż suma i większy niż różnica dwóch innych kątów płaskich.Te kąty płaskie są mierzone przez boki trójkąta sferycznego, na którym spoczywają, a dwuścienny kąty są mierzone przez odpowiednie kąty trójkąta sferycznego. Pozwala to na ustalenie następujących zależności między bokami i kątami trójkąta sferycznego.
+                            </p>
+                            <img class="monochrome" src="source/illustration/2.3.png" alt="">
+                            <ol>
+                                <li><p>
+                                 Ponieważ ∠AOC<∠AOB + ∠BOC i ∠AOC = b, ∠AOB = c, ∠BOC = a , to następuje: a+c>b
+                                Dlatego każdy bok trójkąta sferycznego jest mniejszy niż suma dwóch pozostałych boków i możemy zapisać system nierówności:
+                                </p>
+                                <img id="Sdu3" src="source/illustration/2.3eql.png" alt="">
+                                <p>
+                                    Na podstawie wzorów drugiego wiersza wynika, że ​​każdy bok trójkąta sferycznego jest większy niż różnica dwóch pozostałych.
+                                </p>
+                                <p>
+                                    Dodając c do obu części pierwszej nierówności i dzieląc obie części wynikowej nierówności przez dwa, otrzymujemy
+                                </p>
+                                <img class="monochrome" src="source/illustration/2.3eql-1.png" alt="">
+                                <p>
+                                    Dlatego półokres p trójkąta sferycznego jest zawsze większy niż którykolwiek z boków.
+                                </p>
+                                </li>
+                                <li><p>
+                                    Z geometrii bryłowej wiadomo, że w dowolnym kącie trójściennym suma jego kątów płaskich nie przekracza 360°
+                                </p>
+                                Suma boków trójkąta sferycznego jest zawsze mniejsza niż 360° .
+                            
+                                </li>
+                                <li>
+                                    <p>
+                                        Rozważmy dwa wzajemnie biegunowe trójkąty sferyczne ACB A'B'C'.Następnie zgodnie z (2) dla boków trójkąta A'B'C' możemy zapisać:
+                                    </p>
+                                    <b>
+                                        i < a' < b' < c' < 360°
+                                    </b>
+                                    <p>
+                                        W paragrafie 2.2 uzyskano wzory łączące boki i kąty trójkątów biegunowych
+                                        а' = 180° - A, b' = 180° - B,  c' = 180° - C, 
+                                    </p>
+                                    <p>
+                                        Podstawiając w nieruwność otrzymujemy:
+
+                                    </p>
+                                    <b>
+                                        180° < A + B + C < 540°
+                                    </b>
+                                    <p>
+                                        Nadmiar sumy kątów trójkąta sferycznego powyżej 180° nazywa się jego  <b>
+                                            kurtozą
+                                        </b> lub<b>sferycznym nadmiarem </b>   i jest oznaczany
+                                    </p>
+                                    <b>
+                                        ε  = А + В + С - 180°
+                                    </b>
+                                </li>
+                                <li>
+                                    <p>
+                                                                           Rozważmy dwa wzajemnie biegunowe trójkąty sferyczne ACB i A'B'C'.Następnie zgodnie z (1) dla boków trójkąta  A'B'C' możemy zapisać:
+                                    </p>
+                                    <b>
+                                        a' + b' > c'
+                                    </b>
+                                    <p>
+                                        Wtedy na podstawie (4) otrzymamy 360° - A + B > 180° - C, skąd
+                                    </p>
+                                    <b>
+                                        A + B- C < 180°
+                                    </b>
+                                </li>
+                                <li>
+                                    <p>
+                                                                          Kąt zewnętrzny trójkąta sferycznego jest mniejszy niż suma dwóch kątów wewnętrznych nie sąsiadujących z nim, ale większy niż ich różnica.
+                                    </p>
+                                    <p>
+                                        <b>
+                                            Dowód.
+                                        </b>
+                                        <img class="monochrome" src="source/illustration/2.3primer.png" alt="">
+                                        Kontynuujemy jeden z boków trójkąta sferycznego ABC, na przykład , i tworzymy kąt zewnętrzny D. z ryc. widać, że D + C \u003d 180 °. Skoro A + B + C> 180°, to A + B + C> D + C. Stąd otrzymujemy A+B>D. Aby udowodnić drugą część twierdzenia, użyjemy nierówności <b>A + C - B < 180°= D + C, skąd A - B < D.</b> 
+                                    </p>
+  
+                                </li>
+                                <li>
+                                    <p>
+                                        Kąty przy podstawie równoramiennego trójkąta sferycznego są sobie równe.
+                                    </p>
+                                    <b>
+                                        Dowód.
+                                    </b>
+                                    <img class="monochrome" src="source/illustration/2.3-primer.png" alt="">
+                                    Niech ABC będzie równoramiennym trójkątem sferycznym, w którym dwa jego boki są sobie równe b=c: Załóżmy, że b < 90°. Narysujmy promienie kuli CO, BO i AO do wierzchołków A, B i C oraz skonstruujmy styczne SB i SC do równych boków b i c  w wierzchołkach B i C. Styczne te przecinają kontynuację promienia OA w tym samym punkcie, a ich długości będą równe: BS=CS. Poprowadźmy styczne BT i CT do boku a przez wierzchołki B i C i połączmy punkt ich przecięcia T z punktem S odcinkiem TS
+                                </p>
+                                <p>
+                                    W płaskich trójkątach STV i STC bok TS jest ich wspólnym bokiem, a pozostałe dwa boki są sobie równe parami, czyli BS=CS i BT=CT. Oczywiście te trójkąty są sobie równe. Oznacza to, że ∠SBT= ∠SCT. Ale ponieważ te kąty mierzą kąty sferyczne na wierzchołkach B i C trójkąta sferycznego, wnioskujemy z tego, że B = C.
+                                </p>
+                                </li>
+                                <li>
+                                    Z udowodnionego twierdzenia wynika, że ​​​​w trójkącie sferycznym równe kąty leżą na równych bokach, to znaczy, jeśli b = c, to B = C.
+                                </li>
+                                <li>
+                                    Przeciwne równe kąty w trójkącie sferycznym mają równe boki.
+                                </li>
+                                <li>
+                                    W trójkącie sferycznym większy bok leży naprzeciwko większego kąta.
+                                </li>
+                                <li>
+                                    W trójkącie sferycznym większy kąt leży naprzeciw większego boku.
+                                </li>
+                                <li>
+                                    Jeżeli suma dwóch boków trójkąta sferycznego spełnia jeden z warunków α+b < 180°, α+b= 180°, α+b > 180° to suma ich przeciwległych kątów również spełnia odpowiedni warunek A + B < 180°, A + B = 180° lub A + B > 180°.
+                                    <p>
+                                        I odwrotnie, jeśli suma dwóch kątów trójkąta sferycznego jest większa, równa lub mniejsza niż 180°, to suma ich przeciwległych boków musi być odpowiednio większa, równa lub mniejsza niż 180°.
+                                    </p>
+                                </li>
+                                <li>
+                                    Jeśli różnica dwóch boków trójkąta sferycznego jest większa, równa lub mniejsza niż 0, to różnica dwóch przeciwległych kątów jest większa, równa lub mniejsza od zera.
+                                </li>
+                                <li>
+                                    Jeśli różnica dwóch kątów trójkąta sferycznego jest większa, równa lub mniejsza niż 0, to różnica dwóch przeciwległych boków jest większa, równa lub mniejsza od zera.
+                                </li>
+
+                            </ol>
+                            <h2 id="2.4" class="paragraf">
+                                § 2.4 Równość i symetria trójkątów sferycznych.
+                            </h2>
+                            <p>
+                                Sferyczne trójkąty leżące na tej samej kuli są sobie równe, jeśli nakładają się na siebie. Stanie się tak, gdy podane równe części trójkątów sferycznych ułożą się w nich w ten sam sposób i zostanie spełniony co najmniej jeden z poniższych warunków:
+                            </p>
+                            <ol>
+                                <li>trójkąty sferyczne mają dwa odpowiednio równe boki i równy kąt zawarty między tymi bokami;</li>
+                                <li>trójkąty sferyczne mają równy bok i dwa odpowiednio równe kąty przylegające do tego boku;</li>
+                                <li>trójkąty sferyczne mają trzy odpowiednio równe boki;</li>
+                                <li>trójkąty sferyczne mają trzy odpowiednio równe kąty.</li>
+                            </ol>
+                            <p>
+                                Wprowadźmy jeszcze jedno ważne pojęcie. Dwa trójkąty sferyczne ABC i A1B1C mogą mieć odpowiednio równe elementy: A=A1 , B=B1 , C=C1 , a=a1 , b=b1 , c=c1 , ale , leżeć na kuli w inna kolejność: numeracja wierzchołków w trójkącie ABC przebiega zgodnie z ruchem wskazówek zegara, aw trójkącie A1B1C1 przeciwnie do ruchu wskazówek zegara.
+                            </p>
+                            <img class="monochrome" src="source/illustration/2.4sym.png" alt="">
+                            Przy takim układzie elementów trójkąt sferyczny A1B1C1 nie może być nałożony na trójkąt sferyczny ABC ani w wyniku jego ruchu po kuli gdy wierzchołki C1 i C pokrywają się z bokami c1 i c, wierzchołek A1 musi być połączony z B, a wierzchołek B1 z A, ale A1 # B, B1 = A, ani w wyniku jego obrotu wokół boku A1B1 (AB), ponieważ w tym przypadku boki a, b i c nie będą się pokrywać z odpowiednimi bokami a1, b1 i c1, których wybrzuszenia będą parami przeciwne; połączenie powierzchni sferycznych trójkątów A1B1C1 i ABC.
+                            
+                            <p>
+                                Aby połączyć odpowiednie boki i powierzchnie sferycznych trójkątów A1B1C1 i ABC, będą one również musiały się zgiąć. Ale wygięcie powierzchni sferycznego trójkąta jest równoznaczne z przesunięciem środka kuli. Trójkąty sferyczne o równej powierzchni, ale nienakładające się na siebie, nazywane są <b>symetrycznymi trójkątami sferycznymi</b> .
+                            </p>
+                            <p>
+                                Symetryczne sferyczne trójkąty równoramienne można nałożyć na kulę.
+                            </p>
+                            <h2 id="2.5" class="paragraf">
+                                § 2.5 Pole trójkąta sferycznego.
+                            </h2>
+                            <p>
+                                W <a href="I.html#1.5">sekcji 1.5</a>  otrzymuje się wzór do obliczania powierzchni kulistego dwukąta:
+                            </p>
+                            <img class="Sdu"  src="source/illustration/S2u.png" alt="">
+                            <p>
+                                gdzie kąt α jest podany w radianach
+                            </p>
+                            <div class="alert alert-secondary" role="">
+                                <b>
+                                    TWIERDZENIE:
+                                </b>
+                                Pole sferycznego trójkąta na kuli o promieniu R jest równe iloczynowi kwadratu promienia i sferycznego nadmiaru,
+                                <img class="eql"  src="source/illustration/2.5.png" alt="">
+                              </div>
+                              <p>
+                             <b>Dowód: </b> Sferyczny trójkąt jest uzupełniony dowolnym trójkątem przylegającym do sferycznego digonu. Kąty otrzymanych dwukątów są równe kątom głównego trójkąta.
+                              </p>
+                              <img class="monochrome" src="source/illustration/2.5sfer.png" alt="" >
+                              <img width="100%" src="source/illustration/2.5formula.png" alt="">
+                              <p>
+                                Dodajmy równości i otrzymajmy
+                              </p>
+                              <img width="100%" src="source/illustration/2.5formula2.png" alt="">
+                              <p>
+                                Ponieważ trójkąty AB1C i A1BC są równe, to ich pola też są równe. Wtedy suma pól trójkątów w nawiasach po lewej stronie równości będzie równa polu powierzchni półkuli, czyli 2 πR^2. W ten sposób otrzymujemy
+                              </p>
+                              <img class="eql" src="source/illustration/2.5formula3.png" alt="">
+                              <img class="eql" src="source/illustration/2.5formula4.png" alt="">
+                              <p>
+                                A ponieważ sferyczny nadmiar jest równy
+                                ε = А + В + С - π
+                                , wtedy  otrzymujemy wzór na obliczenie pola trójkąta sferycznego
+                              </p>
+                              <img class="eql"  src="source/illustration/2.5.png" alt="">
+                              <div class="alert alert-secondary" role="">
+                                <p>
+                                    <b>Przykład.</b>
+
+
+
+                                    Kąty trójkąta sferycznego leżącego na kuli o promieniu 10 m wynoszą: A = 87°45′4”, B=120°23′5”, C = 98°53′7”. Oblicz pole trójkąta.
+                                </p>
+                                
+                                </div>
+                                <img class="w-100" src="source/illustration/2.5exp.png" alt="">
+                                <p>
+                                    Analogicznie B =  120,3847°; C =  98,88528°
+                                </p>
+                                <p>
+                                    Sferyczny nadmiar jest równy ε = А + В + С - π =  127,0211° lub w radianach 2,216937rad. Wtedy <b>S = 100*2,216937 = 221,7 m^2</b> 
+                                </p>
+
+                                <h2 id="2.6" class="paragraf">
+                                    § 2.6 Pytania i ćwiczenia
+                                </h2>
+                                <li>
+                                    Jakie trójkąty nazywamy kulistymi/sferycznymi?
+                                </li>
+                                <li>Jakie trójkąty sferyczne nazywane są biegunowymi?</li>
+                                <li>W jaki sposób powiązane są boki i kąty dwóch trójkątów biegunowych?</li>
+                                <li>Czy suma boków trójkąta sferycznego może przekroczyć 360° ?</li>
+                                <li>Czy suma kątów trójkąta sferycznego będzie równa 180° ? </li>
+                                <li>Jakie są zależności między kątami trójkąta sferycznego?</li>
+                                <li>zy można mieć trójkąt sferyczny z bokiem
+                                    b=32°
+                                    , a kąt B przekracza 100° ?</li>
+                                <li>Jak oblicza się nadmiar kulisty?</li>
+                                <li>Wymień przyznaki równości trójkątów sferycznych.</li>
+                                <li>Jak oblicza się pole trójkąta sferycznego?</li>
+                                <li>Jaka jest różnica między pojęciami: równy i symetryczny
+                                    sferyczne trójkąty?</li>
+          
+
+                    </article>
+                </div>
+
+ 
+
+
+
+
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+                
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</body>
+</html>

@@ -1,0 +1,477 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>V. Rozwiązanie ukośnych trójkątów sferycznych.</title>
+		<meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="source/bootstrap.css">
+    <script src="source/bootstrap.js"></script>
+    <link rel="stylesheet" href="source/css/style.css">
+    
+    <style>
+
+        model-viewer{
+        
+            width:100%;
+        
+            height: 100vh;
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+        model-viewer{
+        
+            height:600px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 767px) {
+        
+        model-viewer{
+        
+            height:350px;
+        
+        }
+        
+        }
+        
+        </style>
+         <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+</head>
+<body>
+  
+    <body>
+        <div class="bg">
+            <div id="all"></div>
+        </div>
+        <div class="content" >
+ 
+             <div class="title">
+                Temat - V.
+            </div>
+
+           
+
+            <div class="mpage">
+
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <a href="index.html"><button type="button" class="btn btn-primary">START</button></a>
+                        
+                      <li class="page-item">
+                        <a class="page-link" href="IV.html" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+ 
+                      <li class="page-item"><a  class="page-link " href="I.html">I</a></li>
+                      <li class="page-item"><a class="page-link" href="II.html">II</a></li>
+                      <li class="page-item"><a class="page-link" href="III.html">III</a></li>
+                      <li class="page-item"><a class="page-link" href="IV.html">IV</a></li>
+                      <li class="page-item"><a style="color: black;" class="page-link bg-secondary" href="V.html">V</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="I.html" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                      <a href="menu.html"><button type="button" class="btn btn-primary">MENU</button></a>
+                      
+                    </ul>
+                  </nav>
+
+
+
+
+                <h1 id="bh1">
+                    <div class="big-text">
+                      Rozwiązanie ukośnych trójkątów sferycznych.
+                    </div>
+                </h1>
+
+                <article class="page">
+                  <h2 class="paragraf">
+                    §5.1 Wzory na sinusy, cosinusy i tangensy
+                  </h2>
+                  <p>
+                    Rozważmy dowolny trójkąt sferyczny ABC i załóżmy, że jego kąty wewnętrzne nie przekraczają 180°. Korzystamy ze znanych wzorów trygonometrii:
+                  </p>
+                  <img width="90%" src="source/illustration/5.1for1.png" alt="">
+                  <p>
+                    W sekcji 3.1 powstał wzór <b>
+                      cos(a)= cos(b)cos(c) + sin(b)sin(c)cos(A),
+                    </b>
+                  </p>
+                  <img id="1for2" width="90%" src="source/illustration/5.1for2.png" alt="">
+                  <p>
+                    Podstawimy (2) do pierwszego równania (1), otrzymujemy
+                  </p>
+                  <img width="90%" src="source/illustration/5.1for3png.png" alt="">
+                  <p>
+                    Ponieważ różnica między cosinusami dwóch kątów jest równa dwukrotności iloczynu sinusa połowy sumy dwóch kątów i sinusa połowy różnicy dwóch kątów, otrzymujemy
+                  </p>
+                  <img width="90%" src="source/illustration/5.1for4.png" alt="">
+                  <p>
+                    Przekształćmy wyrażenia <b>b – c+a=a+b+c - 2c = 2p - 2c;</b>
+                  </p>
+                  <b>
+                    a − b + c = a + b + c − 2b = 2p — 2b,
+                  </b>
+                  <p>
+                    Gdzie p = (a + b + c)/2, jest połową obwodu trójkąta.
+                  </p>
+                  <p>
+                    Następnie formuła przybiera formę
+                  </p>
+                  <img class="eql" src="source/illustration/5.1for6.png" alt="">
+                  <img  class="eql" src="source/illustration/5.1for7.png" alt="">
+                  <p>
+                    Podobnie formuły sinusoidalne uzyskuje się dla innych kątów trójkąta. Mamy więc wzory na sinusy połówek kątów:
+                  </p>
+                  <img id="sysS" class="eql" src="source/illustration/5.1sys.png" alt="">
+                  <p>
+                    Podstaw (2) do drugiego równania (1), otrzymujemy
+                  </p>
+                  <img width="90%" src="source/illustration/5.1sys2.png" alt="">
+                  <p>
+                    Przekształćmy wyrażenia <b>b + c − a = a + b + c − 2a = 2p — 2a.</b> Następnie formuła przybiera formę
+                  </p>
+                  <img class="eql" src="source/illustration/5.1for8.png" alt="">
+                  <p>
+                    Podobnie formuły sinusoidalne uzyskuje się dla innych kątów trójkąta. Mamy więc wzory na cosinusy połówek kątów:
+                  </p>
+                  <img id="for7"  class="eql" src="source/illustration/5.1for9.png" alt="">
+                  <p>
+                    Z otrzymanych wzorów można łatwo uzyskać wzory na styczne połowy kątów:
+                  </p>
+                  <img class="eql" src="source/illustration/5.1for10.png" alt="">
+                  <p>
+                    Wprowadźmy pod uwagę dodatkową wielkość
+                  </p>
+                  <img class="eql" src="source/illustration/5.1for11.png" alt="">
+                  <p>
+                    Wtedy wzory na tangensy połówek kątów można zapisać jako:
+                  </p>
+                  <img width="90%" src="source/illustration/5.1for12.png" alt="">
+                  <p>
+                    Tangens połowy kąta trójkąta sferycznego jest równy wartości pomocniczej M podzielonej przez sinus różnicy połowy obwodu i boku przeciwnego do kąta.
+                  </p>
+                  <p>
+                    Mnożymy osobno lewą i prawą część formuł i otrzymujemy:
+                  </p>
+                  <img class="eql" src="source/illustration/5.1for13.png" alt="">
+                  <h2 class="paragraf">
+                    §5.2 Wzory na sinusy, cosinusy i tangensy połówek boków
+                  </h2>
+                  <p>
+                    Przepiszmy zależności dla kątów trójkąta A1B1C1, które są biegunowe względem danego trójkąta ABC. Półobwód trójkąta biegunowego jest równy p1 = 0,5 (a + b + c;)
+                  </p>
+                  <p>
+                    Dla elementów wzajemnie biegunowych trójkątów dobrze znane
+                  </p>
+                  <img class="eql" src="source/illustration/5.2sys1.png" alt="">
+                  <img class="eql" src="source/illustration/5.2sys2.png" alt="">
+                  gdzie є jest sferycznym nadmiarem trójkąta ABC.
+                  <p>
+                    Skorzystajmy ze wzoru <a href="V.html#for7">wzór</a>, zapisując go dla trójkąta biegunowego А1В1С1 i podstawiamy za nie wartości wielkości ze wzorów.
+                  </p>
+                  <img class="eql" src="source/illustration/5.2sys3.png" alt="">
+                  <p>
+                    W rezultacie otrzymujemy wzory na sinusy połowy boków:
+                  </p>
+                  <img id="2sys4" class="eql" src="source/illustration/5.2sys4.png" alt="">
+                  <p>
+                    Skorzystajmy ze wzoru <a href="V.html#sysS">wzór</a> , zapisując go dla trójkąta biegunowego A1B1C1 i podstawiamy za nie wartości wielkości ze wzorów.
+                  </p>
+                  <img class="eql" src="source/illustration/5.2sys5.png" alt="">
+                  <p>
+                    W rezultacie otrzymujemy wzory na cosinusy połówek boków:
+                  </p>
+                  <img id="2sys6" class="eql" src="source/illustration/5.2sys6.png" alt="">
+                  <p>
+                    Z tych wzorów otrzymujemy wzory na styczne połówek boków:
+                  </p>
+                  <img class="eql" src="source/illustration/5.2sys7.png" alt="">
+                  <p>
+                    Wprowadźmy notację:
+                  </p>
+                  <img class="eql" src="source/illustration/5.2n.png" alt="">
+                  <p>
+                    na koniec znajdźmy wzory na styczne połowy boku:
+                  </p>
+                  <img class="eql" src="source/illustration/5.2sys8.png" alt="">
+                  <p>
+                    Pomnóżmy osobno lewą i prawą część i otrzymajmy:
+                  </p>
+                  <img class="eql" src="source/illustration/5.2tan.png" alt="">
+                  <h2 class="paragraf">
+                    §5.3 Wzory d'Alemberta-Gaussa i analogie Napiera.
+                  </h2>
+                  <p>
+                    Jeśli w tożsamości trygonometrycznej
+                  </p>
+                  <img class="eql" src="source/illustration/5.3for1.png" alt="">
+                  <p>
+                    zastąp odpowiednie wartości z <a href="V.html#1for2">wzór</a>, <a href="V.html#sysS">wzór</a>, a następnie otrzymamy
+                  </p>
+                  <img width="90%" src="source/illustration/5.3for2.png" alt="">
+                  <p>
+                    Podobnie, jeśli w tożsamościach trygonometrycznych
+                  </p>
+                  <img class="eql" src="source/illustration/5.3for3.png" alt="">
+                  <p>
+                    podstawiamy odpowiednie wartości z <a href="V.html#sysS">wzór</a>, <a href="V.html#for7">wzór</a>, <a href="V.html#2sys4">wzór</a> i <a href="V.html#2sys6">wzór</a>, to po prostych przekształceniach otrzymujemy cztery wzory d'Alemberta-Gaussa
+                  </p>
+                  <img class="eql" src="source/illustration/5.3for4.png" alt="">
+                  <p>
+                    Podzielmy pierwszą formułę przez trzecią, a drugą przez czwartą. W rezultacie otrzymujemy pierwszą i drugą analogię Napiera:
+                  </p>
+                  <img class="eql" src="source/illustration/5.3for5.png" alt="">
+                  <p>
+                    Styczna połowy sumy dwóch kątów trójkąta sferycznego ma się do cotangensa połowy trzeciego kąta, tak jak cosinus połowy różnicy przeciwległych boków ma się do cosinusa połowy sumy tych samych boków.
+                  </p>
+                  <p>
+                    Styczna połowy różnicy dwóch kątów trójkąta sferycznego ma się do cotangensa połowy trzeciego kąta, tak jak sinus połowy różnicy przeciwległych boków ma się do sinusa połowy sumy tego samego boki.
+                  </p>
+                  <p>
+                    Dzieląc czwartą formułę przez trzecią i drugą przez pierwszą, otrzymujemy trzecią i czwartą analogię Napiera:
+                  </p>
+                  <img class="eql" src="source/illustration/5.3for6.png" alt="">
+                  <p>
+                    Styczna połowy sumy dwóch boków trójkąta sferycznego odnosi się do stycznej połowy trzeciego boku jako cosinus połowy różnicy przeciwległych kątów do cosinusa połowy sumy tych samych kątów.
+                  </p>
+                  <p>
+                    Styczna połowy różnicy dwóch boków trójkąta sferycznego ma się do stycznej połowy trzeciego boku tak, jak sinus połowy różnicy ich przeciwległych kątów do sinusa połowy sumy tych samych kątów.
+                  </p>
+                  <p>
+                    Łączna liczba analogii Napiera to dwanaście. Pozostałe osiem analogii można uzyskać stosując metodę permutacji elementów po okręgu.
+                  </p>
+                  <p>
+                    Dzieląc pierwszą i drugą lub trzecią i czwartą analogię Napiera, otrzymujemy wzór kontrolny Gaussa.
+                  </p>
+                  <img class="eql" src="source/illustration/5.3for7.png" alt="">
+
+                  <h2 id="5.4" class="paragraf">
+                    §5.4 Podstawowe przypadki rozwiązywania ukośnych trójkątów
+                  </h2>
+                  <p>
+                    Istnieje sześć różnych przypadków rozwiązywania ukośnych trójkątów, biorąc pod uwagę następujące elementy:
+                  </p>
+                  <ol>
+                    <li>trzy boki;</li>
+                    <li>trzy kąty;</li>
+                    <li>dwa boki i kąt między nimi;</li>
+                    <li>bok i
+                      dwa sąsiednie rogi; </li>
+                    <li> dwa boki i kąt leżący naprzeciwko jednego
+                      z nich;</li>
+                    <li>dwa kąty i bok leżący naprzeciwko jednego z nich.</li>
+                  </ol>
+                  <p>
+                    Podczas rozwiązywania należy upewnić się, że wartości elementów spełniają warunki istnienia trójkąta sferycznego
+                  </p>
+                  <div class="alert alert-secondary" role="">
+
+                    <b>
+                      Przypadek 1.
+                    </b>
+                    <p>
+                      Dane są trzy boki trójkąta. Wyznacz kąty trójkąta.
+                    </p>
+                  </div>
+                  <b>
+                    Instrukcje.
+                  </b>
+                  Formuły służąсу do rozwiązywania:
+                  <img width="90%" src="source/illustration/5.4for1.png" alt="">
+                  Aby kontrolować obliczenia, możesz użyć zależności
+                  <img class="eql" src="source/illustration/5.4for2.png" alt="">
+                  <p>
+                  <b>
+                    Przykład.
+                  </b>
+                  Mając dane trzy boki trójkąta α=45°, b=60°, c=30°. Wyznacz kąty trójkąta.
+                  </p>
+                  <b>
+                    Rozwiązanie.
+                  </b>
+                  p = 145°/2 lub p = 1,1781 rad, a=0,7854 rad, b=1,0472 rad, c=0,5236 rad. Wtedy sin(p-a)=sin(0,3927)=0,3827; sin(pb)=sin(0,1309)=0,01305; sin(p-c)=sin(0,6545)=0,6088; sin(p)=sin(1,1781)=0,9239, M=0,1814.
+                  <img class="eql" src="source/illustration/5.4for3.png" alt="">
+                  <img class="eql" src="source/illustration/5.4for4.png" alt="">
+                  <img class="eql" src="source/illustration/5.4for5.png" alt="">
+
+
+                  <div class="alert alert-secondary" role="">
+
+                    <b>
+                      Przypadek 2.
+                    </b>
+                    <p>
+                      Dane są trzy kąty trójkąta. Wyznacz boki trójkąta.
+                    </p>
+                  </div>
+                  <b>
+                    Instrukcje.
+                  </b>
+                  Formuły służąсу do rozwiązywania:
+                  <img width="90%" src="source/illustration/5.4for6.png" alt="">
+                  <img class="eql" src="source/illustration/5.4for7.png" alt="">
+                  <p>
+                    Aby kontrolować obliczenia, możesz użyć zależności
+                  </p>
+                  <img class="eql" src="source/illustration/5.4for8.png" alt="">
+
+
+
+                  <div class="alert alert-secondary" role="">
+
+                    <b>
+                      Przypadek 3.
+                    </b>
+                    <p>
+                      Mając dane dwa boki a i b oraz kąt C między tymi bokami. Znajdź bok c oraz kąty A i B.
+                    </p>
+                  </div>
+                  <b>
+                    Instrukcje.
+                  </b>
+                  Aby obliczyć kąty, używamy analogii Napiera:
+                  <img width="90%" src="source/illustration/5.4for9.png" alt="">
+                  <p>
+                    Aby obliczyć bok, używamy wzoru na cosinus
+                  </p>
+                  <img width="90%" src="source/illustration/5.4for10.png" alt="">
+                  <div class="alert alert-secondary" role="">
+
+                    <b>
+                      Przypadek 4.
+                    </b>
+                    <p>
+                      Dany bok c i dwa sąsiednie kąty A i B. Znajdź boki a i b, kąt C.
+                    </p>
+                  </div>
+                  <b>
+                    Instrukcje.
+                  </b>
+                  <p>
+                    Aby obliczyć boki, używamy trzeciej i czwartej analogii Napiera:
+                  </p>
+                  <img width="90%" src="source/illustration/5.4for11.png" alt="">
+                  <p>
+                    Aby obliczyć kąt C, używamy pierwszej i drugiej analogii Napiera
+                  </p>
+                  <img width="90%" src="source/illustration/5.4for12.png" alt="">
+                  <p>
+                    Aby kontrolować obliczenia, można użyć zależność
+                  </p>
+                  <img class="eql" src="source/illustration/5.4for13.png" alt="">
+
+
+                  <div class="alert alert-secondary" role="">
+
+                    <b>
+                      Przypadek 5.
+                    </b>
+                    <p>
+                      Dane są dwa boki a, b oraz kąt A, który leży naprzeciw jednego z boków (boku a). Znajdź c, B, C.
+                    </p>
+                  </div>
+                  <b>
+                    Instrukcje.
+                  </b>
+                  Kąt B jest określony wzorem
+                  <img class="eql" src="source/illustration/5.4for14.png" alt="">
+                  Kąt C i bok c są określone ze wzorów
+                  <img width="90%" src="source/illustration/5.4for15.png" alt="">
+                  <p>
+                    Przy obliczaniu kąta B możliwe są trzy odpowiedzi:
+                  </p>
+                  <ol>
+                    <li>sinB>1, brak rozwiązania; </li>
+                    <li>sinB=1, następnie B=90°,  jedno rozwiązanie;</li>
+                    <li>sinB < 1, to mamy dwa rozwiązania iw pierwszym przypadku B < 90°, w drugim przypadku B>90°/</li>
+                  </ol>
+
+
+
+                  <div class="alert alert-secondary" role="">
+
+                    <b>
+                      Przypadek 6.
+                    </b>
+                    <p>
+                      Dane są dwa kąty A, B oraz bok a, który leży naprzeciwko jednego z kątów (kąt A). Znajdź b, c, C.
+                    </p>
+                  </div>
+                  <b>
+                    Instrukcje.
+                  </b>
+                  Strona b jest określona wzorem
+                  <img class="eql" src="source/illustration/5.4for16.png" alt="">
+                  <p>
+                    
+                    Kontrola
+                  </p>
+                  <img class="eql" src="source/illustration/5.4for17.png" alt="">
+                  <p>
+                    Kąt C i bok c są określone ze wzorów
+                  </p>
+                  <img width="90%" src="source/illustration/5.4for18.png" alt="">
+
+                  <h2 id="5.5" class="paragraf">
+                    §5.5 Pytania i ćwiczenia
+                  </h2>
+                  <ol>
+                    <li>Ile jest możliwych przypadków rozwiązania ukośnej kuli
+                      trójkąt?</li>
+                    <li>Jaka jest zaleta stosowania wzorów na styczne półkątów
+                      rozwiązać ukośny trójkąt sferyczny?</li>
+                    <li>Za pomocą jakich wzorów wygodnie jest określić kąty trójkąta, jeśli są podane
+                      jego strona?</li>
+                    <li>Jakie wzory są przydatne do określania boków trójkąta, jeśli
+                      dane kąty?</li>
+                    <li>Co wyrażają analogie Napiera?</li>
+                    <li>Zapisz wzory d'Alemberta-Gaussa</li>
+                    <li>Jakiego wzoru używa się do obliczenia nadmiaru sferycznego?</li>
+                    <li>Jak kontrolować poprawność rozwiązywania problemów przez określanie
+                      nieznanych elementów ukośnego trójkąta sferycznego?</li>
+
+                  </ol>
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+                 </article>
+
+
+            </div>
+        
+       
+
+
+ 
+
+
+
+
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+                
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</body>
+</html>
