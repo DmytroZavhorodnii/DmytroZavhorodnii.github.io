@@ -1,0 +1,455 @@
+
+
+body{
+    font-family: Warnock Pro,Georgia,Times New Roman,Times,serif;
+    
+}
+
+
+
+
+
+
+
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: radial-gradient(ellipse at center,#252878 0,rgba(11,15,29,0) 65%);
+    background-image: url(fon.png);
+    margin: 0px;
+    overflow: hidden;
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+  }
+  .bg::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: radial-gradient(white 10%, transparent 11%);
+    background-size: 60px 60px;
+    animation: animate 15s;
+    animation-timing-function: ease-out; 
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+            }
+
+@keyframes animate {
+from {
+    transform: scale(1);
+    opacity: 90%;
+}
+to {
+    transform: scale(1.2);
+    opacity: 10%;
+}
+}
+
+#oreol{
+    width: 100%;
+    height: 100%;    
+    background: radial-gradient(ellipse at center,#252878 0,rgba(11,15,29,0) 65%)
+}
+  
+  .content {
+    margin: 0 auto;
+
+    padding: 85px;
+    overflow: auto;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+#top{
+    margin-top: 28vh;
+}
+#logoimg{
+            float: left;
+			position: absolute;
+			margin-top: 16px;
+			left: 22px;
+            width: 83pt;
+}
+
+
+
+#startd{
+   float: right;
+   margin-right: 22px;
+
+}
+#start{
+   font-size: larger;
+   font-weight: bolder;
+}
+
+#sphlink{
+    margin-top: 12px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#all{
+    background: radial-gradient(ellipse at center,#252878 0,rgba(11,15,29,0) 65%);
+    width: 100%;
+    height: 100%;
+}
+
+
+.title{
+    text-align: center;
+   
+ 
+    width: calc(100% - 90px);
+    padding: 0 15px;
+
+    margin-left: 0px !important;
+    background: #2a3faa;
+
+
+    position: relative;
+    max-width: 540px;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 28pt;
+    line-height: 70px;
+    
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    }
+
+.mpage{
+    display: block;
+    padding: 45px;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    background: #fff;
+    background-image: url(mpage.png);
+    background-position: 70%;
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    }
+
+
+.page{
+
+
+    padding-left: 12vw;
+    padding-right: 12vw;
+    width: 100%;
+    color: #545454;
+}
+#bh1{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+.big-text{
+
+    border-radius: 25px;
+    padding: 8px;
+    display: inline-block;
+    color: #9e8080;
+    font-size: 21pt;
+    font-weight: 600;
+    line-height: 1.38;
+    border:
+    5px       /* width */
+    solid;
+    }
+
+    #vl1{
+        border-left: 5px solid #9e8080;
+        height: 50px;
+
+
+
+    }
+    .vl{
+        
+        border-left: 5px solid #9e8080;
+        height: 100%;
+
+       
+    }
+
+    #dotimg{
+        width: 28pt;
+    }
+    #dotimg {
+        animation: rotate 15s linear infinite;
+      }
+      
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+.lefttime{
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lefttitle{
+    margin: 0px;
+    margin-left: auto;
+    color: #2a3faa;
+}
+.strelka{
+    list-style: none;
+}
+.strelkali::before {
+    content: "\2192"; /* стрелка вправо в юникоде */
+    margin-right: 5px; /* отступ между стрелкой и текстом элемента списка */}
+
+.volumev{
+    color: #1a0dab;;
+    
+    
+    font-size: 18px;
+    line-height: 26px;
+    position: relative;
+   
+  
+}
+
+.volumev:hover{
+    text-decoration: none;
+   
+  
+}
+.mobiletitle{
+    display: none;
+}
+
+#spherestart{
+    background-color: #9e8080;
+    width: 45%;
+}
+.paragraf{
+    position: relative;
+    font-size: 14px;
+    color: #9e8080;
+    font-family: Warnock Pro,Georgia,Times New Roman,Times,serif;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    margin-bottom: 2em;
+    margin-top: 5em;
+    white-space: nowrap;
+ 
+    display: flex;
+    
+    align-items: center;
+
+    width: 100%;
+  }
+.paragraf::after{
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 1px solid #9e8080;
+    margin-left: 1em;
+    padding-bottom: .3em;
+
+}
+#pageunder{
+    border-top-left-radius: 15px ;
+}
+#duocorn{
+   height: 300px;
+   margin-left: 15vw!important;
+}
+.eql{
+    width: 380px;
+    display: block;
+    margin: 0 auto;
+}
+.Sdu{
+    border-radius: 15px;
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+#Sdu2{
+    border-radius: 15px;
+    width: 280px;
+    display: block;
+    margin: 0 auto;
+}
+#ill{
+    border-radius: 15px;
+    width: 380px;
+    display: block;
+    margin: 0 auto;
+}
+
+.monochrome{
+    display: block;
+  margin: 0 auto;
+    width: 300px;
+    
+}
+#systemill{
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+}
+#systemill1{
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+}
+
+#f3{
+    width: 400px;
+}
+
+.calctext{
+    color: #198754;
+}
+#MM{
+    width: 500px;
+}
+.inputCalc{
+    width: 105px;
+}
+table {
+   
+    border-collapse: collapse; /* объединить границы ячеек */
+    width: 100%; /* установить ширину таблицы на 100% */
+  }
+  
+  th, td {
+    border: 1px solid black; /* установить границы ячеек */
+     /* выровнять текст по левому краю */
+    padding: 8px; /* установить отступы внутри ячеек */
+  }
+  
+  th {
+    text-align: center;
+    background-color: #f2f2f2; /* установить цвет фона для заголовков столбцов */
+    color: black; /* установить цвет текста для заголовков столбцов */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* установить четную полосу цвета фона */
+  }
+  
+  /* изменить стиль ячейки, если курсор находится над ней */
+  td:hover {
+    background-color: #f5f5f5;
+  }
+@media (max-width: 768px) {
+    .content{
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+    #logoimg{
+        width: 48pt;
+    }
+    .mpage{
+        border-top-right-radius: 0px;
+    }
+    .big-text{
+        font-size: 16pt;
+    }
+    .lefttime{
+        display: none;
+    }
+    #vl1{
+        height: 0px !important;
+    }
+    #bh1{
+        display: flex;
+        justify-content: start;
+    }
+    .big-text{
+        border-bottom-left-radius: 0px ;
+    }
+    .volumev{
+        font-size: 14pt;
+    }
+    .mobiletitle{
+        display: inline;
+        margin: 5px;
+        
+    }
+    #spherestart{
+        border-bottom-left-radius: 25px ;
+        border-top-left-radius: 0px;
+        width: 65%;
+    }
+    .page{
+        padding: 0px;
+    }
+    .paragraf{
+        white-space: normal;
+    }
+   .monochrome{
+        float: none !important;
+    }
+
+    .illustration{
+        float: none !important;
+    }
+    #f3{
+        width: 350px;
+    }
+    #MM{
+        width: 400px;
+    }
+  }
+  @media (max-width: 576px){
+    .content{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .mpage{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+
+  }
