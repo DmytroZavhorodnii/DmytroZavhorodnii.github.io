@@ -68,6 +68,7 @@ to {
   .content {
     margin: 0 auto;
 
+   
     padding: 85px;
     overflow: auto;
 
@@ -381,11 +382,11 @@ table {
   td:hover {
     background-color: #f5f5f5;
   }
-@media (max-width: 812px) {
+
+@media (max-width: 900px) {
 
     .content{
-        padding-left: 0px;
-        padding-right: 0px;
+        padding: 0px;
     }
     #logoimg{
         width: 48pt;
@@ -441,16 +442,5 @@ table {
     #MM{
         width: 400px;
     }
-  }
-  @media (max-width: 576px){
-    .content{
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .mpage{
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
 
   }
