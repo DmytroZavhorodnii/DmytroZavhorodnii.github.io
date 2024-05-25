@@ -1445,3 +1445,17 @@ main {
     stroke-dashoffset: -136px;
   }
 }
+.accordion-item {
+  border: 1px solid #F73859; /* Sets border color of accordion items */
+}
+.accordion-button {
+  background-color: whitesmoke;
+
+}
+.accordion-button:not(.collapsed) {
+  background-color: whitesmoke; /* Maintain the color when button is active */
+}
+.accordion-button:focus {
+  box-shadow: none; /* Remove the default focus shadow */
+}
+
