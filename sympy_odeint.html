@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Wahadło (sympy&odeint)</title>
+  
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+    h1 {
+        display: flex;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 28pt;
+        margin: 0;
+    }
+    h1 img {
+        width: 68pt;
+        margin-right: 10pt;
+    }
+    @media (max-width: 600px) {
+            h1 {
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 1.5em;
+            }
+            h1 img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+</style>
+<style>
+  body {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #1a1a1a;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+  a{
+    color: #F73859!important;
+  }
+  table {
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+
+
+</style>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  
+  <h1><a style="padding-right: 15px;" href="https://dimon.work/"><img src="dimonblack.svg" alt="Logo"></a>Wahadło (sympy&odeint)</h1>
+
+  <div style="text-align: right;">
+    <a href="vertopal_5345d3b38b6c48efba74e842ab170485/sympy_odeint.7z">Pobierz plik .zip</a>
+  </div>
+  <hr>
+  <h3>-I- OPIS</h3>
+  <hr>
+
+  <i>Krótki opis przedstawianego zjawiska</i>
+  <p>Wahadło matematyczne jest prostym, ale ważnym modelem używanym do badania ruchu oscylacyjnego. Reprezentuje ono punkt poruszający się po okręgu w płaszczyźnie pionowej pod wpływem pola grawitacyjnego. Jego równanie ruchu opisuje zależność kąta od czasu i pozwala nam przewidzieć jego zachowanie.</p>
+  
+  <p>Sympy i scipy to biblioteki Pythona przeznaczone odpowiednio do obliczeń symbolicznych i obliczeń naukowych. Za ich pomocą można przeprowadzić analizę wahadła matematycznego, w tym rozwiązać jego równanie ruchu, zbadać zależność okresu oscylacji od długości struny lub amplitudy, a nawet wykreślić wykresy.</p>
+
+  <p>Sprawozdanie obejmuje symulację wahadła przy użyciu sympy i scipy oraz analizę różnic tych podejść.</p>
+  
+  <i>Niezbędne wzory i warunki początkowe</i>
+  <p>Wahadło matematyczne to punkt materialny poruszający się po okręgu w płaszczyźnie pionowej w jednorodnym polu grawitacyjnym. Równanie ruchu wahadła określa wzór:</p>
+  
+  <p>Równanie ruchu:</p>
+  <p>\(\Theta''(t) + \frac{g}{l} \sin(\Theta(t)) = 0\)</p>
+  
+  <p>gdzie:</p>
+  <ul>
+      <li>\(\Theta\) - kąt wychylenia</li>
+      <li><code>g</code> - przyspieszenie grawitacyjne</li>
+      <li><code>l</code> - długość struny</li>
+  </ul>
+
+  <p>Warunki początkowe przyjęte w symulacji:</p>
+  <ul>
+      <li>\(\Theta(0) = \frac{\pi}{4}\)</li>
+      <li>\(\frac{g}{L} = 10\)</li>
+      <li>t = (0, 10)</li>
+  </ul>
+
+  <p>Wynik linearyzacji równania wahadła otrzymany przy pomocy sympy:</p>
+  <p>\(\Theta(t) = C_1 \sin(\sqrt{\frac{g}{L}} t) + C_2 \cos(\sqrt{\frac{g}{L}} t)\)</p>
+  <p>gdzie \(C_1\) i \(C_2\) są dowolnymi stałymi.</p>
+  <hr>
+  <h3>-II- Wykresy</h3>
+  <hr>
+<div id="dbf7ebed-0de5-41a9-88c4-6249726134e8" class="cell code"
+data-execution_count="37">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> sp.Symbol(<span class="st">&#39;t&#39;</span>) </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> sp.Function(<span class="st">&#39;theta&#39;</span>)(t)  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>g, l <span class="op">=</span> sp.symbols(<span class="st">&#39;g l&#39;</span>) </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>equation <span class="op">=</span> sp.Eq(theta.diff(t, t) <span class="op">+</span> (g <span class="op">/</span> l) <span class="op">*</span> sp.sin(theta), <span class="dv">0</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>equation</span></code></pre></div>
+<div class="output execute_result" data-execution_count="37">
+<p>  <p>\(\Theta''(t) + \frac{g}{l} \sin(\Theta(t)) = 0\)</p></p>
+</div>
+</div>
+<hr>
+<div id="5610bba9-3c0c-471f-8a22-d9d399fd634b" class="cell code"
+data-execution_count="38">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> sp.Symbol(<span class="st">&#39;t&#39;</span>)  <span class="co"># время</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> sp.Function(<span class="st">&#39;theta&#39;</span>)(t)  </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>g, l <span class="op">=</span> sp.symbols(<span class="st">&#39;g l&#39;</span>) </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>linear_equation <span class="op">=</span> sp.Eq(theta.diff(t, t) <span class="op">+</span> (g <span class="op">/</span> l) <span class="op">*</span> theta, <span class="dv">0</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>solution_linear <span class="op">=</span> sp.dsolve(linear_equation, theta)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>solution_linear</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<div class="output execute_result" data-execution_count="38">
+<p>\(\Theta(t) = C_1 \sin(\sqrt{\frac{g}{L}} t) + C_2 \cos(\sqrt{\frac{g}{L}} t)\)</p>
+</div>
+</div>
+<hr>
+<div id="5b8a5b08-5372-46c4-99b5-6d9fb557eeb1" class="cell code"
+data-execution_count="138">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> Function, dsolve, Eq, symbols, init_printing, lambdify</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> odeint</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">&#39;ggplot&#39;</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>init_printing(use_latex<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># sympy</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> symbols(<span class="st">&#39;t&#39;</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> Function(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>eq <span class="op">=</span> Eq(x(t).diff(t, <span class="dv">2</span>), <span class="op">-</span>k <span class="op">*</span> x(t))</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> dsolve(eq, ics<span class="op">=</span>{x(<span class="dv">0</span>): np.pi <span class="op">/</span> <span class="dv">4</span>, x(t).diff(t).subs(t, <span class="dv">0</span>): <span class="dv">0</span>})</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>theta_numeric <span class="op">=</span> lambdify(t, sol.rhs, modules<span class="op">=</span>[<span class="st">&#39;numpy&#39;</span>])</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#odeint</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rownaniew(theta, t, k):</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> [theta[<span class="dv">1</span>], <span class="op">-</span>k <span class="op">*</span> np.sin(theta[<span class="dv">0</span>])]</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>theta0 <span class="op">=</span> [np.pi <span class="op">/</span> <span class="dv">4</span>, <span class="fl">0.0</span>]</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>t_dt <span class="op">=</span> [<span class="fl">0.01</span>, <span class="fl">0.05</span>, <span class="fl">0.1</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.125</span>, <span class="fl">1.25</span>, <span class="fl">1.5</span>, <span class="fl">1.75</span>, <span class="fl">1.9</span>, <span class="dv">2</span>]</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Błędy</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dt <span class="kw">in</span> t_dt:</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">10</span>, dt)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> theta_numeric(t)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">#sympy</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    plt.plot(t, x)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">&#39;Czas&#39;</span>)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">&#39;Kąt&#39;</span>)</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="st">&#39;Odchylenie wahadła - metoda Sympy - dt=&#39;</span> <span class="op">+</span> <span class="bu">str</span>(dt)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    plt.title(title)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># odeint</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    sol <span class="op">=</span> odeint(rownaniew, theta0, t, args<span class="op">=</span>(k,))</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    theta_vals <span class="op">=</span> sol[:, <span class="dv">0</span>]</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    plt.plot(t, theta_vals)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">&#39;Czas&#39;</span>)</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">&#39;Kąt&#39;</span>)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="st">&#39;Odchylenie wahadła - metoda Odeint - dt=&#39;</span> <span class="op">+</span> <span class="bu">str</span>(dt)</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>    plt.title(title)</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>    plt.plot(t, x, label<span class="op">=</span><span class="st">&#39;Metoda Sympy&#39;</span>)</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    plt.plot(t, theta_vals, label<span class="op">=</span><span class="st">&#39;Metoda Odeint&#39;</span>)</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">&#39;Czas&#39;</span>)</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">&#39;Kąt&#39;</span>)</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="st">&#39;Odchylenie wahadła - dt= &#39;</span> <span class="op">+</span> <span class="bu">str</span>(dt)</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    plt.title(title)</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>    mean_absolute_error <span class="op">=</span> np.mean(np.<span class="bu">abs</span>(odeint_solution <span class="op">-</span> sympy_solution))</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>    mean_squared_error <span class="op">=</span> np.mean((odeint_solution <span class="op">-</span> sympy_solution) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;For dt = </span><span class="sc">{</span>dt<span class="sc">}</span><span class="ss">:&quot;</span>)</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Mean Absolute Error: </span><span class="sc">{</span>mean_absolute_error<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Mean Squared Error: </span><span class="sc">{</span>mean_squared_error<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">10</span>, dt)</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>    sympy_solution <span class="op">=</span> theta_numeric(t)</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>    sol <span class="op">=</span> odeint(rownaniew, theta0, t, args<span class="op">=</span>(k,))</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    odeint_solution <span class="op">=</span> sol[:, <span class="dv">0</span>]</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>mean_absolute_error <span class="op">=</span> []</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>mean_squared_error <span class="op">=</span> []</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>t_dt_errors<span class="op">=</span> np.arange(<span class="fl">0.01</span>, <span class="dv">1</span>, <span class="fl">0.01</span>)</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dt <span class="kw">in</span> t_dt_errors:</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">10</span>, dt)</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>    sol <span class="op">=</span> odeint(rownaniew, theta0, t, args<span class="op">=</span>(k,))</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> theta_numeric(t)</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>    abs_error <span class="op">=</span> np.<span class="bu">abs</span>(sol[:, <span class="dv">0</span>] <span class="op">-</span> x)  <span class="co"># Calculate absolute error for the first column of sol</span></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>    sq_error <span class="op">=</span> (sol[:, <span class="dv">0</span>] <span class="op">-</span> x) <span class="op">**</span> <span class="dv">2</span>    <span class="co"># Calculate squared error for the first column of sol</span></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>    mean_absolute_error.append(np.mean(abs_error))</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>    mean_squared_error.append(np.mean(sq_error))</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>plt.plot(mean_absolute_error, label<span class="op">=</span><span class="st">&#39;MAE&#39;</span>, marker<span class="op">=</span><span class="st">&#39;o&#39;</span>, color<span class="op">=</span><span class="st">&#39;blue&#39;</span>)</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Epoch&#39;</span>)</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Mean Absolute Error&#39;</span>)</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Mean Absolute Error&#39;</span>)</span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="co"># Создание графика для Mean Squared Error</span></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>plt.plot(mean_squared_error, label<span class="op">=</span><span class="st">&#39;MSE&#39;</span>, marker<span class="op">=</span><span class="st">&#39;s&#39;</span>, color<span class="op">=</span><span class="st">&#39;green&#39;</span>)</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Epoch&#39;</span>)</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Mean Squared Error&#39;</span>)</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Mean Squared Error&#39;</span>)</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/eee1a612cf3383a7f60daa1e8820e9f788848101.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/0eb8ee32f42eb011f1184d9da3a8bb65441daf80.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/5c54e15bab79e3d63ab0d4915ebec19e0742ea65.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 0.01:
+Mean Absolute Error: 0.0864
+Mean Squared Error: 0.0145
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/91e90ea31878e8dd02533884c0988b6413ff7e4f.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/4c2ade4ffc2db4b22cdab6a9c533c24e8f379ee8.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/07a7d3f567ede70c4fb8823c280ea30ea6abc28a.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 0.05:
+Mean Absolute Error: 0.2998
+Mean Squared Error: 0.1460
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/430e0dc7a2e0f4f5df4b5fc8324b8b361564a75b.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/022d1f24a3eedd178fb1d6cf732e5c50a3a23980.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/6dd92a942a3cbe20955fad11088a13234954dc05.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 0.1:
+Mean Absolute Error: 0.2990
+Mean Squared Error: 0.1457
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/3b8942e9c1ff57f49a040febcfdb1ad612caec21.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/08f3c8621cf5a1b2595bff4a341c49d61e535f74.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/f5088f6842fed747bfeb41e0e788887ce18620d2.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 0.5:
+Mean Absolute Error: 0.2977
+Mean Squared Error: 0.1453
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/cc169a061ddd85c924f6cd0baca87d1899ee84a8.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/e38c2b51a9ec1b41e24557f23b436f5ebefe293a.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/67021759ff29d747db817a5ed2cfbf0ad1daea8d.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 1:
+Mean Absolute Error: 0.2749
+Mean Squared Error: 0.1392
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/1ec41b64191ea12215a845e5bbb503392f819052.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/0b2e5ad3e4443bd761ab617eadf64bd5ee1b3fa0.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/99a8419e204dd65cd03bb874f5a9cf67a97dc2a9.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 1.125:
+Mean Absolute Error: 0.1021
+Mean Squared Error: 0.0194
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/ec313261f09db72b582dccfc065bcc6153f73c69.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/b27103f59bb9794e77a1124976958b8db39e9e33.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/6c06cf8c8f2e7b32be96714d0e0beec0a93acc8a.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 1.25:
+Mean Absolute Error: 0.2995
+Mean Squared Error: 0.1271
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/cfcb0c06955759b097a4aef9aee034789996b66e.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/4f4593de5c00c66c216508afad2d3b1e4244477f.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/4167495f64864f58468f53a7e59f3fb8a8e141c8.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 1.5:
+Mean Absolute Error: 0.2976
+Mean Squared Error: 0.1506
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/7dcba28ac37b9498e68b1937b4af75a75e60aec0.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/2a9bbe2a37be546f8671813bdf9cc0aeec53c02d.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/39a5127f74ff7fc51dae782e4e90392e93e2f08d.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 1.75:
+Mean Absolute Error: 0.2397
+Mean Squared Error: 0.1055
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/94e2b536da7102c9460275af0c73da95223ec858.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/3b331f008625995dd87cdb35bc82384f55210384.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/0fadc220731c54420f7077fe12bdc5550d4d8fac.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 1.9:
+Mean Absolute Error: 0.2703
+Mean Squared Error: 0.1252
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/33b4a8f7cd9933316d26d9d91977af018af7fe47.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/d17ff83d3884414b73a15cbe72480c8156590237.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/f723c47ace017e87a421a245edb109362278f2d3.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For dt = 2:
+Mean Absolute Error: 0.3848
+Mean Squared Error: 0.2401
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/8e0b050d05fc7dd8e74a082718a8efd67d2198db.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_5345d3b38b6c48efba74e842ab170485/30392b7eacb8ad589c242c62bdbf2a8121cba6f4.png" /></p>
+</div>
+</div>
+<hr>
+<div id="132f37d9-0ad8-48cd-b6ed-fd8aae2f4d93" class="cell code">
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+<h5>Błędy i Różnica Wykorzystywanych Podejść</h5>
+<p>Analiza wyników symulacji przeprowadzonych przy użyciu sympy i scipy pokazuje różnice w dokładności w zależności od kroku czasowego <code>dt</code>. Poniżej znajduje się tabela błędów absolutnego (MAE) i kwadratowego (MSE), wyliczonych dla różnych wartości <code>dt</code>:</p>
+
+<table border="1">
+    <tr>
+        <th>dt</th>
+        <th>Mean absolute error</th>
+        <th>Mean squared error</th>
+    </tr>
+    <tr>
+        <td>0.01</td>
+        <td>0.0864</td>
+        <td>0.0145</td>
+    </tr>
+    <tr>
+        <td>0.05</td>
+        <td>0.2998</td>
+        <td>0.1460</td>
+    </tr>
+    <tr>
+        <td>0.1</td>
+        <td>0.2990</td>
+        <td>0.1457</td>
+    </tr>
+    <tr>
+        <td>0.5</td>
+        <td>0.2977</td>
+        <td>0.1453</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0.2749</td>
+        <td>0.1392</td>
+    </tr>
+    <tr>
+        <td>1.125</td>
+        <td>0.1021</td>
+        <td>0.0194</td>
+    </tr>
+    <tr>
+        <td>1.25</td>
+        <td>0.2995</td>
+        <td>0.1271</td>
+    </tr>
+    <tr>
+        <td>1.5</td>
+        <td>0.2976</td>
+        <td>0.1506</td>
+    </tr>
+    <tr>
+        <td>1.75</td>
+        <td>0.2397</td>
+        <td>0.1055</td>
+    </tr>
+    <tr>
+        <td>1.9</td>
+        <td>0.2703</td>
+        <td>0.1252</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>0.3848</td>
+        <td>0.2401</td>
+    </tr>
+</table>
+<hr>
+<h3>-III- Wnioski</h3>
+<hr>
+
+<p><b>Porównanie metod:</b>Porównanie wyników symulacji dla metody SymPy i odeint pokazuje, że obie metody generują podobne trajektorie wahadła dla różnych wartości kroku czasowego (dt). Jednakże widać pewne różnice w szczegółach trajektorii, szczególnie dla większych wartości dt.</p>
+<p><b>Wpływ kroku czasowego: </b>Analiza błędów (MAE i MSE) dla różnych wartości dt wykazała, że mniejsze wartości dt prowadzą do mniejszych błędów. To potwierdza, że dokładność symulacji wzrasta przy mniejszych krokach czasowych.</p>
+<p><b>Zbieżność wyników: </b>Dla odpowiednio małych wartości dt, obie metody zbiegają do podobnych wyników, co jest zgodne z oczekiwaniami. Jednakże dla większych wartości dt różnice między wynikami obu metod mogą być bardziej zauważalne.</p>
+<p><b>Optymalny krok czasowy: </b>Analiza błędów dla różnych wartości dt może pomóc w określeniu optymalnego kroku czasowego dla symulacji. Wartość optymalna będzie zależała od wymagań dokładnościowych oraz zasobów obliczeniowych.</p>
+<p><b>Kontrola błędów</b>: Śledzenie błędów (MAE i MSE) w zależności od czasu pozwala zrozumieć, jak zmienia się dokładność symulacji wraz z postępem czasu. To może być przydatne przy analizie stabilności i długoterminowej dokładności modelu.</p>
+<p>Wnioski te mogą być użyteczne przy dalszym doskonaleniu symulacji oraz przy wyborze odpowiednich parametrów dla konkretnych zastosowań. Dzięki analizie błędów można zoptymalizować wydajność i dokładność modelu, co jest kluczowe w wielu dziedzinach nauki i inżynierii.</p>
+<h6 class='text-center footer-message'>
+  <hr>Do you have interesting projects and good financing?<br> <a href='https://wa.me/48733334981' title='akigel'>Text me</a>, let's be friends <i class="far fa-smile-wink"></i></h6>
+  <a href="https://dimon.work/">dimon.work</a>
+<h6 class='copymark text-center'>Dmytro Zavhorodnii &copy; 2024</h6>
+
+</body>
+</html>
