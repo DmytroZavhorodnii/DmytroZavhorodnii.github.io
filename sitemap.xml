@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://dimon.work/</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Kurs Page -->
+  <url>
+    <loc>https://dimon.work/kurs.html</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Model Lotki-Volterry (MatLab) -->
+  <url>
+    <loc>https://dimon.work/Lotki-Volterry_(MatLab).html</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Model Lotki-Volterry & Lorenz System (Simulink) -->
+  <url>
+    <loc>https://dimon.work/LV_Lorenz_simulink.html</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Euler and odeint Comparison -->
+  <url>
+    <loc>https://dimon.work/LV_Lorenz_Euler_odeint.html</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- odeint and SymPy Comparison -->
+  <url>
+    <loc>https://dimon.work/sympy_odeint.html</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- PCGT -->
+  <url>
+    <loc>https://pcgt.in.ua/index.html</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Sphere Project -->
+  <url>
+    <loc>https://dimon.work/sphere/index.html</loc>
+    <lastmod>2023-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
