@@ -1,0 +1,204 @@
+		||||||||||||||||||||||||||||
+		https://dimon.work/kurs.html 
+		||||||||||||||||||||||||||||
+
+Wyświetl wszystkie filmy, które mają tytuł równy "Avatar":
+
+sql
+
+SELECT * FROM film WHERE title = 'Avatar';
+
+Wyświetl filmy, których rok wydania (release_year) jest większy niż 2005:
+
+sql
+
+SELECT * FROM film WHERE release_year > 2005;
+
+Wyświetl filmy, które zostały wydane w 2005 roku lub później:
+
+sql
+
+SELECT * FROM film WHERE release_year >= 2005;
+
+Wyświetl filmy, które mają rating mniejszy niż 4:
+
+sql
+
+SELECT * FROM film WHERE rating < 4;
+
+Wyświetl filmy, które mają rating równy 5:
+
+sql
+
+SELECT * FROM film WHERE rating = 5;
+
+Wyświetl filmy, które mają rating mniejszy lub równy 3:
+
+sql
+
+SELECT * FROM film WHERE rating <= 3;
+
+Wyświetl filmy, które mają rating różny od 5:
+
+sql
+
+SELECT * FROM film WHERE rating <> 5;
+
+Wyświetl filmy, które mają rating różny od 5 (używając operatora "!="):
+
+sql
+
+    SELECT * FROM film WHERE rating != 5;
+
+Dodatkowe zadania:
+
+    Wyświetl filmy, które mają więcej niż 120 minut długości (length):
+
+    sql
+
+    SELECT * FROM film WHERE length > 120;
+
+    Wyświetl filmy, które mają długość równą 90 minut:
+
+sql
+
+SELECT * FROM film WHERE length = 90;
+
+Te zadania pozwolą Ci przećwiczyć wszystkie podstawowe operatory porównania w SQL w kontekście tabeli film w bazie danych Sakila.
+
+
+----------------------------------------------------------------------------------------
+Zadania:
+
+    Wyświetl filmy, które mają rating równy PG lub PG-13:
+
+    sql
+
+SELECT * FROM film WHERE rating = 'PG' OR rating = 'PG-13';
+
+Wyświetl filmy, które mają długość większą niż 100 minut i rating R:
+
+sql
+
+SELECT * FROM film WHERE length > 100 AND rating = 'R';
+
+Wyświetl filmy, które zostały wydane w 2006 roku i mają długość mniejszą niż 90 minut:
+
+sql
+
+SELECT * FROM film WHERE release_year = 2006 AND length < 90;
+
+Wyświetl filmy, które mają rating G lub długość większą niż 130 minut:
+
+sql
+
+SELECT * FROM film WHERE rating = 'G' OR length > 130;
+
+Wyświetl filmy, które mają rating różny od NC-17 i zostały wydane w 2006 roku:
+
+sql
+
+SELECT * FROM film WHERE rating <> 'NC-17' AND release_year = 2006;
+
+Wyświetl filmy, które mają rating PG oraz zostały wydane w latach 2005-2006:
+
+sql
+
+SELECT * FROM film WHERE rating = 'PG' AND (release_year = 2005 OR release_year = 2006);
+
+Wyświetl filmy, które mają długość mniejszą niż 100 minut lub rating R oraz zostały wydane po 2006 roku:
+
+sql
+
+SELECT * FROM film WHERE (length < 100 OR rating = 'R') AND release_year > 2006;
+
+Wyświetl filmy, które mają rating NC-17 lub długość większą niż 150 minut oraz zostały wydane w 2006 roku:
+
+sql
+
+    SELECT * FROM film WHERE (rating = 'NC-17' OR length > 150) AND release_year = 2006;
+
+Te zadania pozwolą Ci praktykować stosowanie operatorów AND i OR w zapytaniach SQL dotyczących tabeli film.
+
+-----------------------------------------------------------------
+SELECT title, special_features, length 
+FROM film 
+WHERE rating = 'R' AND length < (SELECT AVG(length) FROM film);
+--------------------------------------------------------------
+Znajdź wszystkich aktorów, których imiona zaczynają się od litery "P":
+
+sql
+
+SELECT first_name, last_name 
+FROM actor 
+WHERE first_name LIKE 'P%';
+
+Znajdź wszystkich aktorów, których nazwiska kończą się na "n":
+
+sql
+
+SELECT first_name, last_name 
+FROM actor 
+WHERE last_name LIKE '%n';
+
+Znajdź wszystkich aktorów, których imiona zawierają "EN":
+
+sql
+
+SELECT first_name, last_name 
+FROM actor 
+WHERE first_name LIKE '%EN%';
+
+Znajdź wszystkich aktorów, których imiona zaczynają się na "J" i kończą na "n":
+
+sql
+
+SELECT first_name, last_name 
+FROM actor 
+WHERE first_name LIKE 'J%n';
+
+Znajdź wszystkich aktorów, których imiona mają cztery znaki, a drugim i trzecim znakiem jest "OH":
+
+sql
+
+SELECT first_name, last_name 
+FROM actor 
+WHERE first_name LIKE '_OH_';
+
+Znajdź wszystkich aktorów, których imiona mają dowolny pierwszy znak, drugi i trzeci to "OH", a po nich może następować dowolna liczba znaków:
+
+sql
+
+SELECT first_name, last_name 
+FROM actor 
+WHERE first_name LIKE '_OH%';
+
+-----------------------------------------------------------------------------------
+
+3. Średnia liczba znaków w adresie (address) w każdej dzielnicy:
+
+sql
+
+SELECT district, AVG(LENGTH(address)) AS avg_address_length
+FROM address
+GROUP BY district;
+
+Wynik: Zwróci średnią liczbę znaków w adresie w każdej dzielnicy.
+
+
+
+2. Znajdź maksymalną i minimalną długość numeru telefonu w każdej dzielnicy (district):
+
+sql
+
+SELECT district, MAX(LENGTH(phone)) AS max_phone_length, MIN(LENGTH(phone)) AS min_phone_length
+FROM address
+GROUP BY district;
+
+Wynik: Zwróci maksymalną i minimalną długość numeru telefonu w każdej dzielnicy.
+
+
+		||||||||||||||||||||||||||||
+		https://dimon.work/kurs.html 
+		||||||||||||||||||||||||||||
+

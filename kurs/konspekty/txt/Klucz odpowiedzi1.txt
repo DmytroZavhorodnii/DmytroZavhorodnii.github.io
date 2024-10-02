@@ -1,0 +1,56 @@
+		||||||||||||||||||||||||||||
+		https://dimon.work/kurs.html 
+		||||||||||||||||||||||||||||
+
+Klucz odpowiedzi:
+
+Pytania dotyczące relacji i postaci normalnych:
+
+    1b) Jeden do wielu
+    2c) Relacja wiele do wielu
+    3b) Stworzyć dodatkową tabelę łączącą, zawierającą klucze obce obu tabel
+    4b) Wartości w kolumnach są atomowe (niepodzielne)
+    5a) Tabela musi być w 1NF oraz każda kolumna niebędąca kluczem musi zależeć od całego klucza podstawowego
+    6b) Tabela, w której istnieje zależność między dwiema kolumnami niezależnymi od klucza głównego
+    7a) Wszystkie kolumny zależą bezpośrednio od klucza głównego i nie ma żadnych zależności przechodnich
+    8d) Kolumny zależą tylko od części klucza złożonego
+    9c) Wiele do wielu
+    10a) Tabela zawierająca pole z wartościami wielokrotnymi, np. lista kursów przypisana jednemu studentowi
+
+Pytania dotyczące definicji w pliku PDF:
+
+    11b) Zbiór powiązanych ze sobą danych
+    12b) Za obsługę języka bazy danych, przechowywanie i pobieranie danych oraz ich optymalizację
+    13b) MySQL
+    14b) MySQL, PostgreSQL, Oracle
+    15b) Kolumna, która jednoznacznie identyfikuje każdy wiersz w tabeli
+    16c) Kolumna w tabeli, która odnosi się do klucza podstawowego innej tabeli
+    17b) Proces modyfikacji struktury bazy danych w celu usunięcia redundancji danych i ułatwienia dostępu do nich
+    18b) Gdy wartości pól są atomowe, czyli zawierają pojedyncze informacje
+    19a) Tabela jest w 2NF, gdy każda kolumna zależy od całego klucza podstawowego, a nie od jego części
+    20a) Tabela jest w 3NF, gdy każda kolumna zależy bezpośrednio od klucza głównego i nie ma żadnych zależności przechodnich
+
+Pytania dotyczące SQL i typów danych:
+
+    21c) Językiem do przetwarzania i wybierania danych tabelarycznych
+    22a) SELECT, INSERT, UPDATE, DELETE
+    23a) Tablicę (zestaw wyników)
+    24b) DOUBLE
+    25b) VARCHAR
+    26c) TIMESTAMP
+    27a) BOOLEAN
+    28c) GEOMETRY
+    29b) JSON
+    30b) BIGINT
+
+Pytania dotyczące postaci normalnych z przykładami tabel:
+
+    31b) Nie, tabela nie jest w 1NF, ponieważ kolumna "Kursy" zawiera wiele wartości.
+    32b) Nie, tabela nie jest w 2NF, ponieważ dane dotyczące przedmiotów i ocen nie zależą od kierunku studiów.
+    33b) Nie, tabela nie jest w 3NF, ponieważ dane dotyczące „KlientAdres”, „Miasto” i „KodPocztowy” zależą od siebie nawzajem, a nie od klucza głównego.
+    34b) Nie, tabela nie jest w 2NF, ponieważ kolumna „CenaRazem” zależy od „Ilość” i „CenaJednostkowa”.
+    35b) Nie, tabela nie jest w 1NF, ponieważ kolumna „Telefon” zawiera wiele wartości w jednym polu.
+
+		||||||||||||||||||||||||||||
+		https://dimon.work/kurs.html 
+		||||||||||||||||||||||||||||
