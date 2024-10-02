@@ -1,0 +1,83 @@
+	//////////\\\\\\\\\
+	dr. 阮清 02.10.2024
+	||||||||||||||||||||
+	dimon.work/kurs.html
+	||||||||||||||||||||
+
+-> Dane - wartości określonego typu
+-> Informacje - przyporządkowanie danych do obiektów (za pomocą atrybutów). 
+	Inf musi być związana z rzeczywistym światem
+	Inne przyporządkowanie - inna inf
+	inf o obiektach: gdzie są dane i w jaki sposób one są przyporządkowane
+
+	(Ex. pogoda - We Wrocławiu deszczowo)
+	|stan pogody| --------> |Wrocław|
+				|02.10.2024|
+
+-> Wiedza - mechanizm wnioskowania na podstawie informacji
+	mechanizm - logika (jeśli A ==> to B, z warunkiem niepewności - nie wiemy czy napewno A zachodzi), 
+			   (Ex. każdy ma własny mechanizm => nie rozumiem czemu człowiek tak się zachował)
+	wnioskowanie - podstawa podejmowanie decyzij (Ex. rozkład zajęć)
+
+Piramida wiedzy:
+
+		       Mądrość
+		     --Wiedza--
+		 ----Informacje----
+		--------Dane--------
+	
+Lepsza wiedza => lepsze decyzje => lepsze życie
+Umiejętność wyk mechanizmu - mądrość (ex. wszyscy znają mat, ale nie wszyscy udowod. tw.)
+
+------------------------------------------------------------------------------------------
+
+
+Baza danych (BD) — zbiór powiązanych ze sobą danych (o określonych strukturach)
+	--> 1. Tabela - relacyjna BD
+	->2. Graph - grafowa BD, NoSQL
+	3. Drzewo - hierarchiczna BD
+	4. Obiekt - obiektowa BD
+	5. Logiczna struktura - logiczna BD (ex. wiek(x, 30), wada(x, 20))
+
+
+						  |System BD:
+Użytkownik <----------------->   Interfejs <----> |
+	   (formularze, 		    (SQL) |System Zarządzania Bazami danych + Baza Danych
+	    jeżyk naturalny)	
+
+----------------------------------------------------------------------------------------------------
+
+Operacje def algebra relacyjna
+
+Tabele Ex 
+Nr alb	Nazwisko	Imię	Kierunek	Rok	Adres	Wiek
+100	Maj		Anna	Inf		3	Wrocław	20
+101	Nowak		Adam	IS		3	Oława	21
+102	Brom		John	IS		2	Legnica	22
+103	Mohamed		Khaid	Zarz		1	Nysa	24
+104	Adamski		Jan	Zarz		1	Grodków	19
+105	Wieczorek	Janusz	IS		3	Wrocław	20
+106	Turdif		Jacek	Inf		2	Legnica	22
+
+1. Lista nazwisk i imion studentów:
+2. Lista numerów albumów i wiek studentów:
+3. Lista studentów, którzy studiują kierunek IS:
+4. Lista studentów z wiekiem pomiędzy 19 a 22 lata:
+5. Lista nazwisk studentów, którzy mieszkają w Legnicy:
+6. Lista studentów, którzy są na 3 roku i studiują informatykę:
+7. Lista kierunków:
+
+Ex - lączenie tabel
+
+
+
+
+
+
+
+
+
+
+
+
+
