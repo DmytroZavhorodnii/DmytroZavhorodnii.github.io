@@ -1,8 +1,9 @@
-	//////////\\\\\\\\\
-	dr. 阮清 02.10.2024
-	||||||||||||||||||||
-	dimon.work/kurs.html
-	||||||||||||||||||||
+          Dr. 阮清
+         02.10.2024
+    ||||||||||||||||||||
+    dimon.work/kurs.html
+    ||||||||||||||||||||
+
 
 -> Dane - wartości określonego typu
 -> Informacje - przyporządkowanie danych do obiektów (za pomocą atrybutów). 
