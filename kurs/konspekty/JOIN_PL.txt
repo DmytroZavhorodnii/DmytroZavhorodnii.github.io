@@ -1,0 +1,15 @@
+			  JOIN_PL
+		||||||||||||||||||||||||||||
+		https://dimon.work/kurs.html 
+		||||||||||||||||||||||||||||
+
+Zadania: 
+	1. Znajdź filmy akcji i komediowe, które mają mniej niż 10 kopii w magazynie. 	Wydrukuj tytuły filmów, liczbę kopii w magazynie i nazwisko pracownika	odpowiedzialnego za sklep.
+	
+	2. Znajdź wszystkich aktorów, którzy wystąpili w więcej niż 5 filmach. Podaj imię i 	nazwisko aktora oraz łączną liczbę filmów, w których wystąpił.
+	
+	3. Znajdź wszystkie filmy, które zostały wypożyczone więcej niż 20 razy.Wyświetla	nazwę filmu i całkowitą liczbę wypożyczeń.
+
+		||||||||||||||||||||||||||||
+		https://dimon.work/kurs.html 
+		||||||||||||||||||||||||||||
