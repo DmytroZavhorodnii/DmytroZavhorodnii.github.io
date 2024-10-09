@@ -416,7 +416,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
 
         <h6 class='text-center footer-message'><hr>Do you have interesting projects and good financing?<br> <a href='https://wa.me/48733334981' title='akigel'>Text me</a>, let's be friends <i class="far fa-smile-wink"></i></h6>
-        <h6 class='copymark text-center'>Dmytro Zavhorodnii &copy; 2024</h6>
+        <h6 class='copymark text-center'>Dmytro Zavhorodnii &copy; <span id="currentYear"></span>     
+</h6>
+<script>
+  // Получаем текущий год
+  const currentYear = new Date().getFullYear();
+  // Выводим текущий год в элемент с id "currentYear"
+  document.getElementById("currentYear").textContent = currentYear;
+</script>
       </main>
     </div>
 
