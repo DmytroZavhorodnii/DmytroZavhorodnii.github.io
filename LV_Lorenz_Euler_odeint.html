@@ -318,7 +318,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
   
-  <h1><a style="padding-right: 15px;" href="https://dimon.work/"><img src="dimonblack.svg" alt="Logo"></a>Porównanie metody Eulera i funkcji odeint</h1>
+  <h1><a style="padding-right: 15px;" href="https://dimon.work/"><img src="https://dimon.work/dimonblack.svg" alt="Logo"></a>Porównanie metody Eulera i funkcji odeint</h1>
 
   <div style="text-align: right;">
     <a href="vertopal_41259dc942374850892f84f4fe35a533/laba3-Matlab.ipynb">Pobierz plik .ipynb</a>
@@ -862,10 +862,14 @@ class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 </p>
 
 
-<h6 class='text-center footer-message'>
-  <hr>Do you have interesting projects and good financing?<br> <a href='https://wa.me/48733334981' title='akigel'>Text me</a>, let's be friends <i class="far fa-smile-wink"></i></h6>
-  <a href="https://dimon.work/">dimon.work</a>
-<h6 class='copymark text-center'>Dmytro Zavhorodnii &copy; 2024</h6>
+<h6 class='copymark text-center'>Dmytro Zavhorodnii &copy; <span id="currentYear"></span>     
+</h6>
+<script>
+  // Получаем текущий год
+  const currentYear = new Date().getFullYear();
+  // Выводим текущий год в элемент с id "currentYear"
+  document.getElementById("currentYear").textContent = currentYear;
+</script>
 
 
 
