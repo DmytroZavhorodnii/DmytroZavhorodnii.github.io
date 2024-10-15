@@ -1,0 +1,62 @@
+design
+Konspekt wykładu na temat projektowania i grafiki komputerowej
+1. Czym jest Bauhaus?
+
+Bauhaus to szkoła artystyczna założona w Niemczech w 1919 roku przez architekta Waltera Gropiusa. Wywarła ogromny wpływ na współczesny design i architekturę. Główne idee Bauhausu to:
+
+    Funkcjonalność ponad wszystko: forma musi wynikać z funkcji, a w projekcie nie ma miejsca na zbędne ozdoby.
+    Połączenie sztuki i rzemiosła: Bauhaus dążył do zjednoczenia sztuki, rzemiosła i technologii, aby tworzyć funkcjonalne przedmioty, które można masowo produkować.
+    Minimalizm i geometria: proste formy i linie, wyraźna struktura i jasne proporcje.
+    Użycie nowych materiałów: dążenie do nowatorstwa w stosowaniu materiałów, takich jak stal, szkło, beton, drewno.
+
+Bauhaus położył fundamenty pod wiele kierunków w projektowaniu, w tym dla rozwoju designu przemysłowego i grafiki, wywierając wpływ na zasady minimalizmu i funkcjonalizmu w grafice.
+2. Proporcje w projektowaniu
+
+Proporcje to stosunek między różnymi częściami obiektu lub jego wielkością w odniesieniu do otoczenia. W projektowaniu odpowiednie proporcje pomagają tworzyć harmonijne i estetyczne formy. Kilka kluczowych pojęć:
+
+    Złoty podział (1:1.618): jest to proporcja często spotykana w naturze, używana w sztuce i architekturze. Obiekty oparte na złotym podziale są postrzegane jako naturalne i piękne.
+    Zasada trójpodziału: to jedna z podstawowych technik kompozycji. Przestrzeń dzielimy na 9 równych części za pomocą dwóch poziomych i dwóch pionowych linii, a istotne elementy umieszczamy na przecięciach tych linii.
+    Siatka modularna: system pomagający w organizacji elementów w projekcie, szczególnie w grafice i projektowaniu stron internetowych, dla osiągnięcia wizualnej równowagi.
+
+Proporcje wpływają na nasze postrzeganie, ponieważ opierają się na naturalnych zasadach i wzorcach wizualnych, które nasz mózg łatwo odbiera.
+3. Dlaczego podobają nam się niektóre rzeczy?
+
+Przyczyny, dla których coś nam się podoba, można wyjaśnić jako połączenie estetycznych, psychologicznych i kulturowych czynników oraz wpływem naturalnych wzorców:
+
+    Estetyka: nasza skłonność do harmonijnych form i symetrii. Piękno często tkwi w prostocie i jasności, co sprawia, że obiekt jest łatwy do odbioru i przyjemny dla oka.
+    Psychologia percepcji: kolor, forma, faktura i proporcje odgrywają rolę w tym, jak nasz mózg interpretuje obiekty. Na przykład ciepłe kolory mogą wywoływać uczucie komfortu, a płynne formy – spokój.
+    Konteksty kulturowe: nasze gusta i preferencje mogą być kształtowane przez środowisko kulturowe. To, co jest uważane za piękne w jednej kulturze, może się różnić w innej.
+    Przyczyny ewolucyjne: na przykład symetria często kojarzy się ze zdrowiem i dobrymi genami, co sprawia, że symetryczne twarze i formy są bardziej atrakcyjne dla człowieka.
+
+4. Główne formaty grafiki komputerowej
+
+Grafika komputerowa dzieli się na kilka kluczowych typów formatów, z których każdy ma swoje cechy i zastosowania:
+
+    Grafika rastrowa (bitmap):
+        Składa się z pikseli – małych kolorowych punktów, które tworzą obraz.
+        Przykłady formatów: JPEG, PNG, GIF, BMP.
+        Zalety: wysoka szczegółowość, odpowiednia do zdjęć i złożonych obrazów.
+        Wady: skalowanie prowadzi do utraty jakości (pikselizacja).
+
+    Grafika wektorowa:
+        Składa się z formuł matematycznych opisujących linie, krzywe i kształty.
+        Przykłady formatów: SVG, EPS, AI (Adobe Illustrator).
+        Zalety: nieskończone skalowanie bez utraty jakości, mały rozmiar pliku.
+        Wady: nie nadaje się do złożonych zdjęć i obrazów z dużą ilością detali.
+
+    Grafika trójwymiarowa (3D):
+        Operuje obiektami w przestrzeni trójwymiarowej, używając współrzędnych w osiach X, Y i Z.
+        Przykłady formatów: OBJ, STL, FBX.
+        Zastosowania: animacja, wizualizacja, gry i modelowanie.
+
+    Formaty animacyjne:
+        Format wspierający ruch i zmiany w czasie.
+        Przykłady: GIF (prosta animacja), MP4, WEBM (wideo).
+
+    Formaty do druku i publikacji:
+        W druku i publikacji często używa się formatów wspierających wysoką jakość i szeroką kompatybilność.
+        Przykłady: PDF (Portable Document Format) – uniwersalny format dokumentów, który zachowuje czcionki, obrazy i układ.
+
+Podsumowanie:
+
+Design i grafika komputerowa są ściśle powiązane z kulturą i ludzką percepcją. Zasady Bauhausu uczą nas funkcjonalności i harmonii, odpowiednie proporcje sprawiają, że projekt jest atrakcyjny, a wybór formatu grafiki zależy od zamierzonych celów i końcowego zastosowania.
