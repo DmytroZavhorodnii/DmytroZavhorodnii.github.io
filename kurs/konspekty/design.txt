@@ -60,3 +60,5 @@ Grafika komputerowa dzieli się na kilka kluczowych typów formatów, z których
 Podsumowanie:
 
 Design i grafika komputerowa są ściśle powiązane z kulturą i ludzką percepcją. Zasady Bauhausu uczą nas funkcjonalności i harmonii, odpowiednie proporcje sprawiają, że projekt jest atrakcyjny, a wybór formatu grafiki zależy od zamierzonych celów i końcowego zastosowania.
+
+https://ux-journal.ru/zolotoe-sechenie-v-web-designe.html
