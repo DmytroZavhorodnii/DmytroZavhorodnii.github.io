@@ -1,0 +1,168 @@
+		||||||||||||||||||||||||||||
+		https://dimon.work/kurs.html 
+		||||||||||||||||||||||||||||
+
+Tworzenie pejzażu w Inkscape – krok po kroku
+Cel: Stworzenie prostego górskiego pejzażu na podstawie załączonego obrazu, korzystając z podstawowych narzędzi Inkscape, takich jak kształty, gradienty i warstwy.
+Krok 1: Przygotowanie obszaru roboczego
+
+    Otwórz Inkscape.
+    Wybierz odpowiedni rozmiar obszaru roboczego:
+        Przejdź do Plik > Właściwości dokumentu.
+        Ustaw orientację poziomą i rozmiar na 800x600 pikseli (lub inną odpowiednią wartość).
+    Ustaw siatkę, aby ułatwić sobie rysowanie:
+        Przejdź do Widok > Siatka.
+
+Krok 2: Tworzenie tła (nieba)
+
+    Wybierz narzędzie Prostokąt (F4).
+    Narysuj prostokąt, który będzie obejmował cały obszar roboczy (tło).
+    Ustaw wypełnienie gradientem:
+        Otwórz panel Wypełnienie i obrys (Ctrl+Shift+F).
+        Wybierz wypełnienie Gradient liniowy.
+        Ustaw początek gradientu na jasny żółty odcień (na dole) i przejdź do jasnego beżu (na górze).
+
+Krok 3: Tworzenie gór
+
+    Wybierz narzędzie Krzywe Beziéra (Pióro) (B).
+    Narysuj pierwszą górę, klikając, aby dodać węzły (punkty). Postaraj się, aby linia była falista, tworząca kształt szczytu.
+    Zamknij kształt, łącząc ostatni punkt z pierwszym.
+    Wypełnij górę ciemnym niebiesko-szarym kolorem.
+    Aby uzyskać efekt głębi, dodaj kolejne góry w tle, używając jaśniejszych kolorów (np. jaśniejsze odcienie szarości lub niebieskiego).
+        Każda kolejna góra powinna być za poprzednią:
+            Użyj opcji Obiekt > Obniż (Page Down), aby ustawić góry w odpowiedniej kolejności.
+
+Krok 4: Dodanie chmur
+
+    Wybierz narzędzie Koło (F5).
+    Narysuj kilka okręgów, które połączą się w kształt chmury.
+    Zaznacz wszystkie okręgi i zgrupuj je, wybierając Obiekt > Zgrupuj (Ctrl+G).
+    Skopiuj i umieść kilka takich chmur w różnych miejscach na niebie.
+    Aby chmury wyglądały naturalnie, ustaw przezroczystość:
+        Przejdź do panelu Wypełnienie i obrys i ustaw przezroczystość (np. 70%).
+
+Krok 5: Dodanie wody
+
+    Użyj ponownie narzędzia Prostokąt (F4), aby stworzyć prostokąt w dolnej części obszaru roboczego, który będzie przedstawiał wodę.
+    Wypełnij go gradientem od ciemnoniebieskiego na dole do jaśniejszego niebieskiego u góry.
+
+Krok 6: Praca z warstwami
+
+    Aby zachować porządek w projekcie, możesz użyć warstw:
+        Otwórz panel warstw: Warstwa > Warstwy... (Ctrl+Shift+L).
+        Stwórz nową warstwę dla każdej grupy obiektów: tło, góry, chmury, woda.
+        Przesuwaj obiekty między warstwami, korzystając z menu kontekstowego lub narzędzia Obiekt > Przenieś do warstwy.
+
+Krok 7: Dodanie gradientów dla gór i wody
+
+    Wybierz górę, którą chcesz edytować.
+    Przejdź do Panelu Wypełnienia i wybierz Gradient liniowy.
+    Ustaw początek gradientu na ciemniejszy kolor (np. dół góry), a koniec na jaśniejszy (górna część).
+    Zrób to samo dla innych gór, różnicując odcienie, aby uzyskać efekt głębi.
+    Nałóż gradient również na wodę, zmieniając odcień od ciemnego do jasnego niebieskiego.
+
+Krok 8: Dopracowanie szczegółów i finalne poprawki
+
+    Dodaj delikatne linie na wodzie, które będą imitować fale:
+        Użyj narzędzia Krzywe Beziéra, rysując cienkie białe linie wzdłuż powierzchni wody.
+    Dodaj dodatkowe chmury lub elementy, takie jak słońce za górami:
+        Użyj narzędzia Koło, aby dodać słońce, a następnie zastosuj gradient do kształtu słońca (od jasnego żółtego do przezroczystości).
+    Sprawdź ogólną kompozycję. Upewnij się, że każdy element jest umieszczony prawidłowo i że kolory tworzą spójną całość.
+
+Krok 9: Eksportowanie pracy
+
+    Po zakończeniu pracy zapisz projekt w formacie SVG.
+    Aby wyeksportować projekt jako obraz PNG:
+        Wybierz Plik > Eksportuj obraz PNG.
+        Ustaw odpowiednią rozdzielczość (np. 300 dpi) i wybierz folder, w którym chcesz zapisać plik.
+        Kliknij Eksportuj, aby zapisać gotowy plik PNG.
+
+Oczekiwany wynik:
+
+Po wykonaniu wszystkich kroków powinieneś uzyskać górski pejzaż, podobny do tego z ilustracji, z gradientowym niebem, górami w tle, chmurami na niebie i wodą na pierwszym planie.
+
+
+-----------------------ENG-----------------------
+Creating a Landscape in Inkscape – Step by Step
+
+Goal: Create a simple mountain landscape based on the provided image, using basic Inkscape tools such as shapes, gradients, and layers.
+Step 1: Preparing the Workspace
+
+    Open Inkscape.
+    Choose the appropriate document size:
+        Go to File > Document Properties.
+        Set the orientation to Landscape and the size to 800x600 pixels (or another suitable value).
+    Set up a grid to facilitate drawing:
+        Go to View > Grid.
+
+Step 2: Creating the Background (Sky)
+
+    Select the Rectangle Tool (F4).
+    Draw a rectangle that covers the entire workspace (background).
+    Set the fill to a gradient:
+        Open the Fill and Stroke panel (Ctrl+Shift+F).
+        Select Linear Gradient fill.
+        Set the start of the gradient to a light yellow shade (at the bottom) and transition to a light beige (at the top).
+
+Step 3: Creating the Mountains
+
+    Select the Bezier Tool (Pen) (B).
+    Draw the first mountain by clicking to add nodes (points). Try to make the line wavy, creating a peak shape.
+    Close the shape by connecting the last point to the first.
+    Fill the mountain with a dark blue-gray color.
+    To create depth, add additional mountains in the background using lighter colors (e.g., lighter shades of gray or blue).
+        Each subsequent mountain should be behind the previous one:
+            Use the Object > Lower (Page Down) option to arrange the mountains properly.
+
+Step 4: Adding Clouds
+
+    Select the Circle Tool (F5).
+    Draw several circles that connect to form a cloud shape.
+    Select all the circles and group them by choosing Object > Group (Ctrl+G).
+    Copy and place several of these clouds in different areas of the sky.
+    To make the clouds look natural, adjust the opacity:
+        Go to the Fill and Stroke panel and set the opacity (e.g., 70%).
+
+Step 5: Adding Water
+
+    Again use the Rectangle Tool (F4) to create a rectangle at the bottom of the workspace to represent water.
+    Fill it with a gradient from dark blue at the bottom to a lighter blue at the top.
+
+Step 6: Working with Layers
+
+    To keep your project organized, you can use layers:
+        Open the Layers panel: Layer > Layers... (Ctrl+Shift+L).
+        Create a new layer for each group of objects: background, mountains, clouds, water.
+        Move objects between layers using the context menu or the Object > Move to Layer option.
+
+Step 7: Adding Gradients to Mountains and Water
+
+    Select the mountain you want to edit.
+    Go to the Fill panel and select Linear Gradient.
+    Set the start of the gradient to a darker color (e.g., the bottom of the mountain) and the end to a lighter one (top part).
+    Do the same for the other mountains, varying the shades for depth.
+    Apply a gradient to the water as well, changing the hue from dark to light blue.
+
+Step 8: Refining Details and Final Touches
+
+    Add subtle lines on the water to imitate waves:
+        Use the Bezier Tool to draw thin white lines along the surface of the water.
+    Add additional clouds or elements like the sun behind the mountains:
+        Use the Circle Tool to add the sun, then apply a gradient to the sun shape (from bright yellow to transparency).
+    Check the overall composition. Make sure each element is placed correctly and that the colors create a cohesive whole.
+
+Step 9: Exporting Your Work
+
+    Once you’ve finished, save your project in SVG format.
+    To export the project as a PNG image:
+        Choose File > Export PNG Image.
+        Set the appropriate resolution (e.g., 300 dpi) and select the folder where you want to save the file.
+        Click Export to save the completed PNG file.
+
+Expected Outcome:
+
+After completing all the steps, you should have a mountain landscape similar to the illustration, with a gradient sky, mountains in the background, clouds in the sky, and water in the foreground.
+
+		||||||||||||||||||||||||||||
+		https://dimon.work/kurs.html 
+		||||||||||||||||||||||||||||
