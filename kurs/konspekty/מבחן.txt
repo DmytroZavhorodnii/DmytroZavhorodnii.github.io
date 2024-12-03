@@ -1,0 +1,517 @@
+		----	SPRAWDZIAN	 SZBD	----
+       	   	 ----dimon.work/kurs.html----
+1. IMIĘ,	 	NAZWISKO,	 		klasa
+
+
+2. Po włączeniu opcji AUTOCOMMIT zmiany będą wprowadzane automatycznie na końcu każdego polecenia SQL.
+    A) Tak
+    B) Nie
+3. Jakie polecenie w SQL jest używane do dodania nowej kolumny do istniejącej tabeli?
+    A) ADD COLUMN column_name TO table_name
+    B) INSERT COLUMN column_name INTO table_name
+    C) ALTER TABLE table_name ADD column_name column_type
+    D) UPDATE TABLE table_name SET ADD column_name column_type
+4. Jak inaczej można nazwać kolumny tabeli?
+    A) Atrybuty (Attributes)
+    B) Pola (Fields)
+    C) Rekordy (Records)
+    D) Krotka
+5. Jk zmienić nazwę kolumny 'EmployeeName' na 'FullName' w tabeli 'Employees'?
+    A) ALTER TABLE Employees RENAME COLUMN EmployeeName TO FullName
+    B) UPDATE TABLE Employees CHANGE EmployeeName FullName
+    C) ALTER TABLE Employees MODIFY COLUMN EmployeeName AS FullName
+    D) RENAME COLUMN EmployeeName TO FullName IN Employees
+6. Które polecenie SQL jest używane do zmiany typu danych kolumny w istniejącej tabeli?
+    A) ALTER TABLE table_name MODIFY column_name new_data_type
+    B) UPDATE TABLE table_name SET column_name TYPE new_data_type
+    C) CHANGE TABLE table_name column_name new_data_type
+    D) MODIFY TABLE table_name column_name SET TYPE new_data_type
+7. Który z typów relacji wymaga utworzenia tabeli pośredniej łączącej klucze główne obu tabel?
+    A) 1..1
+    B) 1..n
+    C) n..m
+    D) n..1
+8. Integralność encji w bazie danych zostanie zachowana, jeżeli między innymi:
+    A) Każdy klucz główny będzie miał odpowiadający mu klucz obcy w innej tabeli.
+    B) Każdej kolumnie zostanie przypisany typ danych.
+    C) Klucz główny będzie zawsze liczbą całkowitą.
+    D) Dla każdej tabeli zostanie utworzony klucz główny.
+9. Aby przy pomocy zapytania SQL zmodyfikować strukturę istniejącej tabeli, należy zastosować kwerendę:
+    A) UPDATE
+    B) CREATE TABLE
+    C) ALTER TABLE
+    D) INSERT INTO
+10. Którego typu danych w bazie MySQL należy użyć, aby przechować w jednym polu datę i czas?
+    A) DATE
+    B) TIMESTAMP
+    C) BOOLEAN
+    D) YEAR
+    E) DATETIME
+11. Aby edytować dane w bazie danych można posłużyć się:
+    A) Raportem
+    B) Kwerendą SELECT
+    C) Filtrowaniem
+    D) Formularzem
+12. ALTER TABLE artykuly MODIFY cena float;
+    A) Usunąć kolumnę cena typu float.
+    B) Zmienić typ na float dla kolumny cena.
+    C) Zmienić nazwę kolumny z cena na float.
+    D) Dodać kolumnę cena o typie float, jeśli nie istnieje.
+14. W relacyjnych bazach danych, jeżeli dwie tabele są połączone za pomocą ich kluczy głównych, mamy do czynienia z relacją:
+    A) 1..1
+    B) n..n
+    C) n..1
+    D) 1..n
+15. Normalizacja tabel jest procesem, który ma na celu:
+    A) Dodanie rekordów do bazy.
+    B) Przedstawienie graficzne bazy.
+    C) Jedynie utworzenie tabel i relacji w bazie.
+    D) Sprawdzenie i optymalizację bazy danych.
+16. Wbudowanym w pakiet XAMPP narzędziem służącym do zarządzania bazą danych jest:
+    A) MySQL Workbench
+    B) SQLite
+    C) pgAdmin
+    D) phpMyAdmin
+17. Aby usunąć tabelę należy zastosować kwerendę:
+    A) DELETE
+    B) TRUNCATE TABLE
+    C) DROP TABLE
+    D) UNIQUE
+18. ALTER TABLE nazwa1 ADD nazwa2 DOUBLE NOT NULL;
+    A) Zmieniona nazwa kolumny z nazwa1 na nazwa2.
+    B) Zmieniona wartość kolumny nazwa2 na DOUBLE.
+    C) Dodana kolumna nazwa2 typu zmiennoprzecinkowego.
+    D) Dodana kolumna nazwa2 przyjmująca wartość domyślną DOUBLE.
+19. CHECK TABLE pracownicy CHANGED;
+    A) Tabele, które zmieniły się w aktualnej sesji.
+    B) Jedynie tabele, które nie zostały poprawnie zamknięte.
+    C) Tabele, które zmieniły się od ostatniej kontroli lub nie zostały poprawnie zamknięte.
+    D) Jedynie tabele referujące do innych.
+20. Klucz obcy w tabeli jest tworzony po to, aby:
+    A) Łączyć go z innymi kluczami obcymi tabeli.
+    B) Stworzyć formularz wpisujący dane do tabeli.
+    C) Umożliwić jednoznaczną identyfikację rekordu w tabeli.
+    D) Zdefiniować relację 1..n wiążącą go z kluczem głównym innej tabeli.
+21. Które ze twierdzeń dotyczących klucza podstawowego jest prawdziwe?
+    A) Składa się tylko z jednego pola.
+    B) Jest unikalny w obrębie tabeli.
+    C) Może przyjmować tylko wartości liczbowe.
+    D) Dla tabeli z danymi osobowymi może być to pole nazwisko.
+22. W języku SQL, aby zmodyfikować dane w tabeli, należy posłużyć się poleceniem:
+    A) CREATE
+    B) JOIN
+    C) SELECT
+    D) UPDATE
+23. Aby utworzyć tabelę, należy się posłużyć poleceniem:
+    A) INSERT INTO
+    B) CREATE DATABASE
+    C) CREATE TABLE
+    D) ALTER TABLE
+25. W wyniku połączenia relacją kluczy głównych dwóch tabel otrzymuje się relację typu:
+    A) Wiele do wielu.
+    B) Wiele do jednego.
+    C) Jeden do jednego.
+    D) Jeden do wielu.
+26. Aby odebrać uprawnienia użytkownikowi, należy zastosować polecenie:
+    A) DELETE
+    B) GRANT NO PRIVILEGES
+    C) DELETE PRIVILEGES
+    D) REVOKE
+27. Relacja pomiędzy tabelami, realizowana przez bezpośrednie połączenie kluczy głównych obu tabel, jest relacją:
+    A) 1..1
+    B) n..m
+    C) n..1
+    D) 1..n
+28. Pojęcie krotka odpowiada:
+    A) Wierszowi
+    B) Kolumnie
+    C) Relacji
+    D) Tabeli
+    E) Rekordowi
+29. W bazie danych MySQL utworzono tabelę. Aby jednoznacznie zdefiniować, że pole ID jest kluczem głównym, należy dopisać:
+    A) PK (ID) przed zamknięciem nawiasu
+    B) PK w linii, w której jest zdefiniowane pole ID
+    C) FOREIGN KEY w linii, w której jest zdefiniowane pole ID
+    D) PRIMARY KEY (ID) przed zamknięciem nawiasu
+30. Klauzuli DROP COLUMN można użyć podczas wydawania kwerendy:
+    A) DROP TABLE
+    B) ALTER TABLE
+    C) ALTER COLUMN
+    D) CREATE TABLE
+31. Który zapis służy do ustawienia klucza obcego w MySQL?
+    A) UNIQUE KEY(ID)
+    B) FOREIGN KEY(ID)
+    C) PRIMARY KEY(ID)
+    D) AUTO_INCREMENT(ID)
+32. Jednym z pól tabeli ksiazki jest status „czyWypozyczona” przyjmujący dwie wartości: true lub false. Optymalny typ dla tego pola, to:
+    A) CHAR
+    B) DOUBLE
+    C) BOOLEAN
+    D) VARCHAR(5)
+33. Aby usunąć zadania o statusie „zamknięte” należy zastosować kwerendę:
+    A) TRUNCATE TABLE zadania WHERE status = 'zamknięte';
+    B) DELETE FROM zadania WHERE status = 'zamknięte';
+    C) TRUNCATE TABLE zadania;
+    D) DELETE FROM zadania;
+34. Odpowiednikiem encji w relacyjnej bazie danych jest:
+    A) Tabela
+    B) Kolumna
+    C) Atrybut
+    D) Wiersz
+35. Lokalny System Zarządzania Bazą Danych (SZBD) udostępnia bazę danych:
+    A) Jako serwer w sieci
+    B) W chmurze komputerowej
+    C) Jako usługę sieciową serwera
+    D) Tylko na jednym, określonym komputerze
+36. W tworzonej tabeli pole typu BLOB jest przeznaczone do przechowywania:
+    A) Danych logicznych takich jak true.
+    B) Łańcuchów znaków nieokreślonej długości.
+    C) Danych binarnych dużych rozmiarów, takich jak grafika.
+    D) Liczb całkowitych, które są większe od zakresu typu INT.
+37. Obiektem z graficznym interfejsem użytkownika służącym do wprowadzania danych do bazy jest:
+    A) Encja
+    B) Formularz
+    C) Kwerenda
+    D) Raport
+38. Wskaż polecenie aktualizujące dane w tabeli:
+    A) ALTER
+    B) UPDATE
+    C) CREATE
+    D) SELECT
+39. Baza danych fizycznie umieszczona na większej liczbie komputerów, a logicznie traktowana jako jedna, jest oparta o architekturę:
+    A) Lokalną
+    B) Relacyjną
+    C) Abstrakcyjną
+    D) Rozproszoną
+40. Wybrany minimalny zestaw atrybutów relacji, jednoznacznie identyfikujący każdy rekord tej relacji, przyjmujący wartości niepowtarzalne i niepuste, nazywamy kluczem:
+    A) Obcym
+    B) Głównym
+    C) Złożonym
+    D) Kandydującym
+41. Podczas tworzenia tabeli produkty należy utworzyć pole cena będące reprezentacją ceny produktu. Odpowiedni typ dla tego pola, to:
+    A) DECIMAL(10, 2)
+    B) INTEGER(11)
+    C) TINYTEXT
+    D) ENUM
+42. Tworząc tabelę, do pola, które będzie przyjmowało kolejne liczby całkowite nadawane automatycznie, należy dodać znaczenie:
+    A) NULL
+    B) AUTO_INCREMENT
+    C) PRIMARY KEY
+    D) NOT NULL
+43. Obiektem służącym w bazie danych do podsumowywania, wyświetlania i wydruków danych jest:
+    A) Raport
+    B) Zestawienie
+    C) Formularz
+    D) Zapytanie
+44. Polecenie służące do sprawdzenia i optymalizacji bazy danych to:
+    A) mysqlimport
+    B) mysqlshow
+    C) mysqlcheck
+    D) mysqldump
+46. W bazie MySQL zdefiniowano podczas tworzenia tabeli pole id int NOT NULL AUTO_INCREMENT. Wpis AUTO_INCREMENT oznacza, że:
+    A) Dozwolone jest dodawanie rekordu z dowolną wartością pola id.
+    B) Pole id będzie mogło przyjmować wartości: NULL, 1, 2, 3, 4 i tak dalej.
+    C) Wartości pola będą automatycznie generowane podczas dodawania nowego rekordu do bazy.
+    D) Wartość pola id zostanie automatycznie nadana przez bazę i będzie to wygenerowana losowo liczba całkowita.
+47. Typowym narzędziem SZBD służącym do generowania zestawień danych w celu ich wydrukowania jest:
+    A) Raport
+    B) Kwerenda UPDATE
+    C) Formularz
+    D) Makro
+48. W języku SQL usunięcie wszystkich danych z tabeli bez usuwania samej tabeli możliwe jest za pomocą polecenia:
+    A) DROP
+    B) TRUNCATE
+    C) UPDATE
+    D) ALTER
+49. W zapytaniu SQL:
+	CREATE TABLE ksiazka ( 
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+	tytul VARCHAR(200), 
+	autor SMALLINT UNSIGNED NOT NULL, 
+	CONSTRAINT `dane` FOREIGN KEY (autor) REFERENCES autorzy(id) );
+Pole autor w tabeli ksiazka jest:
+    A) Kluczem głównym tabeli ksiazka.
+    B) Kluczem obcym związanym z tabelą autorzy.
+    C) Polem wykorzystanym przy relacji z tabelą dane.
+    D) Polem typu napisowego zawierającym dane o autorze.
+50. Jak za pomocą SQL można wstawić nowy rekord do tabeli „Persons”?
+    A) INSERT VALUES ('Jimmy', 'Jackson') INTO Persons
+    B) INSERT ('Jimmy', 'Jackson') INTO Persons
+    C) INSERT INTO Persons VALUES ('Jimmy', 'Jackson')
+51. Które polecenie SQL jest używane do utworzenia tabeli bazy danych o nazwie „Customers”?
+    A) CREATE DB Customers
+    B) CREATE DATABASE TAB Customers
+    C) CREATE DATABASE TABLE Customers
+    D) CREATE TABLE Customers
+--------------------------------------------------------------------------------------------------
+1. SELECT COUNT(cena) FROM uslugi;
+Przedstawione zapytanie wybierze:
+A) sumę cen usług w tabeli.
+B) średnią cenę usług w tabeli.
+C) wszystkie ceny usług w tabeli.
+D) liczbę wszystkich cen usług w tabeli.
+
+2. Dla których imion klauzula LIKE jest prawdziwa?
+id	imie
+1	Oksana
+2	Ola
+3	Olga
+4	Oda
+5	Oktawia
+SELECT imie FROM mieszkancy WHERE imie LIKE 'o_%_a';
+A) Oksana, Ola, Olga.
+B) Oda, Oksana, Oktawia.
+C) Oksana, Oktawia, Olga.
+D) Oktawia, Odaria, Omelia.
+
+3. SELECT marka, model FROM samochody WHERE rocznik > 2017 AND marka = "opel";
+id	marka	model		rocznik
+1	opel	astra		2018
+2	opel	corsa		2019
+3	ford	focus		2020
+4	opel	insignia	2017
+5	toyota	corolla		2018
+Tabela samochody zawiera rekordy przedstawione na obrazie. Wydając przedstawione zapytanie SQL zostaną zwrócone dane:
+A) zafira
+B) opel zafira
+C) zafira; insignia
+D) opel zafira; opel insignia
+
+5. Klauzula WHERE do kwerendy wybierającej klientów:
+(punkty > 3000 OR liczbaZakupow > 100) AND ostatnieZakupy >= '2022-01-01'
+Wskaż poprawne zapytanie SQL:
+A) WHERE punkty > 3000 OR liczbaZakupow > 100 OR ostatnieZakupy >= '2022-01-01'.
+B) WHERE punkty > 3000 AND liczbaZakupow > 100 OR ostatnieZakupy >= '2022-01-01'.
+C) WHERE punkty > 3000 AND liczbaZakupow > 100 AND ostatnieZakupy >= '2022-01-01'.
+D) WHERE (punkty > 3000 OR liczbaZakupow > 100) AND ostatnieZakupy >= '2022-01-01'.
+
+6. Aby policzyć ile różnych miast występuje w tabeli mieszkańcy należy napisać:
+A) SELECT COUNT(miasto) FROM mieszkancy;
+B) SELECT DISTINCT miasto FROM mieszkancy;
+C) SELECT COUNT(DISTINCT miasto) FROM mieszkancy;
+D) SELECT COUNT(miasto) FROM mieszkancy DISTINCT.
+
+7. Z przedstawionych tabel Klienci i Uslugi należy wybrać jedynie imiona klientów oraz odpowiadające im nazwy usług, które są droższe niż 10 zł. Kwerenda wybierająca te dane ma postać:
+Tabela klienci:
+id	imie	uslugi_id
+1	Anna	2
+2	Jan	3
+3	Maria	1
+------------------------------
+Tabela uslugi:
+id	nazwa		cena
+1	Mycie auta	8
+2	Woskowanie	15
+3	Polerowanie	20
+
+A) SELECT imie, nazwa FROM klienci, uslugi WHERE cena < 10;
+B) SELECT imie, nazwa FROM klienci JOIN uslugi ON uslugi.id = uslugi_id;
+C) SELECT imie, nazwa FROM klienci JOIN uslugi ON uslugi.id = klienci.id;
+D) SELECT imie, nazwa FROM klienci JOIN uslugi ON uslugi.id = uslugi_id WHERE cena > 10;
+E) SELECT imie, nazwa FROM klienci WHERE uslugi_id IN (SELECT id FROM uslugi WHERE cena > 10).
+
+8. liczba >= 10 AND liczba <= 100
+W języku SQL przedstawiony warunek jest równoważny warunkowi:
+A) NOT (liczba < 10 AND liczba > 100).
+B) liczba BETWEEN 10 AND 100.
+C) liczba IN (10, 100).
+D) liczba LIKE '10%'.
+
+9. Jednym z pól tabeli ksiazki jest status czyWypozyczona, przyjmujący dwie wartości true lub false. Optymalny typ dla tego pola to:
+A) CHAR
+B) VARCHAR(5)
+C) BOOLEAN
+D) DOUBLE
+
+10. Jaka kolejność komend w typowym zapytaniu SQL?
+(Check all that apply.)
+A) SELECT		1
+B) ORDER BY		2
+C) LIMIT		3
+D) FROM			4
+E) GROUP BY		5
+F) WHERE		6
+G) IN			7
+H) HAVING		8
+
+11. Aby usunąć zadania w tabeli zadania, których statusem jest 'zamknięte', należy zastosować kwerendę:
+A) DELETE FROM zadania;
+B) TRUNCATE TABLE zadania;
+C) DELETE FROM zadania WHERE status = 'zamknięte';
+D) TRUNCATE TABLE zadania WHERE status = 'zamknięte'.
+
+12. Aby wybrać nazwiska studentów i odpowiadające im idZajecia dla studentów z grupy 15, należy użyć kwerendy:
+(Check all that apply.)
+A) SELECT nazwisko, idZajecia FROM Studenci INNER JOIN Zapisy WHERE grupa = 15;
+B) SELECT nazwisko, idZajecia FROM Studenci INNER JOIN Zapisy ON Studenci.id = Zapisy.idStudenta;
+C) SELECT nazwisko, idZajecia FROM Studenci JOIN Zapisy ON Studenci.id = Zapisy.idZajecia WHERE grupa = 15;
+D) SELECT nazwisko, idZajecia FROM Studenci JOIN Zapisy ON Studenci.id = Zapisy.idStudenta WHERE grupa = 15;
+E) SELECT nazwisko, idZajecia FROM Studenci WHERE id IN (SELECT idStudenta FROM Zapisy WHERE grupa = 15).
+
+13. Z tabeli klienci wybierz nazwiska trzech najlepszych klientów, którzy mają najwięcej punktów:
+A) SELECT nazwisko FROM klienci LIMIT 3.
+B) SELECT nazwisko FROM klienci ORDER BY punkty DESC LIMIT 3.
+C) SELECT nazwisko FROM klienci ORDER BY nazwisko DESC LIMIT 3.
+D) SELECT LIMIT 3 nazwisko FROM klienci ORDER BY nazwisko DESC.
+E) SELECT nazwisko FROM klienci ORDER BY punkty ASC LIMIT 3.
+
+14. Wskaż kwerendę liczącą dla każdego pasma górskiego średnią wysokość jego szczytów:
+A) SELECT pasmo, AVG(wysokosc) FROM gory LIMIT pasmo;
+B) SELECT pasmo, AVG(wysokosc) FROM gory GROUP BY pasmo;
+C) SELECT pasmo, SUM(wysokosc) FROM gory GROUP BY pasmo;
+D) SELECT pasmo, COUNT(wysokosc) FROM gory ORDER BY pasmo;
+
+15. Które dane zostaną wybrane w wyniku działania zapytania?
+id	nazwa		cena
+1	Komputer	2500
+2	Klawiatura	150
+3	Monitor		900
+4	Myszka		100
+5	Telefon		2000
+6	Kable USB	50
+7	Konsola		1500
+8	Kalkulator	200
+
+SELECT nazwa FROM produkty WHERE nazwa LIKE "K%";
+A) Komputer, Klawiatura, Konsola, Kalkulator
+B) Komputer, Klawiatura
+C) Klawiatura, Kalkulator
+D) Konsola, Kalkulator
+
+16. Aby wybrać nazwiska autorów i tytuły artykułów ocenionych na 5, należy zastosować kwerendę:
+(Check all that apply.)
+A) SELECT nazwisko, tytul FROM autorzy, artykuly WHERE ocena == 5;
+B) SELECT nazwisko, tytul FROM autorzy JOIN artykuly ON autorzy.id = autorzy_id;
+C) SELECT nazwisko, tytul FROM autorzy JOIN artykuly ON autorzy.id = artykuly.id;
+D) SELECT nazwisko, tytul FROM autorzy JOIN artykuly ON autorzy.id = autorzy_id WHERE ocena = 5;
+E) SELECT nazwisko, tytul FROM autorzy WHERE id IN (SELECT autorzy_id FROM artykuly WHERE ocena = 5);
+
+17. Podczas tworzenia tabeli produkty należy utworzyć pole cena będące reprezentacją ceny produktu. Odpowiedni typ dla tego pola to:
+(Check all that apply.)
+A) DECIMAL(10, 2)
+B) ENUM
+C) TINYTEXT
+D) INTEGER(11)
+E) BOOLEAN
+F) FLOAT
+G) BLOB
+
+18. Sklep internetowy korzysta z tabeli faktury. Na koniec dnia należy wpisać aktualną datę do wierszy, w których pole dataPlatnosci jest puste. Kwerenda SQL do wykonania tej operacji to:
+A) UPDATE faktury SET dataPlatnosci=CURTIME() WHERE id = 3;
+B) UPDATE faktury SET dataPlatnosci=CURDATE() WHERE dataPlatnosci IS NULL;
+C) UPDATE faktury SET dataPlatnosci=CURTIME() WHERE dataPlatnosci IS NOT NULL;
+D) UPDATE faktury SET dataPlatnosci=CURDATE() WHERE dataPlatnosci = '0000-00-00';
+
+19. Baza danych zawiera tabelę faktury o polach: numer, data, id_klienta, wartosc, status. Każdego dnia generowany jest raport faktur z bieżącego dnia. Która z kwerend SQL służy do stworzenia tego raportu?
+A) SELECT numer, wartosc FROM faktury;
+B) SELECT * FROM faktury;
+C) SELECT numer, wartosc FROM faktury WHERE data = CURRENT_DATE();
+D) SELECT * FROM faktury WHERE data = CURRENT_DATE();
+20. Aby zaktualizować dane w wierszach tabeli, należy zastosować polecenie (DUŻYMI LITERAMI):
+
+
+(Do uzupełnienia przez użytkownika).
+21. W języku SQL, aby zmienić strukturę tabeli (np. dodać lub usunąć kolumnę), należy zastosować polecenie (dwa słowa, DUŻYMI LITERAMI):
+
+
+(Do uzupełnienia przez użytkownika).
+22. W relacyjnym modelu baz danych krotkami nazywa się:
+A) wiersze tabeli z wyjątkiem wiersza nagłówkowego, w którym umieszcza się nazwy kolumn.
+B) wszystkie kolumny tabeli, które zawierają atrybuty obiektu.
+C) wszystkie wiersze tabeli wraz z wierszem nagłówkowym.
+D) liczbę rekordów tabeli.
+
+23. Aby w systemie MySQL nadać użytkownikowi prawo do nadawania i zmiany uprawnień innym użytkownikom, należy zastosować klauzulę:
+A) TRIGGER
+B) FLUSH PRIVILEGES
+C) GRANT OPTION
+D) ALL PRIVILEGES
+
+24. W tabeli personel znajdują się pola: imie, nazwisko, pensja, staz. Aby otrzymać średnią pensję pracowników, których staż wynosi od 10 do 20 lat włącznie, należy wykonać kwerendę:
+A) SELECT COUNT(pensja) FROM personel WHERE staz >= 10 AND staz <= 20;
+B) SELECT AVG() FROM personel WHERE staz >= 10 AND staz <= 20;
+C) SELECT COUNT() FROM personel WHERE staz >= 10 AND staz <= 20;
+D) SELECT AVG(pensja) FROM personel WHERE staz >= 10 AND staz <= 20;
+25. Aby utworzyć tabelę, należy zastosować polecenie (dwa słowa, DUŻYMI LITERAMI):
+
+
+(Do uzupełnienia przez użytkownika).
+25. Które mechanizmy są niezbędne dla Systemu Zarządzania Bazą Danych?
+A) System zarządzania wersjami bazy.
+B) Wielodostępność danych.
+C) Pakiety do tworzenia statystyk.
+D) Przystawka do wizualizacji diagramów encji.
+
+26. Aby wybrać rekordy uczennic o imieniu „Aleksandra” urodzonych po roku 1998 z tabeli Uczniowie, należy zapisać zapytanie:
+A) SELECT * FROM Uczniowie WHERE imie="Aleksandra" OR rok_urodzenia > "1998";
+B) SELECT * FROM Uczniowie WHERE imie="Aleksandra" OR rok_urodzenia < "1998";
+C) SELECT * FROM Uczniowie WHERE imie="Aleksandra" AND rok_urodzenia > "1998";
+D) SELECT * FROM Uczniowie WHERE imie="Aleksandra" AND rok_urodzenia < "1998";
+
+27. Baza danych zawiera tabelę ksiazki o polach: tytul, id_autora, data_wypoz, id_czytelnika. Każdego dnia generowany jest raport książek wypożyczonych danego dnia. Która z kwerend SQL posłuży do stworzenia tego raportu?
+A) SELECT tytul, data_wypoz FROM ksiazki WHERE data_wypoz = CURRDATENT_E();
+B) SELECT tytul FROM ksiazki WHERE data_wypoz = CURRENT_DATE();
+C) SELECT tytul FROM ksiazki;
+D) SELECT * FROM ksiazki;
+
+30. Które polecenie służy do zmiany wartości o jeden w polu RokStudiów w tabeli Studenci dla studentów, którzy studiują na roku 1÷4?
+A) UPDATE Studenci SET RokStudiow = RokStudiow+1 WHERE RokStudiow <5;
+B) UPDATE Studenci, RokStudiow+1 WHERE RokStudiow < 5;
+C) UPDATE RokStudiow SET RokStudiow++ WHERE RokStudiow < 5;
+D) UPDATE Studenci SET RokStudiow WHERE RokStudiow < 5;
+
+31. Funkcją agregującą zwracającą liczbę rekordów jest (DUŻYMI literami):
+
+
+(Do uzupełnienia przez użytkownika).
+32. W bazie danych MySQL polecenie CREATE USER umożliwia:
+A) wyświetlenie informacji o istniejącym użytkowniku.
+B) utworzenie użytkownika i nadanie mu praw do bazy.
+C) zmodyfikowanie hasła istniejącego użytkownika.
+D) utworzenie użytkownika.
+
+33. W tabeli mieszkancy zapisane są osoby z całej Polski. Aby policzyć ile różnych miast występuje w danych tabeli, należy zapisać kwerendę:
+A) SELECT DISTINCT miasto FROM mieszkancy;
+B) SELECT COUNT(miasto) FROM mieszkancy;
+C) SELECT COUNT(DISTINCT miasto) FROM mieszkancy;
+D) SELECT COUNT(miasto) FROM mieszkancy DISTINCT;
+
+34. W bazie MySQL zdefiniowano podczas tworzenia tabeli pole id. Wpis AUTO_INCREMENT oznacza, że:
+A) pole id będzie mogło przyjmować wartości: NULL, 1, 2, 3, 4 i tak dalej.
+B) wartość pola id zostanie automatycznie nadana przez bazę i będzie to wygenerowana losowo liczba całkowita.
+C) wartości pola będą automatycznie generowane podczas dodawania nowego rekordu do bazy.
+D) dozwolone jest dodawanie rekordu z dowolną wartością pola id.
+
+
+35. W tabeli personel znajdują się pola: imie, nazwisko, pensja, staz. Aby otrzymać średnią pensję pracowników, których staż wynosi od 10 do 20 lat włącznie, należy wykonać kwerendę:
+A) SELECT COUNT(pensja) FROM personel WHERE staz >= 10 AND staz <= 20;
+B) SELECT AVG() FROM personel WHERE staz >= 10 AND staz <= 20;
+C) SELECT COUNT() FROM personel WHERE staz >= 10 AND staz <= 20;
+D) SELECT AVG(pensja) FROM personel WHERE staz >= 10 AND staz <= 20;
+
+36. Aby zmienić maksymalną długość pola imie w tabeli klienci na 30 znaków, należy użyć w języku SQL następującego kodu:
+A) CHANGE TABLE klienci TO COLUMN imie SET CHAR(30);
+B) CHANGE TABLE klienci MODIFY imie CHAR(30);
+C) ALTER TABLE klienci MODIFY COLUMN imie VARCHAR(30);
+D) ALTER TABLE klienci CHANGE imie TEXT;
+
+37. Dla dowolnego zestawu danych, aby wyświetlić nazwy tych zwierząt, które żyją przynajmniej 20 lat oraz są ssakami, należy wydać zapytanie:
+A) SELECT nazwa FROM zwierzeta WHERE dlugosc_zycia >=20 AND gromada = ‘ssak’;
+B) SELECT nazwa FROM zwierzeta WHERE dlugosc_zycia >=20;
+C) SELECT nazwa FROM zwierzeta WHERE dlugosc_zycia >=20 OR gromada = ‘ssak’;
+D) SELECT nazwa FROM zwierzeta WHERE gromada = ‘ssak’;
+
+38. Po uszkodzeniu serwera bazy danych, aby możliwie najsprawniej przywrócić działanie kompletnej bazy należy użyć:
+A) aktualnej wersji kopii zapasowej.
+B) opisu struktur danych w tabelach.
+C) najnowszej wersji instalacyjnej serwera.
+D) pełnej listy użytkowników serwera.
+
+39. Wyszukując z tabeli Pracownicy wyłącznie nazwiska, w których ostatnią literą jest „i”, jaką użyć kwerendy SQL (DUŻYMI LITERAMI):
+
+(Do uzupełnienia przez użytkownika).
+40. Wskaż zapytanie, w którym dane zostały posortowane:
+A) SELECT AVG(ocena) FROM uczniowie WHERE klasa = 2;
+B) SELECT nazwisko FROM firma WHERE pensja > 2000 LIMIT 10;
+C) SELECT DISTINCT produkt, cena FROM artykuly;
+D) SELECT imie, nazwisko FROM mieszkancy WHERE wiek > 18 ORDER BY wiek;
