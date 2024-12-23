@@ -1,0 +1,20 @@
+
+
+
+  .form-control-group {
+            margin: 20px;
+        }
+        input[type="text"]:focus {
+            border-color: #F73859; /* Подсветка на фокус */
+            outline: none; /* Убираем стандартную рамку фокуса */
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+
+

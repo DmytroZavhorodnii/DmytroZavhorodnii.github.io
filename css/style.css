@@ -1458,4 +1458,6 @@ main {
 .accordion-button:focus {
   box-shadow: none; /* Remove the default focus shadow */
 }
-
+a{
+  color: #F73859!important;
+}
