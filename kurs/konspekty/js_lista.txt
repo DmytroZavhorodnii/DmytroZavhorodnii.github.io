@@ -1,0 +1,99 @@
+zadania		ocena
+1, 2, 3		2
+4, 5		3
+6, 7		4
+8		5
+
+1.----------------------------------------------------------------
+Skrypt powinien obliczać, ile PLN dziennie przynosi
+użytkownikowi depozyt ulokowany na półtora roku przy rocznej
+stopie procentowej 4.5%.
+
+2.----------------------------------------------------------------
+Opracuj skrypt, który obliczy
+kwotę podatków do zapłacenia i kwotę,
+która pozostanie po zapłaceniu podatków
+w oparciu o dochód osoby fizycznej.
+
+3.----------------------------------------------------------------
+1) Dany jest bok kwadratu. Znajdź jego obwód;
+2) Dana jest długość krawędzi sześcianu. Znaleźć objętość sześcianu i
+pole jego powierzchni bocznej;
+3) Dany jest promień okręgu. Znajdź długość okręgu i jego pole;
+4) Podano objętość i masę substancji. Określ gęstość materiału tej
+substancji;
+5) Znana jest liczba mieszkańców stanu i powierzchnia jego
+terytorium (w km2). Określ gęstość zaludnienia w tym stanie.
+6). Dane są katy trójkąta prostokątnego. Znajdź jego
+przeciwprostokątną.
+7) Obliczyć wartość y dla dowolnych wartości wejściowych a: y=(a^2+10)/sqrt(a^2 + 1)
+
+4.----------------------------------------------------------------
+Użytkownik ma pewną sumę
+pieniędzy na swoim koncie bankowym. Chce
+przelać część pieniędzy, a bank chce pobrać
+opłatę. Konieczne jest obliczenie kwoty
+prowizji według stawki 1% (minimum 10 PLN,
+maksimum 250 PLN).
+
+5.----------------------------------------------------------------
+Opracuj skrypt obliczający
+wskaźnik masy ciała użytkownika. W zależności od wyniku, wyświetla komunikat
+o tym, co oznacza indeks
+
+6.----------------------------------------------------------------
+Wykonanie obliczeń schematu spłaty pożyczki zgodnie z
+klasycznym schematem. Parametry określające kredyt (dane
+wejściowe): kwota, stopa procentowa (% rocznie) i okres
+kredytowania (w miesiącach). Prowizje i inne opłaty nie są
+brane pod uwagę.
+Program powinien zawierać informacje dla każdego
+miesiąca: jaka część pożyczki powinna zostać spłacona, ile
+odsetek powinno zostać zapłaconych (oraz kwota części +
+odsetki) i ile pozostało na części pożyczki po tej spłacie.
+Na koniec należy wydedukować, jaka będzie nadpłata
+pożyczki.
+Wszystkie kwoty pieniężne muszą być zaokrąglone do 2
+miejsc po przecinku.
+Przykład funcjonału:
+https://fin-calc.org.ua/en/credit/calculate/
+
+7.----------------------------------------------------------------
+Zadanie: tablica zawiera dane o dziennych temperaturach w miesiącach zimowych. Konieczne jest
+obliczenie, ile było przymrozków w tym okresie (przymrozki występują, gdy temperatura jest dodatnia
+pewnego dnia i ujemna następnego dnia).
+Trudne zadanie : Określ najdłuższy okres mrozu (ile dni z rzędu temperatura wynosiła poniżej zera).
+Zadanie „ przymrozek” #B1
+Szablon z danymi:
+dimon.work/kurs/assets/les20.7z
+
+8.----------------------------------------------------------------
+Skrypt losuje liczbę (od 1 do 100 włącznie) i daje graczowi 10 prób odgadnięcia
+jej, jeśli użytkownik nie zgadnie - skrypt informuje, że przegrał, a gra mówi
+mu, jaka była prawidłowa odpowiedź. Jeśli gracz zgadł, gra informuje, że
+wygrał. Do generowania liczb należy użyć funkcji Math.random(). Gra powinna
+podpowiedzieć, czy wprowadzona przez użytkownika liczba jest większa lub
+mniejsza od odgadniętej.
+
+9.----------------------------------------------------------------
+
+HTML: Stwórz stronę z polem tekstowym (<input>) i listami (<ol><li>)
+JavaScript:
+Wprowadź filtrację: ukrywaj elementy, które nie zawierają tekstu wpisanego w pole
+Przydatne funkcje
+document.querySelector('#elastic').oninput = function () {
+            let val = this.value.trim().toLowerCase();
+            let listItems = document.querySelectorAll('ol li');
+.
+.
+.
+
+let pos = textContent.indexOf(val);
+
+------------------------------------------------------------------
+
+ZADANIA NA 6
+1. Darts
+2. LCG Generator
+3. Kalkulator szeregów Taylora
+// O szczegóły proszę pytać na lekcji lub mailowo
