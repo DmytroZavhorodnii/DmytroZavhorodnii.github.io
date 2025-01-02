@@ -2,7 +2,7 @@ zadania		ocena
 1, 2, 3		2
 4, 5		3
 6, 7		4
-8		5
+8, 9		5
 
 1.----------------------------------------------------------------
 Skrypt powinien obliczać, ile PLN dziennie przynosi
